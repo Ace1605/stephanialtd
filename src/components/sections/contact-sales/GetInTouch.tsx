@@ -29,7 +29,7 @@ export const GetInTouch = ({ isSales }: Props) => {
               'text-left 768:text-center 768:text-[70px] text-[44px] leading-[48px] 768:leading-[80px] text-gradient'
             }
           >
-            Get in touch
+            Start Your Project
           </motion.h5>
 
           <motion.p
@@ -42,9 +42,7 @@ export const GetInTouch = ({ isSales }: Props) => {
             }}
             className={'mt-3 text-left 768:text-center subtitle'}
           >
-            {`Should you have any inquiries, don't hesitate to contact us, and we'll
-          get back to you promptly. Make sure to include as much detail as you
-          can.`}
+            {`Ready to bring your engineering vision to life? Contact our expert team to discuss your project requirements. We'll provide a comprehensive consultation and tailored solutions for your specific needs.`}
           </motion.p>
         </div>
         {isSales && <GetInTouchMeans />}

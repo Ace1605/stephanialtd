@@ -1,4 +1,4 @@
-@import './prismic.css';
+@import "./prismic.css";
 
 @tailwind base;
 @tailwind components;
@@ -22,8 +22,8 @@ body:has(.no-scroll) {
   position: relative;
   cursor: pointer;
   transform-style: preserve-3d;
-  transform-origin: center right;
-  transition: transform 1s;
+  transform-origin: right center;
+  transition: transform 1.5s;
 }
 
 .flip-card.is-flipped {
@@ -83,7 +83,7 @@ body:has(.no-scroll) {
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(45deg, #f3000b 47.7%, #ff9811 96.55%);
+  background: -webkit-linear-gradient(45deg, #0194a3 47.7%, #f8a613 96.55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-right: 0.2rem;

@@ -5,8 +5,8 @@ import {
   Telegram,
   Twitter,
   Youtube,
-} from '@/components/svgs/Socials';
-import clsx from 'clsx';
+} from "@/components/svgs/Socials";
+import clsx from "clsx";
 
 interface Props {
   isDark?: boolean;
@@ -18,7 +18,7 @@ export const Socials = ({ className, isDark }: Props) => {
     <div
       className={clsx(
         className,
-        'flex gap-2 items-center justify-center 768:justify-start',
+        "flex gap-2 items-center justify-center 768:justify-start"
       )}
     >
       {socials.map(({ icon, url }) => {
@@ -26,14 +26,14 @@ export const Socials = ({ className, isDark }: Props) => {
           <a
             href={url}
             key={url}
-            className='y-center smooth w-8 h-8 rounded-full hover:bg-primary-800 text-white transition-colors'
-            target='_blank'
-            rel='noopenner noreferrer'
+            className="y-center smooth w-8 h-8 rounded-full hover:bg-primary-800 text-white transition-colors"
+            target="_blank"
+            rel="noopenner noreferrer"
           >
             <div
               className={clsx(
-                isDark && '!text-black text-4xl',
-                'mx-auto h-4.5 w-4.5 p-[0.5px] text-white',
+                isDark && "!text-black text-4xl",
+                "mx-auto h-4.5 w-4.5 p-[0.5px] text-white"
               )}
             >
               {icon}
@@ -48,25 +48,15 @@ export const Socials = ({ className, isDark }: Props) => {
 const socials: { icon: JSX.Element; url: string }[] = [
   {
     icon: <Twitter />,
-    url: 'https://twitter.com/myvpayafrica',
+    url: "#",
   },
-  { icon: <Instagram />, url: 'https://www.instagram.com/myvpayafrica/' },
+  { icon: <Instagram />, url: "#" },
   {
     icon: <Facebook />,
-    url: 'https://web.facebook.com/people/VPay-Africa/100065166683977/',
+    url: "#",
   },
-  {
-    icon: <Youtube />,
-    url: 'https://www.youtube.com/@vpayafrica7143/featured',
-  },
-
   {
     icon: <LinkedIn />,
-    url: 'https://www.linkedin.com/company/vpayafrica/',
-  },
-
-  {
-    icon: <Telegram />,
-    url: 'https://t.me/joinchat/nqPoWpDU5wk4MjE8',
+    url: "#",
   },
 ];

@@ -35,38 +35,63 @@ export const Footer = () => {
               return (
                 <div
                   className={
-                    "text-center 768:text-left col-span-12 768:col-span-6 960:mt-0 mt-1 960:col-span-4"
+                    "text-center 768:text-left col-span-12 768:col-span-6 960:mt-0 mt-1 960:col-span-3"
                   }
                   key={title}
                 >
                   {isLast && (
                     <>
                       <div className="mb-3 768:mb-4">
-                        <p className={clsx("footer_links_header")}>Contact</p>
-                        <p className={clsx("footer_link_item pb-0")}>
-                          <Link href="tel:+2342016335260">+234 2016335260</Link>
-                          ,
+                        <p className={clsx("footer_links_header")}>USA</p>
+                        <p
+                          className={clsx(
+                            "footer_link_item pb-0 text-xs 768:text-sm"
+                          )}
+                        >
+                          5900 Balcones Drive, STE 100 Austin, Texas 78731. USA
                         </p>
                         <p className={clsx("footer_link_item pb-0 pt-1")}>
-                          <Link href="tel:+2342016339125">+234 2016339125</Link>
+                          <Link href="tel:+19282656523">+1 928 265 6523</Link>
                         </p>
                       </div>
 
-                      <div
-                        className={clsx(
-                          i !== footerGroups.length - 1 && "h-6 425:h-7"
-                        )}
-                      >
-                        <p className={clsx("footer_links_header")}>Whatsapp</p>
+                      <div className="mb-3 768:mb-4">
+                        <p className={clsx("footer_links_header")}>
+                          United Kingdom
+                        </p>
+                        <p
+                          className={clsx(
+                            "footer_link_item pb-0 text-xs 768:text-sm"
+                          )}
+                        >
+                          C/o 151-177 Foleshill Road, Storage King Office
+                          Complex. Coventry. CV1 4LF
+                        </p>
+                        <p className={clsx("footer_link_item pb-0 pt-1")}>
+                          <Link href="tel:+447452230428">+44 7452 230428</Link>
+                        </p>
                       </div>
 
-                      <Link
-                        href="https://wa.me/2348028108892"
-                        className={clsx("footer_link_item")}
-                        target="_blank"
-                      >
-                        +234 802 810 8892
-                      </Link>
+                      <div className="mb-3 768:mb-4">
+                        <p className={clsx("footer_links_header")}>Nigeria</p>
+                        <p
+                          className={clsx(
+                            "footer_link_item pb-0 text-xs 768:text-sm"
+                          )}
+                        >
+                          162 Peter Odili Road, Port Harcourt Nigeria
+                        </p>
+                        <p className={clsx("footer_link_item pb-0 pt-1")}>
+                          <Link href="tel:+2348134646487">
+                            +234 813 464 6487
+                          </Link>
+                        </p>
+                        <p className={clsx("footer_link_item pb-0")}>
+                          <Link href="tel:+2349133033349">
+                            +234 913 303 3349
+                          </Link>
+                        </p>
+                      </div>
                     </>
                   )}
                   <div
@@ -106,14 +131,16 @@ export const Footer = () => {
                       <Link
                         href={
                           link === "Terms of Service"
-                            ? "/legal/terms-of-use"
+                            ? "#"
                             : link === "Privacy Policy"
-                              ? "/legal/privacy-policy"
-                              : link === "Support"
-                                ? "/contact-sales"
-                                : link === "support@vpay.africa"
-                                  ? "mailto: support@vpay.africa"
-                                  : href
+                              ? "#"
+                              : link === "Partnership"
+                                ? "#"
+                                : link === "Support"
+                                  ? "/contact-sales"
+                                  : link === "support@vpay.africa"
+                                    ? "mailto: support@vpay.africa"
+                                    : href
                         }
                         key={link}
                         className={clsx("footer_link_item")}
@@ -134,14 +161,9 @@ export const Footer = () => {
         </div>
         <div className="py-8 border-t text-center 768:text-left border-neutral-900 grid 768:flex gap-4 items-center justify-center 768:justify-between">
           <div>
-            <p className="text-neutral-500 text-base mb-4 768:pr-12">
-              VPay, powered by VFD Microfinance Bank and Minerva Technologies,
-              provides financial services through its different web and mobile
-              platforms. VPay and VFD are legal trademarks in Nigeria. All
-              rights reserved.
-            </p>
             <p className="text-neutral-500 text-base">
-              ©{new Date().getFullYear()} VPay. All rights reserved
+              ©{new Date().getFullYear()} All rights reserved. Stephania
+              Support Services Limited
             </p>
           </div>
         </div>
@@ -169,26 +191,28 @@ const footerGroups: {
   //   ],
   // },
   {
-    title: "Businesses",
+    title: "Core Services",
     nestedPages: true,
-    links: [
-      ...businessesLinks.links?.businesses,
-      ...businessesLinks.links?.["company size"],
-    ],
+    links: [...businessesLinks.links?.["core services"]],
   },
   {
-    title: "Resources",
+    title: "Specialized Solutions",
+    nestedPages: true,
+    links: [...businessesLinks.links?.["specialized solutions"]],
+  },
+  {
+    title: "Company",
     links: [
       "About",
-      "Pricing",
-      "Support",
-      "VPay Blog",
+      "Partnership",
+      "Contact us",
+      // "VPay Blog",
       "Terms of Service",
       "Privacy Policy",
     ],
   },
   {
     title: "Email",
-    links: ["support@vpay.africa"],
+    links: ["info@stephanialtd.com"],
   },
 ];

@@ -3,7 +3,7 @@
 import { AppCtaButton } from "@/components/buttons/AppCtaButton";
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import Link from "next/link";
+// import Link from "next/link";
 
 export const HeroCtaPair = ({
   waitlist,
@@ -65,7 +65,7 @@ export const HeroCtaPair = ({
         )}
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -82,7 +82,7 @@ export const HeroCtaPair = ({
         >
           Contact Us
         </Link>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

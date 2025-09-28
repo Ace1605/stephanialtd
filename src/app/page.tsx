@@ -1,15 +1,14 @@
 "use client";
 
 import { CallToAction } from "@/components/core/Footer/CallToAction";
-import { PseudoNavigation } from "@/components/core/Header/PseudoNavigation";
+// import { PseudoNavigation } from "@/components/core/Header/PseudoNavigation";
 import { TabOption } from "@/components/core/tabs/Tabs";
-import { DownloadPrompt } from "@/components/sections/home/DownloadPrompt";
-import { ExploreOptions } from "@/components/sections/home/ExploreOptions";
+// import { DownloadPrompt } from "@/components/sections/home/DownloadPrompt";
+// import { ExploreOptions } from "@/components/sections/home/ExploreOptions";
 import { Hero } from "@/components/sections/home/Hero";
 import { TestimonialSlide } from "@/components/sections/home/TestimonialSlide";
-import { WhyChooseVpay } from "@/components/sections/home/WhyChooseVPay";
+// import { WhyChooseVpay } from "@/components/sections/home/WhyChooseVPay";
 import { HomeFilterOptions } from "@/contants/filters";
-import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { hyphenateString } from "@/helpers/converters/hyphenateString";
@@ -92,7 +91,7 @@ export default function Home() {
     <main>
       <Hero />
       <section id={"why-choose-vpay"} className="flex flex-col">
-        <div
+        {/* <div
           id="stickyTab"
           ref={stickyTabRef}
           className={clsx(
@@ -111,7 +110,7 @@ export default function Home() {
             getActive={getActive}
             handleChange={handleChange}
           />
-        </div>
+        </div> */}
         {/* <WhyChooseVpay /> */}
         <TestimonialSlide />
         {/* <DownloadPrompt />
