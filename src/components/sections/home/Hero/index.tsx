@@ -2,17 +2,13 @@
 
 import { motion } from "framer-motion";
 import { StaticImageData } from "next/image";
-import heroImage from "/public/assets/home/home-hospitality.png";
-import secondImage from "/public/assets/home/home-fashion.png";
-import thirdImage from "/public/assets/home/home-retail.png";
+import heroImage from "/public/assets/home/firstBannerImage.jpg";
+import secondImage from "/public/assets/home/secondBannerImage.jpg";
+import thirdImage from "/public/assets/home/thirdBannerImage.jpg";
 import { useEffect, useState } from "react";
 import { AppCtaButton } from "@/components/buttons/AppCtaButton";
 
-export const imgSrcs: StaticImageData[] = [
-  heroImage,
-  secondImage,
-  thirdImage,
-];
+export const imgSrcs: StaticImageData[] = [heroImage, secondImage, thirdImage];
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -107,7 +103,7 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
       <div className="relative z-10 app-container flex items-center justify-center 768:justify-start min-h-[400px] 768:min-h-[500px] 1024:min-h-[600px]">
-        <div className="w-full 768:w-1/2 1024:w-3/5">
+        <div className="w-full">
           <motion.h1
             initial={{ y: 10, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -116,7 +112,7 @@ export const Hero = () => {
               duration: 0.4,
             }}
             className={
-              "text-center 768:text-left font-bold text-white text-[42px] 360:text-[48px] 390:text-[50px] 640:text-[54px] 1180:text-[72px] 1400:text-[82px] leading-[45px] 360:leading-[49px] 640:leading-[66px] 1180:leading-[70px] 1400:leading-[80px] tracking-[-2.5px] 1180:tracking-[-5.28px] drop-shadow-lg"
+              "text-center font-bold text-white text-[42px] 360:text-[48px] 390:text-[50px] 640:text-[54px] 1180:text-[72px] 1400:text-[82px] leading-[45px] 360:leading-[49px] 640:leading-[66px] 1180:leading-[70px] 1400:leading-[80px] tracking-[-2.5px] 1180:tracking-[-5.28px] drop-shadow-lg"
             }
           >
             <span id="changingWord" className={"text-gradient"}>
@@ -132,7 +128,7 @@ export const Hero = () => {
               duration: 0.4,
             }}
             className={
-              "mt-4 1024:mt-2 1300:mt-5 text-white max-w-[850px] leading-[24px] 1024:leading-[26px] 1300:leading-[30px] tracking-[-0.32px] 768:tracking-[-0.4px] text-base 1300:text-lg font-normal text-center 768:text-left drop-shadow-md"
+              "mt-4 1024:mt-2 1300:mt-5 text-white max-w-[550px] mx-auto leading-[24px] 1024:leading-[26px] 1300:leading-[30px] tracking-[-0.32px] 768:tracking-[-0.4px] text-base 1300:text-lg font-normal text-center drop-shadow-md"
             }
           >
             {paragraphs[currentParagraphIndex]}
@@ -141,7 +137,7 @@ export const Hero = () => {
           <AppCtaButton
             href={"#"}
             className={
-              "primary-button max-w-fit mt-4 640:mt-6 gap-2 h-12 768:h-14 group x-center"
+              "primary-button max-w-fit mt-4 640:mt-6 gap-2 h-12 768:h-14 group x-center mx-auto"
             }
             withArrow
             type={"signup"}

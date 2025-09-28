@@ -1,16 +1,16 @@
-import { AppCtaButton } from '@/components/buttons/AppCtaButton';
-import { navigationLinks } from '@/components/core/Header';
-import { productGroupLinks } from '@/components/core/Header/navigation/ProductGroup';
-import { MobileMenuWrapper } from '@/components/modal/ModalWrapper';
-import { ChevronDown } from '@/components/svgs/ChevronDown';
-import { Cancel, Hamburger } from '@/components/svgs/Navigation';
-import { hyphenateString } from '@/helpers/converters/hyphenateString';
-import clsx from 'clsx';
-import { AnimatePresence, motion } from 'framer-motion';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { Dispatch, SetStateAction, useState } from 'react';
-import { businessesLinks } from '@/components/core/Header/navigation/BusinessesGroup';
+import { AppCtaButton } from "@/components/buttons/AppCtaButton";
+import { navigationLinks } from "@/components/core/Header";
+import { productGroupLinks } from "@/components/core/Header/navigation/ProductGroup";
+import { MobileMenuWrapper } from "@/components/modal/ModalWrapper";
+import { ChevronDown } from "@/components/svgs/ChevronDown";
+import { Cancel, Hamburger } from "@/components/svgs/Navigation";
+import { hyphenateString } from "@/helpers/converters/hyphenateString";
+import clsx from "clsx";
+import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Dispatch, SetStateAction, useState } from "react";
+import { businessesLinks } from "@/components/core/Header/navigation/BusinessesGroup";
 
 interface Props {
   setShowMobileMenu: Dispatch<SetStateAction<boolean>>;
@@ -25,184 +25,173 @@ export const MobileMenu = ({
 }: Props) => {
   const pathname = usePathname();
 
-  const [activeGroup, setActiveGroup] = useState('');
+  const [activeGroup, setActiveGroup] = useState("");
 
   const subNavItems =
-    activeGroup === 'Products'
+    activeGroup === "Services"
       ? [
-          ...productGroupLinks.links?.products.map((title) => ({
+          ...businessesLinks.links?.["core services"].map((title) => ({
             label: title,
-            url: `/products/${hyphenateString(title)}`,
+            url: `/businesses/${hyphenateString(title)}`,
           })),
-          ...productGroupLinks.links?.['company size']
-            .slice(0, 1)
-            .map((title) => ({
-              label: title,
-              url: `/products/${hyphenateString(title)}`,
-            })),
+          ...businessesLinks.links?.["specialized solutions"].map((title) => ({
+            label: title,
+            url: `/businesses/${hyphenateString(title)}`,
+          })),
         ]
-      : activeGroup === 'Businesses'
-        ? [
-            ...businessesLinks.links?.['company size'].map((title) => ({
-              label: title,
-              url: `/businesses/${hyphenateString(title)}`,
-            })),
-            ...businessesLinks.links?.businesses.map((title) => ({
-              label: title,
-              url: `/businesses/${hyphenateString(title)}`,
-            })),
-          ]
-        : [];
+      : [];
 
   function close() {
     setShowMobileMenu(false);
   }
 
   return (
-    <div className={clsx('y-center', className)}>
-      <button
+    <div className={clsx("y-center", className)}>
+      {/* Modern Hamburger Button */}
+      <motion.button
         onClick={() => setShowMobileMenu((prev) => !prev)}
-        className='my-auto h-10 -mr-2 w-10 rounded-lg'
+        className="relative h-10 w-10 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+        whileTap={{ scale: 0.95 }}
       >
-        <div className='text-white x-center'>
-          {showMobileMenu ? <Cancel /> : <Hamburger />}
+        <div className="text-white x-center">
+          <motion.div
+            animate={showMobileMenu ? { rotate: 180 } : { rotate: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            {showMobileMenu ? <Cancel /> : <Hamburger />}
+          </motion.div>
         </div>
-      </button>
+      </motion.button>
 
       <MobileMenuWrapper
         show={showMobileMenu}
         close={close}
-        className='w-full pb-5 bg-white'
+        className="w-full bg-gradient-to-br from-white via-gray-50 to-white flex flex-col h-full"
       >
-        <ul>
-          {navigationLinks.map(({ title, id, hasChildren }) => {
+        {/* Navigation Items */}
+        <div className="px-4 py-4 space-y-2 flex-1 overflow-y-auto">
+          {navigationLinks.map(({ title, id, hasChildren }, index) => {
             const url = `/${id ?? hyphenateString(title)}`;
-
-            const parent = `/${pathname.split('/')[1]}`;
-
+            const parent = `/${pathname.split("/")[1]}`;
             const isActive = activeGroup === title;
 
-            if (hasChildren)
+            if (hasChildren) {
               return (
-                <li
+                <motion.div
                   key={title}
-                  className={clsx(
-                    isActive && 'bg-neutral-70',
-                    'border-b border-neutral-310 my-0',
-                  )}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="overflow-hidden"
                 >
-                  <button
-                    onClick={() => {
-                      setActiveGroup(isActive ? '' : title);
-                    }}
-                    type={'button'}
+                  <motion.button
+                    onClick={() => setActiveGroup(isActive ? "" : title)}
                     className={clsx(
-                      'w-full mobile_menu_item h-[55px]',
+                      "w-full flex items-center justify-between p-4 rounded-2xl transition-all duration-300 group",
                       isActive || parent === url
-                        ? 'text-primary-main'
-                        : 'text-neutral-main',
+                        ? "bg-gradient-to-r from-blue-50 to-cyan-50 text-primary-main shadow-sm"
+                        : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
                     )}
+                    whileTap={{ scale: 0.98 }}
                   >
-                    <span className='my-auto'>{title}</span>
-
-                    <span
-                      className={clsx(
-                        'transition-transform my-auto',
-                        isActive && 'rotate-180',
-                      )}
+                    <span className="font-semibold text-left">{title}</span>
+                    <motion.div
+                      animate={{ rotate: isActive ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-gray-400 group-hover:text-gray-600"
                     >
                       <ChevronDown />
-                    </span>
-                  </button>
+                    </motion.div>
+                  </motion.button>
 
-                  <AnimatePresence initial={false}>
+                  <AnimatePresence>
                     {isActive && (
                       <motion.div
-                        initial='collapsed'
-                        animate='open'
-                        exit='collapsed'
-                        variants={{
-                          open: {
-                            height: 'auto',
-                          },
-                          collapsed: {
-                            height: 0,
-                            overflow: 'hidden',
-                          },
-                        }}
-                        transition={{
-                          duration: 0.3,
-                        }}
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
                       >
-                        <div
-                          className={
-                            'h-full px-8 py-1 border-t border-neutral-310 bg-neutral-70 '
-                          }
-                        >
-                          {subNavItems.map(({ label, url }) => {
-                            return (
+                        <div className="pl-4 pr-2 pb-2 space-y-1">
+                          {subNavItems.map(({ label, url }, subIndex) => (
+                            <motion.div
+                              key={label}
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: subIndex * 0.05 }}
+                            >
                               <Link
-                                key={label}
+                                href={url}
                                 onClick={close}
                                 className={clsx(
-                                  'block y-center text-neutral-740 font-normal text-sm h-12 my-auto',
-                                  pathname === url && 'text-primary-main',
+                                  "block px-4 py-3 text-sm rounded-xl transition-all duration-200",
+                                  pathname === url
+                                    ? "bg-primary-main text-white font-medium shadow-md"
+                                    : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                                 )}
-                                href={url}
                               >
-                                <span className='my-auto'>{label}</span>
+                                <span className="flex items-center">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-current opacity-50 mr-3"></div>
+                                  {label}
+                                </span>
                               </Link>
-                            );
-                          })}
+                            </motion.div>
+                          ))}
                         </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </li>
+                </motion.div>
               );
+            }
 
             return (
-              <li
+              <motion.div
                 key={title}
-                className='border-b border-neutral-310 flex items-center'
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
               >
                 <Link
                   href={url}
                   onClick={close}
                   className={clsx(
-                    'mobile_menu_item h-[55px]',
-                    pathname === url && 'text-primary-main',
+                    "flex items-center p-4 rounded-2xl transition-all duration-300 group",
+                    pathname === url
+                      ? "bg-gradient-to-r from-blue-50 to-cyan-50 text-primary-main shadow-sm"
+                      : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
                   )}
                 >
-                  {title}
+                  <span className="font-semibold">{title}</span>
+                  <motion.div
+                    className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
+                    initial={{ x: -10 }}
+                    whileHover={{ x: 0 }}
+                  >
+                    →
+                  </motion.div>
                 </Link>
-              </li>
+              </motion.div>
             );
           })}
-        </ul>
-
-        <div className='absolute x-center w-full border-t border-neutral-310 pt-5 bottom-4 gap-4 px-8'>
-          <AppCtaButton
-            href='https://www.vpay.africa/login'
-            target='_blank'
-            type={'signin'}
-            className={
-              'y-center text-primary-main items-center outline-button h-12 768:h-14 w-full shadow-sm'
-            }
-          >
-            Login
-          </AppCtaButton>
-
-          <AppCtaButton
-            href='https://www.vpay.africa/signup'
-            target='_blank'
-            className={
-              'primary-button h-12 items-center 768:h-14 w-full y-center'
-            }
-          >
-            Sign up
-          </AppCtaButton>
         </div>
+
+        {/* Footer CTA - Fixed to bottom */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="px-6 py-4 border-t border-gray-100 bg-gradient-to-r from-gray-50 to-white"
+        >
+          <AppCtaButton
+            href="#"
+            type={"signin"}
+            className="w-full flex items-center justify-center bg-gradient-to-r from-primary-main to-cyan-600 hover:from-primary-main hover:to-cyan-700 text-white font-semibold h-11 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+          >
+            Get Started
+          </AppCtaButton>
+        </motion.div>
       </MobileMenuWrapper>
     </div>
   );
