@@ -5,7 +5,6 @@ import { Inter } from 'next/font/google';
 import { Header } from '@/components/core/Header';
 import Providers from './providers';
 import { Footer } from '@/components/core/Footer';
-import { createClient } from '@/prismicio';
 import { ReactNode } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -18,30 +17,15 @@ export const metadata: Metadata = {
   description: 'Simplifying payment processes for African businesses',
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: ReactNode;
 }) {
-  const client = createClient();
-
-  const posts = await client.getAllByType('blog_post', {
-    graphQuery: `
-    {
-      blog_post {
-        title
-        description
-        banner
-      }
-    }
-  `,
-    limit: 2,
-  });
-
   return (
     <html lang='en'>
       <body className={clsx(inter.className, 'mobile-container')}>
-        <Header posts={posts} />
+        <Header />
         <Providers>{children}</Providers>
         <Footer />
 

@@ -1,13 +1,11 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { TermsOfUseDocument, PrivacyPolicyDocument } from '@/types/prismic';
-import { PrismicRichText } from '@prismicio/react';
 
 interface Props {
   params: any;
-  termsOfUse: TermsOfUseDocument<string>;
-  privacyPolicy: PrivacyPolicyDocument<string>;
+  termsOfUse: { content: string };
+  privacyPolicy: { content: string };
 }
 
 export const LegalDocuments = ({
@@ -30,9 +28,9 @@ export const LegalDocuments = ({
           </div>
 
           <div className='app-container mx-auto px-8 768:px-28 mb-20'>
-            {termsOfUse?.data?.content && (
+            {termsOfUse?.content && (
               <div className='rich-text'>
-                <PrismicRichText field={termsOfUse.data.content} />
+                <div dangerouslySetInnerHTML={{ __html: termsOfUse.content }} />
               </div>
             )}
           </div>
@@ -50,9 +48,9 @@ export const LegalDocuments = ({
           </div>
 
           <div className='app-container mx-auto px-8 768:px-28 mb-20'>
-            {privacyPolicy?.data?.content && (
+            {privacyPolicy?.content && (
               <div className='rich-text'>
-                <PrismicRichText field={privacyPolicy.data.content} />
+                <div dangerouslySetInnerHTML={{ __html: privacyPolicy.content }} />
               </div>
             )}
           </div>

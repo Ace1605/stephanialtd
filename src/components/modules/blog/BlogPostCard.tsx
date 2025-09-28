@@ -1,10 +1,18 @@
 import { formatDate } from '@/helpers/formatters/formatDate';
-import { PrismicRichText } from '@prismicio/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BlogPostDocument } from '@/types/prismic';
 
-export const BlogPostCard = ({ post }: { post: BlogPostDocument<string> }) => {
+interface BlogPost {
+  uid: string;
+  first_publication_date: string;
+  data: {
+    title: string;
+    banner: { url: string };
+    description: string;
+  };
+}
+
+export const BlogPostCard = ({ post }: { post: BlogPost }) => {
   const {
     uid,
     first_publication_date,
@@ -30,14 +38,14 @@ export const BlogPostCard = ({ post }: { post: BlogPostDocument<string> }) => {
       </p>
       <h6
         className={
-          'mt-1 prismic_title group-hover:underline text-xl line-clamp-2'
+          'mt-1 group-hover:underline text-xl line-clamp-2'
         }
       >
-        <PrismicRichText field={title} />
+        {title}
       </h6>
       <p
         className={
-          'mt-3 prismic_description group-hover:underline text-base 768:text-lg text-neutral-440 line-clamp-2'
+          'mt-3 group-hover:underline text-base 768:text-lg text-neutral-440 line-clamp-2'
         }
       >
         {description}

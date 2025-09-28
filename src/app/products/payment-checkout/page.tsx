@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import phone from '/public/assets/products/dropin-hero.png';
 import { ProductsHero } from '@/components/sections/product/ProductsHero';
 import { ProductBrand } from '@/components/sections/product/ProductsBrand';
-import { createClient } from '@/prismicio';
 import { FaqsAsFooter } from '@/components/modules/faqs/FaqsAsFooter';
 import { ProductFeature } from '@/components/sections/product/ProductFeature';
 import { HowToGetStarted } from '@/components/sections/product/HowToGetStarted';
@@ -17,9 +16,7 @@ export const metadata: Metadata = {
   title: 'VPay Dropin',
 };
 
-export default async function VPayDropin() {
-  const client = createClient();
-  const faqs = await client.getAllByType('faq');
+export default function VPayDropin() {
   return (
     <>
       <ProductsHero
@@ -94,7 +91,7 @@ export default async function VPayDropin() {
         outline
         withArrow
       />
-      <FaqsAsFooter faqs={faqs} />
+      <FaqsAsFooter faqs={[]} />
       <CallToAction />
     </>
   );

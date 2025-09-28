@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { createClient } from '@/prismicio';
 import { FaqsAsFooter } from '@/components/modules/faqs/FaqsAsFooter';
 import { DownloadPrompt } from '@/components/sections/home/DownloadPrompt';
 import { IndustriesHero } from '@/components/sections/industries/IndustriesHero';
@@ -17,9 +16,7 @@ export const metadata: Metadata = {
   title: 'Retail Stores',
 };
 
-export default async function RetailStores() {
-  const client = createClient();
-  const faqs = await client.getAllByType('faq');
+export default function RetailStores() {
   return (
     <>
       <IndustriesHero
@@ -45,7 +42,7 @@ export default async function RetailStores() {
       />
 
       <DownloadPrompt />
-      <FaqsAsFooter faqs={faqs} />
+      <FaqsAsFooter faqs={[]} />
       <VPayNumbers withoutParent />
       <CallToAction />
     </>

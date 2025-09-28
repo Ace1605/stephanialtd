@@ -2,10 +2,18 @@
 
 import { Accordion } from '@/components/commons/Accordion';
 import { Minus, Plus } from '@/components/svgs/faqs/Signs';
-import { FaqDocument } from '@/types/prismic';
 import { useState } from 'react';
 
-export const FaqList = ({ faqs }: { faqs: FaqDocument<string>[] }) => {
+interface FAQ {
+  uid: string;
+  first_publication_date: string;
+  data: {
+    question: string;
+    answer: string;
+  };
+}
+
+export const FaqList = ({ faqs }: { faqs: FAQ[] }) => {
   const [expandedQuestion, setExpandedQuestion] = useState('');
 
   return (

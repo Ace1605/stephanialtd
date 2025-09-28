@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import phone from '/public/assets/products/storefront-hero.png';
 import { ProductsHero } from '@/components/sections/product/ProductsHero';
 import { ProductBrand } from '@/components/sections/product/ProductsBrand';
-import { createClient } from '@/prismicio';
 import { FaqsAsFooter } from '@/components/modules/faqs/FaqsAsFooter';
 import { ProductFeature } from '@/components/sections/product/ProductFeature';
 import { HowToGetStarted } from '@/components/sections/product/HowToGetStarted';
@@ -15,9 +14,7 @@ export const metadata: Metadata = {
   title: 'Storefront',
 };
 
-export default async function Cashier() {
-  const client = createClient();
-  const faqs = await client.getAllByType('faq');
+export default function Cashier() {
   return (
     <>
       <ProductsHero
@@ -76,7 +73,7 @@ export default async function Cashier() {
         ThirdBoxTitle='Start Selling'
         thirdBoxText="Distribute your store's link, initiate the sales process, and commence accepting various payment methods."
       />
-      <FaqsAsFooter faqs={faqs} />
+      <FaqsAsFooter faqs={[]} />
       <CallToAction />
     </>
   );
