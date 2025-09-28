@@ -16,7 +16,7 @@ export const CallToAction = () => {
     >
       <div className="app-container flex flex-col gap-4">
         <h4 className={"max-w-[660px] text-white text-center mx-auto"}>
-          Get pro <span className="text-gradient">support</span>.
+          Ready to build your next <span className="text-gradient">project</span>?
         </h4>
 
         <p
@@ -24,10 +24,7 @@ export const CallToAction = () => {
             "768:mt-5 text-neutral-300 text-base leading-[24px] 768:leading-[28px] 768:text-[18px] max-w-[640px] tracking-[-0.32px] 768:tracking-[-0.36px] font-medium mx-auto text-center px-4 768:px-0"
           }
         >
-          We’re here to help. If you need assistance switching from your current
-          solution, have any questions about why VPay is right for your
-          business, or want support getting started, please talk to a member of
-          our team.
+          Partner with our experienced engineering team to bring your vision to life. Whether you need comprehensive project solutions, specialized procurement services, or ongoing support, we're here to deliver excellence from concept to completion.
         </p>
 
         <div className={"x-center 960:mt-5 1024:mt-7"}>

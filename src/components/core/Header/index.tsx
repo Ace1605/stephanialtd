@@ -32,8 +32,8 @@ export const navigationLinks: NavLink[] = [
     title: "Services",
     hasChildren: true,
   },
-  { title: "Partnerships", id: "pricing" },
-  { title: "Contact us", id: "contact_sales" },
+  { title: "Partnerships" },
+  { title: "Contact us", id: "contact-sales" },
   // { title: 'Newsroom', id: 'vpay-blog' },
 ];
 
@@ -55,11 +55,7 @@ export const Header = ({ posts }: { posts: BlogPostDocument<string>[] }) => {
 
   return (
     <>
-      {pathname.includes("businesses") ? (
-        <IndustriesHeader />
-      ) : pathname.includes("developer-apis") ? (
-        <DeveloperApisHeader />
-      ) : (
+      {
         <nav
           className={
             "w-full h-14 480:h-[88px] border-b border-neutral-310 sticky bg-white top-0 z-[1200] left-0"
@@ -122,21 +118,8 @@ export const Header = ({ posts }: { posts: BlogPostDocument<string>[] }) => {
             </div>
 
             <div className="hidden 1024:flex my-auto relative z-[1100] gap-2">
-              <AppCtaButton
-                href="https://www.vpay.africa/login"
-                type={"signin"}
-                className={"y-center outline-button shadow-sm"}
-                target="_blank"
-              >
-                Sign in
-              </AppCtaButton>
-
-              <AppCtaButton
-                href="https://www.vpay.africa/signup"
-                target="_blank"
-                className={"primary-button y-center ml-2"}
-              >
-                Create Account
+              <AppCtaButton href="#" className={"primary-button y-center ml-2"}>
+                Get started
               </AppCtaButton>
             </div>
             <MobileMenu
@@ -146,7 +129,7 @@ export const Header = ({ posts }: { posts: BlogPostDocument<string>[] }) => {
           </div>
 
           <AnimatePresence initial={false}>
-            {activeGroup === "Products" || activeGroup === "Services" ? (
+            {activeGroup === "Services" ? (
               <motion.div
                 initial="collapsed"
                 animate="open"
@@ -168,15 +151,15 @@ export const Header = ({ posts }: { posts: BlogPostDocument<string>[] }) => {
                 }}
                 onMouseEnter={() => setActiveGroup(() => activeGroup)}
                 onMouseLeave={closeMenu}
-                className="sticky z-[1000] 1024:block hidden left-0 bg-white -mt-[16px] w-full"
+                className="sticky z-[1000] 1024:block hidden left-0 bg-white mt-0 w-full rounded-b-[20px] border-t"
               >
                 <div
                   className={clsx(
-                    "h-[390px] app-container pb-20",
-                    activeGroup !== "Products" ? "pt-14" : "pt-20"
+                    "h-[370px] app-container pb-20 pt-20"
+                    // activeGroup !== "Products" ? "pt-14"
                   )}
                 >
-                  {activeGroup === "Products" && (
+                  {/* {activeGroup === "Products" && (
                     <motion.div
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
@@ -184,7 +167,7 @@ export const Header = ({ posts }: { posts: BlogPostDocument<string>[] }) => {
                     >
                       <ProductGroup close={closeMenu} />
                     </motion.div>
-                  )}
+                  )} */}
                   {activeGroup === "Services" && (
                     <motion.div
                       initial={{ opacity: 0 }}
@@ -199,7 +182,7 @@ export const Header = ({ posts }: { posts: BlogPostDocument<string>[] }) => {
             ) : null}
           </AnimatePresence>
         </nav>
-      )}
+      }
       <AnimatePresence>
         {activeGroup && (
           <motion.div

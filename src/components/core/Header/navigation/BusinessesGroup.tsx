@@ -1,12 +1,12 @@
-import { hyphenateString } from '@/helpers/converters/hyphenateString';
-import illustration from '/public/assets/megamenu/phone.png';
-import clsx from 'clsx';
-import Image from 'next/image';
-import Link from 'next/link';
-import { BlogPostDocument } from '@/types/prismic';
-import { usePathname } from 'next/navigation';
-import { Apple, GooglePlay } from '@/components/svgs/Socials';
-import { Line } from '@/components/svgs/app/Line';
+import { hyphenateString } from "@/helpers/converters/hyphenateString";
+// import illustration from "/public/assets/megamenu/phone.png";
+import clsx from "clsx";
+// import Image from "next/image";
+import Link from "next/link";
+import { BlogPostDocument } from "@/types/prismic";
+import { usePathname } from "next/navigation";
+// import { Apple, GooglePlay } from "@/components/svgs/Socials";
+// import { Line } from "@/components/svgs/app/Line";
 
 export const BusinessesGroup = ({
   posts,
@@ -18,28 +18,24 @@ export const BusinessesGroup = ({
   const pathname = usePathname();
 
   return (
-    <div className={'flex items-center justify-between gap-20'}>
-      <div className={'flex gap-20 -mt-24'}>
+    <div className={"flex items-center justify-between gap-20"}>
+      <div className={"flex gap-20 -mt-12"}>
         <div>
-          <h6 className={'text-base text-neutral-500 font-semibold'}>
-            Industries
-          </h6>
-
-          <div className='w-full mt-5 gap-x-5'>
-            {businessesLinks?.links?.businesses?.map((link) => {
+          <div className="w-full grid grid-cols-2 gap-x-5">
+            {businessesLinks?.links?.["core services"]?.map((link) => {
               const href = `/businesses/${hyphenateString(link)}`;
 
               return (
                 <Link
                   href={href}
                   onClick={close}
-                  className={'flex py-2 col-span-1 group'}
+                  className={"flex py-2 col-span-1 group"}
                   key={link}
                 >
                   <div
                     className={clsx(
-                      'text-black font-semibold group-hover:text-primary-main text-base',
-                      pathname === href && 'text-primary-main',
+                      "text-black font-semibold group-hover:text-primary-main text-sm",
+                      pathname === href && "text-primary-main"
                     )}
                   >
                     {link}
@@ -51,21 +47,21 @@ export const BusinessesGroup = ({
         </div>
 
         <div>
-          <div className='w-full mt-11 gap-x-5'>
-            {businessesLinks?.links?.['company size']?.map((link) => {
+          <div className="w-full grid grid-cols-2 gap-x-5">
+            {businessesLinks?.links?.["specialized solutions"]?.map((link) => {
               const href = `/businesses/${hyphenateString(link)}`;
 
               return (
                 <Link
                   href={href}
                   onClick={close}
-                  className={'flex py-2 col-span-1 group'}
+                  className={"flex py-2 col-span-1 group"}
                   key={link}
                 >
                   <div
                     className={clsx(
-                      'text-black font-semibold group-hover:text-primary-main text-base',
-                      pathname === href && 'text-primary-main',
+                      "text-black font-semibold group-hover:text-primary-main text-sm",
+                      pathname === href && "text-primary-main"
                     )}
                   >
                     {link}
@@ -77,7 +73,7 @@ export const BusinessesGroup = ({
         </div>
       </div>
 
-      <div className='w-1/2 mt-4'>
+      {/* <div className='w-1/2 mt-4'>
         <h6 className={'text-base text-neutral-500 font-semibold'}>
           Resources
         </h6>
@@ -108,14 +104,44 @@ export const BusinessesGroup = ({
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
 export const businessesLinks = {
   links: {
-    businesses: ['Retail Stores', 'Transportation', 'Education'],
-    'company size': ['Hospitality', 'Online Store', 'Fashion'],
+    "core services": [
+      "Engineering",
+      "Production & Services",
+      "Procurement",
+      "Integrated Systems",
+      "Lube Oil",
+      "Full Packaging",
+      "Gas Seal Panels",
+      "Dampers",
+      "Water Washing Systems",
+      "Water Injection Systems",
+      "Gland Steam Condensers",
+      "Gas Dryers",
+      "Stator Winding Cooling Systems",
+    ],
+    "specialized solutions": [
+      "Pressure Vessels",
+      "Balance of Plants",
+      "Spare Parts",
+      "Revamping and Retrofit",
+      "Onshore Construction",
+      "Offshore Construction",
+      "Oil & Gas Engineering",
+      "Mechanical Engineering",
+      "Civil Engineering",
+      "Electrical Engineering",
+      "Ground Engineering",
+      "Structural Repairs",
+      "Facilities Maintenance",
+      "Containerized Turn-Key Solutions",
+      "Dosing, Metering and Chemical Systems",
+    ],
   },
 };

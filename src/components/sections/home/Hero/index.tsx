@@ -1,60 +1,113 @@
 "use client";
 
-import { HeroCtaPair } from "@/components/commons/hero/HeroCtaPair";
 import { motion } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import heroImage from "/public/assets/home/home-hospitality.png";
 import secondImage from "/public/assets/home/home-fashion.png";
 import thirdImage from "/public/assets/home/home-retail.png";
-import fourthImage from "/public/assets/home/home-transportation.png";
-import fifthImage from "/public/assets/home/home-education.png";
-import sixImage from "/public/assets/home/home-online.png";
 import { useEffect, useState } from "react";
-import { startWordChanging } from "@/helpers/converters/hyphenateString";
-import { ImageDownloadTrigger } from "@/components/commons/hero/ImageDownloadTrigger";
+import { AppCtaButton } from "@/components/buttons/AppCtaButton";
 
 export const imgSrcs: StaticImageData[] = [
   heroImage,
   secondImage,
   thirdImage,
-  fourthImage,
-  fifthImage,
-  sixImage,
 ];
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentParagraphIndex, setCurrentParagraphIndex] = useState(0);
+  const [currentButtonIndex, setCurrentButtonIndex] = useState(0);
+  const [nextImageIndex, setNextImageIndex] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const words: string[] = [
-    `${" "}Fashion`,
-    `${" "}Retail Stores`,
-    `${" "}Transportation`,
-    `${" "}Education`,
-    `${" "}Online stores`,
-    `${" "}Hospitality`,
+    `${" "}Engineering Services`,
+    `${" "}Procurement`,
+    `${" "}Support Services`,
+  ];
+
+  const paragraphs: string[] = [
+    "Join us are we display innovation by providing holistic engineering solutions that are adapted to your precise requirements.",
+    "We give the needed boosts to project delivery of all kinds; with our extensive engineering procurement solutions.",
+    "From troubleshooting to project guidance, we're your trusted partner in engineering success.",
+  ];
+
+  const buttonTexts: string[] = [
+    "See our recent projects",
+    "See our recent projects",
+    "Get a quotation",
   ];
   useEffect(() => {
-    startWordChanging(
-      "changingWord",
-      "changingImages",
-      words,
-      imgSrcs,
-      4,
-      setCurrentImageIndex
-    );
+    let currentIndex = 0;
 
-    return () => {};
+    const updateContent = () => {
+      const changingWord = document.getElementById("changingWord");
+      if (changingWord) {
+        changingWord.textContent = words[currentIndex];
+      }
+
+      // Update paragraph and button immediately to sync with the word
+      setCurrentParagraphIndex(currentIndex);
+      setCurrentButtonIndex(currentIndex);
+
+      // Start transition for images
+      const nextIndex = (currentIndex + 1) % words.length;
+      setNextImageIndex(nextIndex);
+      setIsTransitioning(true);
+
+      // After a short delay, complete the image transition
+      setTimeout(() => {
+        setCurrentImageIndex(nextIndex);
+        setIsTransitioning(false);
+      }, 400);
+
+      currentIndex = nextIndex;
+    };
+
+    // Set initial content
+    updateContent();
+
+    const interval = setInterval(updateContent, 4000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return (
     <section
       id={"hero"}
       className={
-        "py-16 overflow-hidden 640:py-20 1024:pb-8 1024:pt-12 1180:pb-16 1180:pt-20 1400:pb-20 1400:pt-28"
+        "relative py-16 overflow-hidden 640:py-20 1024:pb-8 1024:pt-12 1180:pb-16 1180:pt-20 1400:pb-20 1400:pt-28"
       }
     >
-      <div className="app-container grid 768:grid-cols-2 items-center gap-10 768:gap-20">
-        <div>
+      {/* Background images with smooth transition */}
+      <div
+        className="absolute inset-0 transition-opacity duration-700 ease-in-out"
+        style={{
+          backgroundImage: `url(${imgSrcs[currentImageIndex].src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          opacity: isTransitioning ? 0 : 1,
+        }}
+      />
+      <div
+        className="absolute inset-0 transition-opacity duration-700 ease-in-out"
+        style={{
+          backgroundImage: `url(${imgSrcs[nextImageIndex].src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          opacity: isTransitioning ? 1 : 0,
+        }}
+      />
+      {/* Background overlay for better text readability */}
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+
+      <div className="relative z-10 app-container flex items-center justify-center 768:justify-start min-h-[400px] 768:min-h-[500px] 1024:min-h-[600px]">
+        <div className="w-full 768:w-1/2 1024:w-3/5">
           <motion.h1
             initial={{ y: 10, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -63,55 +116,46 @@ export const Hero = () => {
               duration: 0.4,
             }}
             className={
-              "text-center 768:text-left font-bold text-black text-[42px] 360:text-[48px] 390:text-[50px] 640:text-[54px] 1180:text-[72px] 1400:text-[82px] leading-[45px] 360:leading-[49px] 640:leading-[66px] 1180:leading-[70px] 1400:leading-[80px] tracking-[-2.5px] 1180:tracking-[-5.28px]"
+              "text-center 768:text-left font-bold text-white text-[42px] 360:text-[48px] 390:text-[50px] 640:text-[54px] 1180:text-[72px] 1400:text-[82px] leading-[45px] 360:leading-[49px] 640:leading-[66px] 1180:leading-[70px] 1400:leading-[80px] tracking-[-2.5px] 1180:tracking-[-5.28px] drop-shadow-lg"
             }
           >
-            Simplifying Payment Processes for{" "}
-            <span className={""}>
-              <span id="changingWord" className={"text-gradient"}>
-                Hospitality{" "}
-              </span>
+            <span id="changingWord" className={"text-gradient"}>
+              Engineering Services{" "}
             </span>
           </motion.h1>
 
           <motion.p
+            key={currentParagraphIndex}
             initial={{ y: 10, opacity: 0 }}
-            viewport={{ once: true }}
-            whileInView={{ y: 0, opacity: 1 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{
-              duration: 0.6,
-              delay: 0.2,
+              duration: 0.4,
             }}
             className={
-              "mt-4 1024:mt-2 1300:mt-5 text-neutral-1000 leading-[24px] 1024:leading-[26px] 1300:leading-[30px] tracking-[-0.32px] 768:tracking-[-0.4px] text-base 1300:text-lg 960:max-w-[480px] font-normal text-center 768:text-left 768:w-5/6 1024:w-full 1300:w-2/3"
+              "mt-4 1024:mt-2 1300:mt-5 text-white max-w-[850px] leading-[24px] 1024:leading-[26px] 1300:leading-[30px] tracking-[-0.32px] 768:tracking-[-0.4px] text-base 1300:text-lg font-normal text-center 768:text-left drop-shadow-md"
             }
           >
-            The easiest way to setup your business bank accounts, send/receive
-            payments and verify customer bank transfers instantly.
+            {paragraphs[currentParagraphIndex]}
           </motion.p>
 
-          <HeroCtaPair target="_blank" justifyLeft />
+          <AppCtaButton
+            href={"#"}
+            className={
+              "primary-button max-w-fit mt-4 640:mt-6 gap-2 h-12 768:h-14 group x-center"
+            }
+            withArrow
+            type={"signup"}
+          >
+            <span className="h-full y-center">
+              {buttonTexts[currentButtonIndex]}
+            </span>
+          </AppCtaButton>
         </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1 }}
-          transition={{
-            duration: 0.6,
-            delay: 0.2,
-          }}
-          className="relative 768:flex justify-end"
-        >
-          <Image
-            width={600}
-            height={400}
-            src={imgSrcs[currentImageIndex].src}
-            id="changingImages"
-            className="w-full object-contain 1024:max-w-[380px] 1300:max-w-[440px] 1400:max-w-[480px] 1600:max-w-[565px]"
-            alt="hero_image"
-          />
-          {/* <ImageDownloadTrigger /> */}
-        </motion.div>
+      </div>
+
+      {/* Hidden image for preloading and animation reference */}
+      <div className="hidden">
+        <div id="changingImages" />
       </div>
     </section>
   );

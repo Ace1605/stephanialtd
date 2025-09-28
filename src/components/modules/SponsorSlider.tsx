@@ -1,64 +1,60 @@
-import Image from 'next/image';
-import clsx from 'clsx';
-import { sponsors } from '../sections/product/constants';
-import { useEffect, useRef, useState } from 'react';
-import { mobileWidth } from '../sections/home/TestimonialSlide';
+import Image from "next/image";
+import clsx from "clsx";
+import { sponsors } from "../sections/product/constants";
+import { useState } from "react";
+import React from "react";
 
 interface Props {
   hide?: boolean;
 }
 
 export const SponsorSlider = ({ hide }: Props) => {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-  const sponsorRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < mobileWidth);
-    };
+  const [isPaused, setIsPaused] = useState<boolean>(false);
 
-    handleResize(); // Check initial window size
-    window.addEventListener('resize', handleResize);
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+  };
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+  };
 
-  useEffect(() => {
-    if (isMobile) {
-      const carouselInner = sponsorRef.current;
+  // Create sponsor item component
+  const sponsorItems = sponsors.map((sponsor, index) => (
+    <div
+      key={index}
+      className="min-w-[120px] max-h-[60px] 768:max-h-[40px] 768:min-w-[140px] flex justify-center cursor-pointer flex-shrink-0"
+    >
+      <Image
+        className="object-contain hover:scale-105 transition-transform duration-300"
+        src={sponsor.src}
+        priority
+        alt="sponsor_image"
+      />
+    </div>
+  ));
 
-      // Duplicate items for infinite looping
-      if (carouselInner) {
-        carouselInner.innerHTML += carouselInner.innerHTML;
-      }
-    }
-  }, []);
+  // Create enough copies to ensure continuous scrolling across screen width
+  const repeatedSponsors = Array.from({ length: 4 }, (_, i) =>
+    sponsorItems.map((item, index) =>
+      React.cloneElement(item, { key: `${i}-${index}` })
+    )
+  ).flat();
 
   return (
-    <div
-      ref={sponsorRef}
-      className={clsx(
-        hide && '!hidden 768:flex',
-        'flex items-center justify-between gap-12 768:gap-8 overflow-hidden',
-      )}
-      style={{ animation: isMobile ? 'slide 80s linear infinite' : 'none' }}
-    >
-      {sponsors.map((sponsor, index) => {
-        return (
-          <div
-            key={index}
-            className='min-w-[90px] max-h-[60px] 768:max-h-[40px] 768:min-w-[100px] flex justify-end'
-          >
-            <Image
-              className='object-contain'
-              src={sponsor.src}
-              priority
-              alt='testimonial_image'
-            />
-          </div>
-        );
-      })}
+    <div className={clsx(hide && "!hidden 768:flex", "overflow-hidden w-full")}>
+      <div
+        className="flex items-center gap-2 768:gap-3"
+        style={{
+          animation: "slide 80s linear infinite",
+          animationPlayState: isPaused ? "paused" : "running",
+          width: "max-content",
+        }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {repeatedSponsors}
+      </div>
     </div>
   );
 };

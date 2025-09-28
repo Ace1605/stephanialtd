@@ -1,5 +1,32 @@
 export const contactMeans = [
-    {title: 'Call Admin', description: 'Get quick answers to any questions about Vpay', btnText: 'Contact Admin', backTitle: 'Phone Number', links: [{value:'+2342016309952'}, {value: '+2342016339125'}]  },
-    {title: 'Get in touch', description: 'Send us a message or chat when someone is available', btnText: 'Chat with Admin', backTitle: 'Send Us A Message', links: [{value: 'support@vpay.africa'}, {value: 'https://wa.me/2348028108892'}, {value: 'https://t.me/joinchat/nqPoWpDU5wk4MjE8'}] },
-    {title: 'Suggest an improvement', description: 'If you spot something that can be better, let us know', btnText: 'Make a suggestion', backTitle: 'Email Address', links: [{value: 'support@vpay.africa'}] },
-]
+  {
+    title: "Call Us",
+    description: "Get quick answers to any questions about our engineering services",
+    btnText: "Contact Us",
+    backTitle: "Phone Numbers",
+    links: [
+      { value: "+234 813 464 6487" }, 
+      { value: "+234 913 303 3349" },
+      { value: "+1 928 265 6523" },
+      { value: "+44 7452 230428" }
+    ],
+  },
+  {
+    title: "Get in touch",
+    description: "Send us a message or email for engineering consultations",
+    btnText: "Contact Support",
+    backTitle: "Contact Methods",
+    links: [
+      { value: "info@stephanialtd.com" },
+      { value: "+234 813 464 6487" },
+      { value: "+234 913 303 3349" },
+    ],
+  },
+  {
+    title: "Project Consultation",
+    description: "Discuss your engineering project requirements with our experts",
+    btnText: "Request Consultation",
+    backTitle: "Email Address",
+    links: [{ value: "info@stephanialtd.com" }],
+  },
+];

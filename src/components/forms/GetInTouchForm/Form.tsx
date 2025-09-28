@@ -17,22 +17,13 @@ export const Form = ({ processing, formikProps }: Props) => {
       onSubmit={handleSubmit}
       className={'p-5 768:p-14 rounded-2xl border border-neutral-100'}
     >
-      <div className='640:flex gap-4 -mt-5'>
-        <Input
-          label='First Name'
-          placeholder={'Enter your first name'}
-          autoFocus
-          name='first_name'
-          next='first_name'
-        />
-
-        <Input
-          label='Last Name'
-          placeholder={'Enter your last name'}
-          name='last_name'
-          next='last_name'
-        />
-      </div>
+      <Input
+        label='Full Name'
+        placeholder={'Enter your full name'}
+        autoFocus
+        name='full_name'
+        next='full_name'
+      />
 
       <div className='640:flex gap-4'>
         <Input

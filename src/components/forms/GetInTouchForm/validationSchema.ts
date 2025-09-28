@@ -5,9 +5,8 @@ export const validationSchema = object({
     .trim()
     .required('Please provide your email')
     .email('Please provide a valid email'),
-  first_name: string().trim().required('Please provide your first name'),
+  full_name: string().trim().required('Please provide your full name'),
   company_name: string().trim().required('Please provide company name'),
-  last_name: string().trim().required('Please provide your last name'),
   message: string()
     .trim()
     .required('Please provide your message')

@@ -134,7 +134,7 @@ export const TestimonialSlide = () => {
             <ForwardButton onClick={moveSliderForward} />
           </span>
         </div> */}
-        <div className="hidden-scrollbar mt-3 768:mt-7 px-8 768:px-8 768:app-container overflow-x-auto 768:overflow-x-hidden">
+        <div className="hidden-scrollbar px-8 768:px-8 overflow-x-auto 768:overflow-x-hidden">
           <div className={clsx("min-w-fit")}>
             <SponsorSlider />
           </div>
