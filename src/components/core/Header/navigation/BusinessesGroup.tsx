@@ -3,17 +3,14 @@ import { hyphenateString } from "@/helpers/converters/hyphenateString";
 import clsx from "clsx";
 // import Image from "next/image";
 import Link from "next/link";
-import { BlogPostDocument } from "@/types/prismic";
 import { usePathname } from "next/navigation";
 // import { Apple, GooglePlay } from "@/components/svgs/Socials";
 // import { Line } from "@/components/svgs/app/Line";
 
 export const BusinessesGroup = ({
-  posts,
   close,
 }: {
   close: () => void;
-  posts: BlogPostDocument<string>[];
 }) => {
   const pathname = usePathname();
 

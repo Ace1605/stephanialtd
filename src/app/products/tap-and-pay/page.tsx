@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import phone from '/public/assets/products/tap-pay-hero.png';
 import { ProductsHero } from '@/components/sections/product/ProductsHero';
 import { ProductBrand } from '@/components/sections/product/ProductsBrand';
-import { createClient } from '@/prismicio';
 import { FaqsAsFooter } from '@/components/modules/faqs/FaqsAsFooter';
 import { ProductFeature } from '@/components/sections/product/ProductFeature';
 import { HowToGetStarted } from '@/components/sections/product/HowToGetStarted';
@@ -15,9 +14,7 @@ export const metadata: Metadata = {
   title: 'Tap and Pay',
 };
 
-export default async function TapAndPay() {
-  const client = createClient();
-  const faqs = await client.getAllByType('faq');
+export default function TapAndPay() {
   return (
     <>
       <ProductsHero
@@ -69,7 +66,7 @@ export default async function TapAndPay() {
         target='_blank'
         withArrow
       />
-      <FaqsAsFooter faqs={faqs} />
+      <FaqsAsFooter faqs={[]} />
       <CallToAction />
     </>
   );

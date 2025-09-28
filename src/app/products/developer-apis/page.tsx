@@ -1,34 +1,14 @@
 import { HeroCtaPair } from "@/components/commons/hero/HeroCtaPair";
 import { FaqsAsFooter } from "@/components/modules/faqs/FaqsAsFooter";
-import { createClient } from "@/prismicio";
-import { PrismicRichText } from "@prismicio/react";
 import React from "react";
 import { AppCtaButton } from "@/components/buttons/AppCtaButton";
 import { BuildAwesomeProducts } from "@/components/sections/product/developer_apis/BuildAwesomeProducts";
-import clsx from "clsx";
 import { TrustedDevelopers } from "@/components/sections/product/developer_apis/TrustedDevelopers";
 import { CallToAction } from "@/components/core/Footer/CallToAction";
 
-export default async function DeveloperApis() {
-  const client = createClient();
-  const faqs = await client.getAllByType("faq");
-  const apis = await client.getSingle("developer_apis", {
-    graphQuery: `
-    {
-        developer_apis {
-            title
-            description
-            banner
-            categories
-            slices
-
-        }
-    }`,
-  });
-
-  const {
-    data: { description, banner, slices },
-  } = apis;
+export default function DeveloperApis() {
+  const description = "Build robust and scalable payment solutions with our comprehensive APIs. Whether you're creating e-commerce platforms, mobile apps, or custom payment systems, our APIs provide everything you need.";
+  const slices = [];
 
   return (
     <>
@@ -60,54 +40,25 @@ export default async function DeveloperApis() {
       <div className="app-container my-6">
         <TrustedDevelopers />
         <div className="relative">
-          {slices.map(({ id, slice_type, primary, items }, index) => {
-            if (slice_type === "content_block") {
-              return (
-                <div
-                  className={
-                    "grid mt-12 mb-20 768:my-36 768:grid-cols-2 gap-8 768:gap-20 items-center"
-                  }
-                  key={id}
-                >
-                  <div
-                    className={clsx(
-                      index % 2 != 1 && "768:!order-2",
-                      "tall-list img-list order-2 768:order-none"
-                    )}
-                  >
-                    {primary && (
-                      <PrismicRichText field={primary.content} key={id} />
-                    )}
-                  </div>
-                  <div className={"rich-text tall-list prismic-head"}>
-                    {items.map(({ content }) => {
-                      return (
-                        <div key={id}>
-                          <PrismicRichText field={content} />
-                          <div className={"flex mt-2 768:mt-4"}>
-                            <AppCtaButton
-                              href="/contact-sales"
-                              className={
-                                "primary-button gap-2 h-12 768:h-14 group x-center"
-                              }
-                              withArrow
-                            >
-                              <span className="h-full y-center">
-                                Contact Us
-                              </span>
-                            </AppCtaButton>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            }
-          })}
+          <div className="text-center mt-12 mb-20">
+            <p className="text-neutral-1000">
+              Our APIs are designed for developers who want to integrate powerful payment functionality into their applications.
+            </p>
+            <div className="flex justify-center mt-6">
+              <AppCtaButton
+                href="/contact-sales"
+                className="primary-button gap-2 h-12 768:h-14 group x-center"
+                withArrow
+              >
+                <span className="h-full y-center">
+                  Contact Us
+                </span>
+              </AppCtaButton>
+            </div>
+          </div>
         </div>
       </div>
-      <FaqsAsFooter left faqs={faqs} />
+      <FaqsAsFooter left faqs={[]} />
       <CallToAction />
     </>
   );

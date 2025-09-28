@@ -9,7 +9,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { BlogPostDocument } from "@/types/prismic";
 import { MobileMenu } from "@/components/core/MobileMenu";
 import { ProductGroup } from "@/components/core/Header/navigation/ProductGroup";
 import { BusinessesGroup } from "@/components/core/Header/navigation/BusinessesGroup";
@@ -37,7 +36,7 @@ export const navigationLinks: NavLink[] = [
   // { title: 'Newsroom', id: 'vpay-blog' },
 ];
 
-export const Header = ({ posts }: { posts: BlogPostDocument<string>[] }) => {
+export const Header = () => {
   const pathname = usePathname();
 
   const [activeGroup, setActiveGroup] = useState("");
@@ -174,7 +173,7 @@ export const Header = ({ posts }: { posts: BlogPostDocument<string>[] }) => {
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
                     >
-                      <BusinessesGroup close={closeMenu} posts={posts} />
+                      <BusinessesGroup close={closeMenu} />
                     </motion.div>
                   )}
                 </div>

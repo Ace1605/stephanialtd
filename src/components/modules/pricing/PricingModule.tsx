@@ -1,11 +1,21 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { PricingModuleDocument } from '@/types/prismic';
-import { PrismicRichText } from '@prismicio/react';
+
+interface PricingItem {
+  uid: string;
+  first_publication_date: string;
+  data: {
+    title: string;
+    pricing: Array<{
+      subtitle: string;
+      text: string;
+    }>;
+  };
+}
 
 interface Props {
-  pricing: PricingModuleDocument<string>[];
+  pricing: PricingItem[];
 }
 
 export const PricingModule = ({ pricing }: Props) => {
@@ -45,7 +55,7 @@ export const PricingModule = ({ pricing }: Props) => {
                     }}
                     className='pricing_head'
                   >
-                    <PrismicRichText field={title} />
+                    {title}
                   </motion.h6>
                   {pricing.map(({ subtitle, text }, index) => {
                     return (

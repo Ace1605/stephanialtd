@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import phone from '/public/assets/products/cahier-hero.png';
 import posGuy from '/public/assets/products/pos-guy.png';
 import { ProductsHero } from '@/components/sections/product/ProductsHero';
-import { createClient } from '@/prismicio';
 import { FaqsAsFooter } from '@/components/modules/faqs/FaqsAsFooter';
 import { ProductFeature } from '@/components/sections/product/ProductFeature';
 import { HowToGetStarted } from '@/components/sections/product/HowToGetStarted';
@@ -15,9 +14,7 @@ export const metadata: Metadata = {
   title: 'P.O.S Terminal',
 };
 
-export default async function POS() {
-  const client = createClient();
-  const faqs = await client.getAllByType('faq');
+export default function POS() {
   return (
     <>
       <ProductsHero
@@ -82,7 +79,7 @@ export default async function POS() {
             dedicated Relationship Manager. This manager will deliver your
             terminal within 48 hours."
       />
-      <FaqsAsFooter faqs={faqs} />
+      <FaqsAsFooter faqs={[]} />
       <CallToAction />
     </>
   );

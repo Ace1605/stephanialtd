@@ -1,14 +1,29 @@
 import { Author, Published } from '@/components/svgs/blog/Post';
 import { formatDate } from '@/helpers/formatters/formatDate';
-import { PrismicRichText } from '@prismicio/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BlogPostDocument, PrimaryBlogPostDocument } from '@/types/prismic';
+
+interface BlogPost {
+  data: {
+    title: string;
+    author: { data: { name: string } };
+    banner: { url: string };
+  };
+  uid: string;
+  first_publication_date: string;
+}
+
+interface PrimaryBlogPost {
+  data: {
+    label: string;
+    post: BlogPost;
+  };
+}
 
 export const PrimaryBlogPost = ({
   primaryPost,
 }: {
-  primaryPost: PrimaryBlogPostDocument<string>;
+  primaryPost: PrimaryBlogPost;
 }) => {
   if (!primaryPost) return null;
 
@@ -20,7 +35,7 @@ export const PrimaryBlogPost = ({
     data: { title, author, banner },
     uid,
     first_publication_date,
-  } = post as unknown as BlogPostDocument<string>;
+  } = post;
 
   return (
     <div>
@@ -37,7 +52,7 @@ export const PrimaryBlogPost = ({
             </span>
 
             <p className={'mt-0.5 text-neutral-440 text-sm 640:text-base'}>
-              {(author as any)?.data?.name}
+              {author?.data?.name}
             </p>
           </div>
 
@@ -54,10 +69,10 @@ export const PrimaryBlogPost = ({
 
         <h6
           className={
-            'mt-2 prismic_title 640:mt-4 font-semibold text-2xl 640:text-5xl 768:max-w-[740px] text-left mb-8'
+            'mt-2 640:mt-4 font-semibold text-2xl 640:text-5xl 768:max-w-[740px] text-left mb-8'
           }
         >
-          <PrismicRichText field={title} />
+          {title}
         </h6>
         <div className='relative overflow-hidden h-[240px] 640:h-[420px] 880:h-[526px] rounded-2xl bg-neutral-200'>
           <Image

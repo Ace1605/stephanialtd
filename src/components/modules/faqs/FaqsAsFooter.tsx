@@ -1,6 +1,14 @@
 import { FaqList } from '@/components/modules/FaqList';
-import { FaqDocument } from '@/types/prismic';
 import clsx from 'clsx';
+
+interface FAQ {
+  uid: string;
+  first_publication_date: string;
+  data: {
+    question: string;
+    answer: string;
+  };
+}
 
 export const FaqsAsFooter = ({
   faqs,
@@ -11,7 +19,7 @@ export const FaqsAsFooter = ({
   className?: string;
   maxWidth?: number;
   left?: boolean;
-  faqs: FaqDocument<string>[];
+  faqs: FAQ[];
 }) => {
   return (
     <div className={clsx('py-14 768:py-28', className ?? 'bg-neutral-120')}>
