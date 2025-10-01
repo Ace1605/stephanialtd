@@ -96,7 +96,7 @@ export const ProductFeature = ({
             className='mt-7 768:mt-10 object-cover rounded-3xl object-center 768:object-contain min-h-[280px] 768:h-none'
             src={image}
             priority
-            alt='vpay_product_feature_img'
+            alt='stephania_product_feature_img'
           />
         )}
         {embedded && (
@@ -120,7 +120,7 @@ export const ProductFeature = ({
                 }}
                 className='min-h-[280px] 768:h-none rounded-[20px] 640:h-[504px] w-full'
                 src={`https://www.youtube.com/embed/${embedId}?autoplay=1`}
-                title='vpay-testimonial'
+                title='stephania-testimonial'
                 allowFullScreen
                 allow='accelerometer; autoplay; encrypted-media;'
               />

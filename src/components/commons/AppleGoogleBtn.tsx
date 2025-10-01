@@ -8,7 +8,7 @@ interface Props {
 export const AppleGoogleBtn = ({ href }: Props) => {
   return (
     <Link
-      href={href ? href : 'https://merchantapp.vpay.africa'}
+      href={href ? href : 'https://merchantapp.stephania.africa'}
       target='_blank'
       className='cursor-pointer flex w-max items-center px-4 h-12 768:h-14 py-2 gap-4 bg-white border rounded-lg border-neutral-100'
     >

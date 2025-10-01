@@ -6,7 +6,7 @@ import integrations from '/public/assets/home/all-in-one.png';
 import Image from 'next/image';
 import { AppCtaButton } from '@/components/buttons/AppCtaButton';
 import clsx from 'clsx';
-import { VPayNumbers } from '@/components/modules/VPayNumbers';
+import { StephaniaNumbers } from '@/components/modules/StephaniaNumbers';
 
 export const ExploreOptions = () => {
   const options = [
@@ -55,10 +55,10 @@ export const ExploreOptions = () => {
         </motion.h1>
       ),
       subtitle:
-        'Built for ambitious businesses and creatives. VPay powers your entire business, streamline operations, and supports diversity in revenue streams.',
+        'Built for ambitious businesses and creatives. Stephania powers your entire business, streamline operations, and supports diversity in revenue streams.',
       buttonText: 'Create Free Account',
       src: integrations,
-      link: 'https://www.vpay.africa/signup',
+      link: 'https://www.stephania.africa/signup',
     },
   ];
   return (
@@ -104,7 +104,7 @@ export const ExploreOptions = () => {
             </div>
           </div>
         ))}
-        <VPayNumbers />
+        <StephaniaNumbers />
       </div>
     </section>
   );

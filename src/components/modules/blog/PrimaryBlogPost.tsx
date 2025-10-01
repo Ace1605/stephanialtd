@@ -40,7 +40,7 @@ export const PrimaryBlogPost = ({
   return (
     <div>
       <Link
-        href={`/vpay-blog/${uid}`}
+        href={`/stephania-blog/${uid}`}
         className={
           'col-span-12 480:col-span-6 mt-5 640:mt-8 block group 880:col-span-4'
         }

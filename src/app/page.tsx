@@ -7,7 +7,7 @@ import { TabOption } from "@/components/core/tabs/Tabs";
 // import { ExploreOptions } from "@/components/sections/home/ExploreOptions";
 import { Hero } from "@/components/sections/home/Hero";
 import { TestimonialSlide } from "@/components/sections/home/TestimonialSlide";
-// import { WhyChooseVpay } from "@/components/sections/home/WhyChooseVPay";
+// import { WhyChooseStephania } from "@/components/sections/home/WhyChooseStephania";
 import { HomeFilterOptions } from "@/contants/filters";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -90,7 +90,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <section id={"why-choose-vpay"} className="flex flex-col">
+      <section id={"why-choose-stephania"} className="flex flex-col">
         {/* <div
           id="stickyTab"
           ref={stickyTabRef}
@@ -111,7 +111,7 @@ export default function Home() {
             handleChange={handleChange}
           />
         </div> */}
-        {/* <WhyChooseVpay /> */}
+        {/* <WhyChooseStephania /> */}
         <TestimonialSlide />
         {/* <DownloadPrompt />
         <ExploreOptions /> */}

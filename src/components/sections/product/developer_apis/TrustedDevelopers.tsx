@@ -34,7 +34,7 @@ export const TrustedDevelopers = ({ hide }: Props) => {
           'text-black mt-4 mb-6 text-base leading-[24px] 768:leading-[30px] 768:text-[18px] tracking-[-0.32px] 640:tracking-[-0.4px] font-normal text-left 768:max-w-[750px]'
         }
       >
-        VPay Developer API was made for creators like you. We build our APIs to
+        Stephania Developer API was made for creators like you. We build our APIs to
         be simple to use, powerful in production, and endlessly scalable. Little
         wonder we are trusted by many
       </motion.p>
@@ -52,7 +52,7 @@ export const TrustedDevelopers = ({ hide }: Props) => {
           className='object-cover rounded-3xl object-center 768:object-contain min-h-[280px] 768:h-none'
           src={dev}
           priority
-          alt='vpay_product_feature_img'
+          alt='stephania_product_feature_img'
         />
       </motion.div>
       {!hide && (
@@ -73,7 +73,7 @@ export const TrustedDevelopers = ({ hide }: Props) => {
                 'mt-3 text-black text-base 768:leading-[28px] 768:text-[18px] font-light text-left pr-2'
               }
             >
-              With our innovative payment methods, VPay makes it simple for you
+              With our innovative payment methods, Stephania makes it simple for you
               to balance your books because we handle all the difficult tasks in
               real time, letting you know who paid for what and when it was paid
             </motion.p>
@@ -94,7 +94,7 @@ export const TrustedDevelopers = ({ hide }: Props) => {
                 'mt-3 text-black text-base 768:leading-[28px] 768:text-[18px] font-light text-left pr-2'
               }
             >
-              VPay provides a variety of options for consumers to pay you via
+              Stephania provides a variety of options for consumers to pay you via
               bank transfers. You can have a distinct or dynamic account number
               mapped to each of your clients, or for every transaction.
             </motion.p>
@@ -115,7 +115,7 @@ export const TrustedDevelopers = ({ hide }: Props) => {
                 'mt-3 text-black text-base 768:leading-[28px] 768:text-[18px] font-light text-left pr-2'
               }
             >
-              With a fully functional testing environment, VPay provides a
+              With a fully functional testing environment, Stephania provides a
               hassle-free onboarding experience.
             </motion.p>
           </div>

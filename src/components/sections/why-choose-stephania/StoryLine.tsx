@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { TeamSection } from "@/components/commons/team/TeamSection";
-import storylineLady from "/public/assets/why_vpay/storyline-lady.png";
-import storylineMonitor from "/public/assets/why_vpay/storyline-monitor.png";
+import storylineLady from "/public/assets/why_stephania/storyline-lady.png";
+import storylineMonitor from "/public/assets/why_stephania/storyline-monitor.png";
 import officeMan from "/public/assets/businesses/office-man.png";
 
 export const StoryLine = () => {

@@ -28,7 +28,7 @@ export const BuildAwesomeProducts = () => {
             'mb-7 768:mb-14 text-neutral-1000 text-base 768:leading-[px] 768:text-[20px] font-normal text-left pr-2'
           }
         >
-          What can you build with VPay? Here&apos;s how our APIs come together
+          What can you build with Stephania? Here&apos;s how our APIs come together
           to bring ideas to life.
         </motion.p>
         <div className='grid 768:grid-cols-2 1180:grid-cols-3 gap-6 768:gap-12 mt-8 768:mt-16 mb-16 768:mb-36'>
@@ -58,7 +58,7 @@ export const BuildAwesomeProducts = () => {
               }
             >
               <AppCtaButton
-                href='https://docs.vpay.africa/vpay-api-specification-basic-gude/methods/outbound-transfer'
+                href='https://docs.stephania.africa/stephania-api-specification-basic-gude/methods/outbound-transfer'
                 className={
                   'text-link mt-6 text-primary-main flex gap-3 hover:text-primary-dark gap-2 group'
                 }
@@ -95,7 +95,7 @@ export const BuildAwesomeProducts = () => {
               }
             >
               <AppCtaButton
-                href='https://docs.vpay.africa/vpay-api-specification-basic-gude/methods/get-bank-list'
+                href='https://docs.stephania.africa/stephania-api-specification-basic-gude/methods/get-bank-list'
                 className={
                   'text-link mt-6 text-primary-main flex gap-3 hover:text-primary-dark gap-2 group'
                 }
@@ -132,7 +132,7 @@ export const BuildAwesomeProducts = () => {
               }
             >
               <AppCtaButton
-                href='https://docs.vpay.africa/vpay-api-specification-basic-gude/methods/nuban-lookup'
+                href='https://docs.stephania.africa/stephania-api-specification-basic-gude/methods/nuban-lookup'
                 className={
                   'text-link mt-6 text-primary-main flex gap-3 hover:text-primary-dark gap-2 group'
                 }
@@ -169,7 +169,7 @@ export const BuildAwesomeProducts = () => {
               }
             >
               <AppCtaButton
-                href='https://docs.vpay.africa/vpay-js-inline-dropin-integration-guide'
+                href='https://docs.stephania.africa/stephania-js-inline-dropin-integration-guide'
                 className={
                   'text-link mt-6 text-primary-main flex gap-3 hover:text-primary-dark gap-2 group'
                 }
@@ -206,7 +206,7 @@ export const BuildAwesomeProducts = () => {
               }
             >
               <AppCtaButton
-                href='https://docs.vpay.africa/vpay-api-specification-basic-gude/methods/get-wallet-balance'
+                href='https://docs.stephania.africa/stephania-api-specification-basic-gude/methods/get-wallet-balance'
                 className={
                   'text-link mt-6 text-primary-main flex gap-3 hover:text-primary-dark gap-2 group'
                 }
@@ -242,7 +242,7 @@ export const BuildAwesomeProducts = () => {
               }
             >
               <AppCtaButton
-                href='https://docs.vpay.africa/vpay-api-specification-basic-gude/methods/create-virtual-account-customer'
+                href='https://docs.stephania.africa/stephania-api-specification-basic-gude/methods/create-virtual-account-customer'
                 className={
                   'text-link mt-6 text-primary-main flex gap-3 hover:text-primary-dark gap-2 group'
                 }
@@ -279,7 +279,7 @@ export const BuildAwesomeProducts = () => {
               }
             >
               <AppCtaButton
-                href='https://docs.vpay.africa/vpay-api-specification-basic-gude/methods/get-transaction-by-reference-number'
+                href='https://docs.stephania.africa/stephania-api-specification-basic-gude/methods/get-transaction-by-reference-number'
                 className={
                   'text-link mt-6 text-primary-main flex gap-3 hover:text-primary-dark gap-2 group'
                 }
@@ -316,7 +316,7 @@ export const BuildAwesomeProducts = () => {
               }
             >
               <AppCtaButton
-                href='https://docs.vpay.africa/vpay-api-specification-basic-gude/methods/re-query-transaction-by-reference-number'
+                href='https://docs.stephania.africa/stephania-api-specification-basic-gude/methods/re-query-transaction-by-reference-number'
                 className={
                   'text-link mt-6 text-primary-main flex gap-3 hover:text-primary-dark gap-2 group'
                 }

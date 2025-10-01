@@ -27,7 +27,7 @@ export default function DeveloperApis() {
               </p>
               <div className="relative h-[100px]">
                 <HeroCtaPair
-                  buttonUrl="https://docs.vpay.africa/vpay-js-inline-dropin-integration-guide"
+                  buttonUrl="https://docs.stephania.africa/stephania-js-inline-dropin-integration-guide"
                   buttonText="Read our API Docs"
                   target="_blank"
                 />

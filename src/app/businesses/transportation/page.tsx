@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { FaqsAsFooter } from '@/components/modules/faqs/FaqsAsFooter';
 import { DownloadPrompt } from '@/components/sections/home/DownloadPrompt';
 import { IndustriesHero } from '@/components/sections/industries/IndustriesHero';
-import { VPayNumbers } from '@/components/modules/VPayNumbers';
+import { StephaniaNumbers } from '@/components/modules/StephaniaNumbers';
 import { CallToAction } from '@/components/core/Footer/CallToAction';
 import { VideoSection } from '@/components/sections/industries/VideoSection';
 import lady from '/public/assets/businesses/bus-lady.png';
@@ -20,7 +20,7 @@ export default function Transportation() {
   return (
     <>
       <IndustriesHero
-        subtitle='At VPay, we are committed to redefining payment solutions for the transportation industry. '
+        subtitle='At Stephania, we are committed to redefining payment solutions for the transportation industry. '
         description='Our innovative Tap and Pay (NFC) technology and advanced POS terminals are tailored to meet the dynamic needs of this fast-paced sector. Experience seamless, secure, and swift transactions that keep your business moving forward.'
         title='Transportation'
         id='transportation_hero'
@@ -44,7 +44,7 @@ export default function Transportation() {
 
       <DownloadPrompt />
       <FaqsAsFooter faqs={[]} />
-      <VPayNumbers withoutParent />
+      <StephaniaNumbers withoutParent />
       <CallToAction />
     </>
   );

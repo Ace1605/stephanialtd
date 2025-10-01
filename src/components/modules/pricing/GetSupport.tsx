@@ -43,7 +43,7 @@ export const GetSupport = () => {
             }
           >
             We&apos;re here to help. If you need assistance switching from your
-            current solution, have any questions about why VPay is right for
+            current solution, have any questions about why Stephania is right for
             your business, or want support getting started, please talk to a
             member of our team.
           </motion.p>

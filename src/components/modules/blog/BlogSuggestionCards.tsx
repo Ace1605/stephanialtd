@@ -25,7 +25,7 @@ export const BlogSuggestionCards = ({
 
   return (
     <Link
-      href={`/vpay-blog/${uid}`}
+      href={`/stephania-blog/${uid}`}
       className={'col-span-12 480:col-span-6 group 880:col-span-4'}
     >
       <div className='relative h-[341px] overflow-hidden rounded-xl bg-neutral-200'>

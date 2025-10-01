@@ -13,19 +13,19 @@ import code from '/public/assets/products/code-img.png';
 import { CallToAction } from '@/components/core/Footer/CallToAction';
 
 export const metadata: Metadata = {
-  title: 'VPay Dropin',
+  title: 'Stephania Dropin',
 };
 
-export default function VPayDropin() {
+export default function StephaniaDropin() {
   return (
     <>
       <ProductsHero
-        id='vpay_dropin_hero'
+        id='stephania_dropin_hero'
         image={phone}
         title={'Seamless Online Payment, '}
         lastWord='Simplified'
         description={
-          'Collect card, transfer, USSD payments using the VPay Payment Gateway.'
+          'Collect card, transfer, USSD payments using the Stephania Payment Gateway.'
         }
         buttonText='Get Started'
       />
@@ -63,7 +63,7 @@ export default function VPayDropin() {
         }
         image={payment}
         action='Get Started'
-        actionLink='https://www.vpay.africa/signup'
+        actionLink='https://www.stephania.africa/signup'
         target='_blank'
         withArrow
       />
@@ -86,7 +86,7 @@ export default function VPayDropin() {
         }
         image={plant}
         action='Lean More'
-        actionLink='https://www.vpay.africa/signup'
+        actionLink='https://www.stephania.africa/signup'
         target='_blank'
         outline
         withArrow

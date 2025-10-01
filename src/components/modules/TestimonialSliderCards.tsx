@@ -54,7 +54,7 @@ export const TestimonialSliderCards = () => {
                 <iframe
                   className='min-h-[310px] rounded-[30px] 640:h-[504px] min-w-[350px] 640:min-w-[750px]'
                   src={`https://www.youtube.com/embed/${review?.embedId}?autoplay=1`}
-                  title='vpay-testimonial'
+                  title='stephania-testimonial'
                   allowFullScreen
                   allow='accelerometer; autoplay; encrypted-media;'
                 />

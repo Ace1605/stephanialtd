@@ -34,7 +34,7 @@ export const FreedomToChoose = () => {
             'mt-3 text-neutral-600 text-base 768:leading-[28px] 768:text-lg font-normal'
           }
         >
-          Today, VPay Africa stands as a trusted partner to a diverse range of
+          Today, Stephania Africa stands as a trusted partner to a diverse range of
           businesses, catering to the needs of both large enterprises with
           complex commerce operations and budding entrepreneurs embarking on
           their business journey. We have been there from the beginning,
@@ -58,7 +58,7 @@ export const FreedomToChoose = () => {
           mission to build a business that is not only substantial but also
           meaningful and enduring. Just as we have empowered sellers locally, we
           are committed to assisting businesses worldwide in achieving their
-          aspirations. With VPay Africa, the future of commerce is limitless.
+          aspirations. With Stephania Africa, the future of commerce is limitless.
         </motion.p>
       </div>
     </section>

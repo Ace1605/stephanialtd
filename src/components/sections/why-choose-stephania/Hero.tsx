@@ -1,7 +1,7 @@
 'use client';
 
 import { HeroCtaPair } from '@/components/commons/hero/HeroCtaPair';
-import coat_lady from '/public/assets/why_vpay/about-hero-img.png';
+import coat_lady from '/public/assets/why_stephania/about-hero-img.png';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 

@@ -91,11 +91,11 @@ export const ProductGroup = ({ close }: { close: () => void }) => {
         <div className='relative mt-7 flex justify-between bg-neutral-150 rounded-2xl py-10 px-12'>
           <div>
             <h6 className='w-3/4 text-xl tracking-normal font-semibold text-black pr-2'>
-              Join over 90,000+ businesses using VPay to{' '}
+              Join over 90,000+ businesses using Stephania to{' '}
               <span className='text-gradient'>simplify payments</span>
             </h6>
             <Link
-              href='https://merchantapp.vpay.africa'
+              href='https://merchantapp.stephania.africa'
               target='_blank'
               className='flex w-max px-4 mt-4 py-2 gap-4 bg-white rounded-lg border border-neutral-100'
             >

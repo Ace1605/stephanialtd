@@ -107,7 +107,7 @@ export const TestimonialSlide = () => {
               "text-left text-black font-bold text-[30px] 640:text-[50px] 1180:text-[70px] leading-[39px] 640:leading-[56px] 1180:leading-[80px] tracking-[-1.5px] 640:tracking-[-3.5px] w-full"
             }
           >
-            Hear from VPay <span className="text-gradient">users</span>.
+            Hear from Stephania <span className="text-gradient">users</span>.
           </h4>
         </div> */}
         {/* <div

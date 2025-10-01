@@ -20,7 +20,7 @@ export const Logo = ({ onClick, className, white }: Props) => {
       <Image
         src={white ? white_logo : logo}
         priority
-        alt="vpay-logo"
+        alt="stephania-logo"
         className="cursor-pointer w-[62px] 640:w-[80px] object-contain"
       />
     </Link>

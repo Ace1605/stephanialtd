@@ -87,7 +87,7 @@ export const VideoSection = ({
                   }}
                   className='min-h-[280px] 768:h-none rounded-2xl 640:h-[504px] w-full'
                   src={`https://www.youtube.com/embed/${embedId}?autoplay=1`}
-                  title='vpay-testimonial'
+                  title='stephania-testimonial'
                   allowFullScreen
                   allow='accelerometer; autoplay; encrypted-media;'
                 />
