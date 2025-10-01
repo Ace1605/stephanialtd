@@ -41,7 +41,7 @@ export const DeveloperApisGetInTouchForm = ({ onSuccess }: Props) => {
             integration_requirement,
             message: integration_requirement,
             recipients:
-              'api-devs@vpay.africa, compliance@vpay.africa, customersupport@vpay.africa, adebayo.oladunjoye@vpay.africa, theresa.usen@vpay.africa',
+              'api-devs@stephania.africa, compliance@stephania.africa, customersupport@stephania.africa, adebayo.oladunjoye@stephania.africa, theresa.usen@stephania.africa',
           }),
         },
       );

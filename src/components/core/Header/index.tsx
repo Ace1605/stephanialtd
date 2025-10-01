@@ -33,7 +33,7 @@ export const navigationLinks: NavLink[] = [
   },
   { title: "Partnerships" },
   { title: "Contact us", id: "contact-sales" },
-  // { title: 'Newsroom', id: 'vpay-blog' },
+  // { title: 'Newsroom', id: 'stephania-blog' },
 ];
 
 export const Header = () => {

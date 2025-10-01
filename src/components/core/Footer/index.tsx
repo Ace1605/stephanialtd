@@ -138,8 +138,8 @@ export const Footer = () => {
                                 ? "#"
                                 : link === "Support"
                                   ? "/contact-sales"
-                                  : link === "support@vpay.africa"
-                                    ? "mailto: support@vpay.africa"
+                                  : link === "support@stephania.africa"
+                                    ? "mailto: support@stephania.africa"
                                     : href
                         }
                         key={link}
@@ -206,7 +206,7 @@ const footerGroups: {
       "About",
       "Partnership",
       "Contact us",
-      // "VPay Blog",
+      // "Stephania Blog",
       "Terms of Service",
       "Privacy Policy",
     ],

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { FaqsAsFooter } from '@/components/modules/faqs/FaqsAsFooter';
 import { DownloadPrompt } from '@/components/sections/home/DownloadPrompt';
 import { IndustriesHero } from '@/components/sections/industries/IndustriesHero';
-import { VPayNumbers } from '@/components/modules/VPayNumbers';
+import { StephaniaNumbers } from '@/components/modules/StephaniaNumbers';
 import { CallToAction } from '@/components/core/Footer/CallToAction';
 import { VideoSection } from '@/components/sections/industries/VideoSection';
 import lady from '/public/assets/products/product-lady.png';
@@ -20,7 +20,7 @@ export default function RetailStores() {
   return (
     <>
       <IndustriesHero
-        subtitle='Optimize your business and prepare for the future with VPays end-to-end retail payments capabilities.'
+        subtitle='Optimize your business and prepare for the future with Stephanias end-to-end retail payments capabilities.'
         description='A unified payment solution that handles your payment processing, fraud/risk management, payouts, and customer incentives. Provide your team with scalable payment solutions that adapt to changing retail landscapes and evolving consumer trends.'
         title='Retail Stores'
         id='retail_stores_hero'
@@ -43,7 +43,7 @@ export default function RetailStores() {
 
       <DownloadPrompt />
       <FaqsAsFooter faqs={[]} />
-      <VPayNumbers withoutParent />
+      <StephaniaNumbers withoutParent />
       <CallToAction />
     </>
   );

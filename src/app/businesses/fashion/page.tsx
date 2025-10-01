@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { FaqsAsFooter } from '@/components/modules/faqs/FaqsAsFooter';
 import { DownloadPrompt } from '@/components/sections/home/DownloadPrompt';
 import { IndustriesHero } from '@/components/sections/industries/IndustriesHero';
-import { VPayNumbers } from '@/components/modules/VPayNumbers';
+import { StephaniaNumbers } from '@/components/modules/StephaniaNumbers';
 import { CallToAction } from '@/components/core/Footer/CallToAction';
 import { VideoSection } from '@/components/sections/industries/VideoSection';
 import lady from '/public/assets/businesses/fashion-lady.png';
@@ -21,7 +21,7 @@ export default function Fashion() {
     <>
       <IndustriesHero
         subtitle='Where seamless payments meet the style of the fashion world.'
-        description='VPay offers a range of products including versatile e-commerce checkout options, user-friendly online store setups, and reliable POS terminals. VPay is here to enhance your online retail presence, making transactions effortless and secure.'
+        description='Stephania offers a range of products including versatile e-commerce checkout options, user-friendly online store setups, and reliable POS terminals. Stephania is here to enhance your online retail presence, making transactions effortless and secure.'
         title='Fashion'
         id='fashion_hero'
         firstImage={fashion}
@@ -42,7 +42,7 @@ export default function Fashion() {
 
       <DownloadPrompt />
       <FaqsAsFooter faqs={[]} />
-      <VPayNumbers withoutParent />
+      <StephaniaNumbers withoutParent />
       <CallToAction />
     </>
   );

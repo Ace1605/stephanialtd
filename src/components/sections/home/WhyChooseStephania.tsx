@@ -6,9 +6,9 @@ import posImage from '/public/assets/home/bar-img.png';
 import monitorImage from '/public/assets/home/cross_arm.png';
 import Image from 'next/image';
 
-export const WhyChooseVpay = () => {
+export const WhyChooseStephania = () => {
   return (
-    <section id='why_choose_vpay' className='pt-5 pb-12 640:pb-0 640:pt-24'>
+    <section id='why_choose_stephania' className='pt-5 pb-12 640:pb-0 640:pt-24'>
       <div className={'relative app-container'}>
         <motion.h1
           initial={{ y: 10, opacity: 0 }}
@@ -21,7 +21,7 @@ export const WhyChooseVpay = () => {
             'text-left text-black font-bold text-[35px] 640:text-[52px] 1180:text-[70px] leading-[41px] 640:leading-[60px] 1180:leading-[80px] w-full 768:w-2/3'
           }
         >
-          Why Choose VPay Payment
+          Why Choose Stephania
           <span className={'inline'}>
             <span className={'text-gradient'}> Solutions</span>?
           </span>

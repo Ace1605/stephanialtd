@@ -38,7 +38,7 @@ export default function BlogPost({ params }: any) {
     <main>
       <div className='py-10 640:py-20'>
         <div className='app-container'>
-          <Link href={'/vpay-blog'} className={'flex gap-2 text-primary-main'}>
+          <Link href={'/stephania-blog'} className={'flex gap-2 text-primary-main'}>
             <span className={'my-auto'}>
               <ArrowLeft />
             </span>

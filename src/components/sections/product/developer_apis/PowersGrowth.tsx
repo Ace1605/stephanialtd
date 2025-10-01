@@ -16,7 +16,7 @@ export const PowersGrowth = ({ hide }: Props) => {
       className={'pt-10 overflow-hidden 640:pt-20 768:pt-32 pb-6 768:pb-8'}
     >
       <h3 className='text-left text-black text-[32px] 640:text-[48px] 1180:text-[60px] leading-[37px] 640:leading-[66px] 1180:leading-[72px] tracking-[-0.6px] 640:tracking-[-1.8px] font-bold mb-4 768:w-2/3'>
-        VPay
+        Stephania
         <span>
           <span className={'text-gradient'}> Powers</span>{' '}
           <span className='block 768:inline'>
@@ -36,7 +36,7 @@ export const PowersGrowth = ({ hide }: Props) => {
           'text-black mb-3 text-base leading-[24px] 768:leading-[30px] 768:text-[18px] tracking-[-0.32px] 640:tracking-[-0.4px] font-normal text-left pr-2'
         }
       >
-        VPay is a growth engine for a new generation of innovative,
+        Stephania is a growth engine for a new generation of innovative,
         forward-looking organizations operating in Africa.
       </motion.p>
       <motion.div
@@ -53,7 +53,7 @@ export const PowersGrowth = ({ hide }: Props) => {
           className='object-cover rounded-3xl object-center 768:object-contain min-h-[280px] 768:h-none'
           src={lady}
           priority
-          alt='vpay_product_feature_img'
+          alt='stephania_product_feature_img'
         />
       </motion.div>
       {!hide && (
@@ -96,7 +96,7 @@ export const PowersGrowth = ({ hide }: Props) => {
                 'mt-3 text-black text-base 768:leading-[28px] 768:text-[18px] font-light text-left pr-2'
               }
             >
-              Most POS devices accept only card payments. VPay Terminal provides
+              Most POS devices accept only card payments. Stephania Terminal provides
               several channels through which customers can pay.
             </motion.p>
           </div>

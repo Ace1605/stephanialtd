@@ -32,14 +32,14 @@ export default function Cashier() {
       <ProductFeature
         featureTitle='Why Platforms And '
         lastWord='Marketplaces '
-        continuation='Choose VPay'
+        continuation='Choose Stephania'
         hClassName='768:!w-2/3'
-        subtitle='Whether you sell physical products like furniture, Or digital products like ebooks and art VPay storefront covers all your online sells needs. '
+        subtitle='Whether you sell physical products like furniture, Or digital products like ebooks and art Stephania storefront covers all your online sells needs. '
         image={lady}
         firstBoxTitle='Sell Multiple Products And Variants'
-        firstBoxText='Track each Storefront transaction in real time via the VPay Dashboard, rather than as a single bulk sum, saving numerous hours in reconciliation.'
+        firstBoxText='Track each Storefront transaction in real time via the Stephania Dashboard, rather than as a single bulk sum, saving numerous hours in reconciliation.'
         secondBoxTitle='Manage Your Online Store On Mobile'
-        secondBoxText='Unlike typical POS systems that only process card payments, VPay Storefront offers a variety of payment options for customers.'
+        secondBoxText='Unlike typical POS systems that only process card payments, Stephania Storefront offers a variety of payment options for customers.'
         ThirdBoxTitle='Multiple Payment Options, With An Easy Checkout'
         thirdBoxText='Our Storefront come equipped with both Wi-Fi and a global SIM card, with a robust data signal for continuous network access.'
       />
@@ -56,7 +56,7 @@ export default function Cashier() {
         hClassName='768:!w-full'
         description={
           <span className={'block'}>
-            {`VPay storefront comes with VPay payments options, card processing, bank transfers and USSD. We automatically handle updates on our end so upgrading is hassle-free. All you need is a VPay Business account.`}
+            {`Stephania storefront comes with Stephania payments options, card processing, bank transfers and USSD. We automatically handle updates on our end so upgrading is hassle-free. All you need is a Stephania Business account.`}
           </span>
         }
         image={checkout}

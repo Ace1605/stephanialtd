@@ -37,7 +37,7 @@ export const DownloadPrompt = () => {
             }}
             className='text-center 1024:text-left text-white font-medium text-sm 768:text-base 560:text-lg'
           >
-            Download The VPay App
+            Download The Stephania App
           </motion.p>
           <motion.h4
             initial={{ y: 10, opacity: 0 }}
@@ -51,7 +51,7 @@ export const DownloadPrompt = () => {
               'text-center tracking-[-1.25px] 1024:tracking-[-3.3px] font-bold mt-1 768:mt-2 1024:text-left text-white text-[25px] 640:text-[48px] 1180:text-[58px] 1300:text-[66px] leading-[31px] 640:leading-[60px] 1180:leading-[75px] w-full 1024:w-7/12 1180:w-2/3 1024:pr-20'
             }
           >
-            Join over 90,000+ businesses using VPay to simplify payments
+            Join over 90,000+ businesses using Stephania to simplify payments
           </motion.h4>
           <motion.div
             initial={{ y: 10, opacity: 0 }}
@@ -65,7 +65,7 @@ export const DownloadPrompt = () => {
           >
             <AppleGoogleBtn />
             <AppCtaButton
-              href='https://www.vpay.africa/signup'
+              href='https://www.stephania.africa/signup'
               target='_blank'
               className={
                 'hidden outline-button bg-transparent h-12 768:h-14 text-white hover:border-white gap-2 group 1024:x-center px-4 1180:px-6'
@@ -81,14 +81,14 @@ export const DownloadPrompt = () => {
             className='absolute left-1/2 425:-bottom-[9rem] 480:-bottom-40 768:-bottom-36  transform -translate-x-1/2 w-[350px] 1024:w-[400px]'
             src={illustration}
             priority
-            alt='vpay_prompt'
+            alt='stephania_prompt'
           />
         </div>
         <Image
           className='absolute 1024:block hidden 1024:-top-20 1300:-top-24 right-0 1300:right-6 w-[370px] 1024:w-[400px]'
           src={illustration}
           priority
-          alt='vpay_prompt'
+          alt='stephania_prompt'
         />
       </motion.div>
     </section>

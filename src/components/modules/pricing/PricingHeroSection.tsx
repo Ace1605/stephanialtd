@@ -55,7 +55,7 @@ export const PricingHeroSection = () => {
           className='object-cover object-center 768:object-contain min-h-[280px] 768:h-none rounded-3xl'
           src={illustration}
           priority
-          alt='vpay_pricing_hero_img'
+          alt='stephania_pricing_hero_img'
         />
       </motion.div>
     </section>

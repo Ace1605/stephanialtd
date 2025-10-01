@@ -4,7 +4,7 @@ interface Props {
   withoutParent?: boolean;
 }
 
-export const VPayNumbers = ({ withoutParent }: Props) => {
+export const StephaniaNumbers = ({ withoutParent }: Props) => {
   return (
     <div className='bg-black'>
       <div
@@ -16,10 +16,10 @@ export const VPayNumbers = ({ withoutParent }: Props) => {
         <div>
           <div>
             <h4 className='main-gradient text-left text-white text-[38px] 640:text-[52px] 1180:text-[70px] leading-[46px] 640:leading-[60px] 1180:leading-[80px] w-full pr-8'>
-              VPay by the numbers
+              Stephania by the numbers
             </h4>
             <p className='mt-4 960:mt-6 text-white'>
-              Why VPay is perfect for you. Find financial tools that connect
+              Why Stephania is perfect for you. Find engineering solutions that connect
               every side of your business
             </p>
           </div>

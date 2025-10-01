@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { FaqsAsFooter } from '@/components/modules/faqs/FaqsAsFooter';
 import { DownloadPrompt } from '@/components/sections/home/DownloadPrompt';
 import { IndustriesHero } from '@/components/sections/industries/IndustriesHero';
-import { VPayNumbers } from '@/components/modules/VPayNumbers';
+import { StephaniaNumbers } from '@/components/modules/StephaniaNumbers';
 import { CallToAction } from '@/components/core/Footer/CallToAction';
 import { VideoSection } from '@/components/sections/industries/VideoSection';
 import guy from '/public/assets/businesses/ramen-man.png';
@@ -44,7 +44,7 @@ export default function Hospitality() {
 
       <DownloadPrompt />
       <FaqsAsFooter faqs={[]} />
-      <VPayNumbers withoutParent />
+      <StephaniaNumbers withoutParent />
       <CallToAction />
     </>
   );

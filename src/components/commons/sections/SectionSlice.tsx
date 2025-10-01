@@ -151,7 +151,7 @@ export const SectionSlice = ({
                 </AppCtaButton>
               )}
               {hasDownload && (
-                <AppleGoogleBtn href='https://cashierapp.vpay.africa' />
+                <AppleGoogleBtn href='https://cashierapp.stephania.africa' />
               )}
             </motion.div>
           )}

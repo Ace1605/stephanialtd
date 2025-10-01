@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const ImageDownloadTrigger = () => {
   return (
     <Link
-      href='https://merchantapp.vpay.africa'
+      href='https://merchantapp.stephania.africa'
       target='_blank'
       className='absolute bottom-0 right-2.5 425:bottom-2 425:right-3 560:right-5 560:bottom-4 640:right-6 640:bottom-6 768:bottom-1 1400:bottom-4 1400:right-4 1400:px-8 768:right-1 px-2 425:px-3 560:px-5 640:px-8 768:px-3'
     >

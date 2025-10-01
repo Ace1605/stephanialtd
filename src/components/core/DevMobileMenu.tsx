@@ -67,7 +67,7 @@ export const DevMobileMenu = ({
 
         <div className='absolute bottom-4 x-center w-full border-t border-neutral-310 pt-5 mt-4 my-auto'>
           <AppCtaButton
-            href='https://www.vpay.africa/login'
+            href='https://www.stephania.africa/login'
             target='_blank'
             type={'signin'}
             className={'y-center outline-button h-12 768:h-14 px-6 shadow-sm'}

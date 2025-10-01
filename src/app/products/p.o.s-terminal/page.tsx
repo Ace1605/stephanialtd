@@ -35,9 +35,9 @@ export default function POS() {
         subtitle='Elevate your sales with our advanced, feature-rich POS device, designed to enable you to craft personalized, brand-centric customer experiences.'
         image={pos}
         firstBoxTitle='Multiple Payment Channel'
-        firstBoxText='Unlike typical POS systems that only process card payments, VPay Terminal offers a variety of payment options for customers.'
+        firstBoxText='Unlike typical POS systems that only process card payments, Stephania Terminal offers a variety of payment options for customers.'
         secondBoxTitle='Simplified Daily Accounting'
-        secondBoxText='Track each Terminal transaction in real time via the VPay Dashboard, rather than as a single bulk sum, saving numerous hours in reconciliation.'
+        secondBoxText='Track each Terminal transaction in real time via the Stephania Dashboard, rather than as a single bulk sum, saving numerous hours in reconciliation.'
         ThirdBoxTitle='Exceptional Connectivity'
         thirdBoxText='Our Terminal devices come equipped with both Wi-Fi and a global SIM card, with a robust data signal for continuous network access.'
       />
@@ -58,7 +58,7 @@ export default function POS() {
         }
         image={posGuy}
         action='Request Terminal'
-        actionLink='https://www.vpay.africa/signup'
+        actionLink='https://www.stephania.africa/signup'
         target='_blank'
       />
       <HowToGetStarted

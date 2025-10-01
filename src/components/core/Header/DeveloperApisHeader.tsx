@@ -68,7 +68,7 @@ export const DeveloperApisHeader = () => {
                   <Link
                     href={
                       id === 'docs'
-                        ? 'https://docs.vpay.africa/vpay-js-inline-dropin-integration-guide'
+                        ? 'https://docs.stephania.africa/stephania-js-inline-dropin-integration-guide'
                         : url
                     }
                     target={id === 'docs' ? '_blank' : '_parent'}
@@ -86,7 +86,7 @@ export const DeveloperApisHeader = () => {
           </ul>
           <div className='hidden 1024:flex my-auto relative z-[1100] gap-2'>
             <AppCtaButton
-              href='https://www.vpay.africa/login'
+              href='https://www.stephania.africa/login'
               type={'signin'}
               target='_blank'
               className={'y-center outline-button shadow-sm'}

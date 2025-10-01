@@ -15,11 +15,11 @@ export default function PressAndMedia({ searchParams }: any) {
           <h5
             className={'text-[48px] text-black 768:text-[70px] text-left pb-3'}
           >
-            The VPay
+            The Stephania
             <span className='text-gradient'> Blog</span>
           </h5>
           <p className='font-semibold text-xl 768:text-[30px] text-black pt-3 pb-2'>
-            Updates and announcements from VPay Team!
+            Updates and announcements from Stephania Team!
           </p>
           <NewsLetterForm />
         </div>

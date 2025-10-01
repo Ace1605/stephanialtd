@@ -120,7 +120,7 @@ export const HowToGetStarted = ({
           </motion.p>
           <div className='flex justify-start mt-7'>
             <AppCtaButton
-              href='https://www.vpay.africa/signup'
+              href='https://www.stephania.africa/signup'
               target='_blank'
               className={'primary-button gap-2 group x-center px-5'}
               withArrow

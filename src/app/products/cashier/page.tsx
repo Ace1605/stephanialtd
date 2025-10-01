@@ -32,7 +32,7 @@ export default function Cashier() {
       <ProductFeature
         featureTitle='Collaborate With Your Team '
         lastWord='Anywhere'
-        subtitle='Keep everyone focused on the big picture, and let VPay automate the rest: collect payment, eliminate fake alerts, real time updates.'
+        subtitle='Keep everyone focused on the big picture, and let Stephania automate the rest: collect payment, eliminate fake alerts, real time updates.'
         image={attendant}
         firstBoxTitle='Payment Verification'
         firstBoxText='Cashier can instantly verify payment without depending on the business owner'
@@ -63,7 +63,7 @@ export default function Cashier() {
         image={cashierGuy}
         action='Get Started'
         withArrow
-        actionLink='https://www.vpay.africa/signup'
+        actionLink='https://www.stephania.africa/signup'
         target='_blank'
       />
       <SectionSlice
@@ -78,12 +78,12 @@ export default function Cashier() {
         }
         description={
           <span className={'block'}>
-            {`With VPay Cashier, you can manage and streamline operations across multiple locations, sales channels, and employees to improve efficiency and your bottom line.`}
+            {`With Stephania Cashier, you can manage and streamline operations across multiple locations, sales channels, and employees to improve efficiency and your bottom line.`}
           </span>
         }
         image={blueLady}
-        action='Try VPayCashier'
-        actionLink='https://www.vpay.africa/signup'
+        action='Try StephaniaCashier'
+        actionLink='https://www.stephania.africa/signup'
         target='_blank'
         outline
         hasDownload
