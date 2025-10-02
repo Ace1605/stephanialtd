@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { TeamSection } from "@/components/commons/team/TeamSection";
-import storylineLady from "/public/assets/why_stephania/storyline-lady.png";
-import storylineMonitor from "/public/assets/why_stephania/storyline-monitor.png";
-import officeMan from "/public/assets/businesses/office-man.png";
+import storylineLady from "/public/assets/why_stephania/female_b.jpg";
+import storylineMonitor from "/public/assets/why_stephania/female_s.jpg";
+import officeMan from "/public/assets/why_stephania/male_o.jpg";
 
 export const StoryLine = () => {
   const teamMembers = [
