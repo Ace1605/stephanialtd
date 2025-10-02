@@ -6,7 +6,7 @@ import { TabOption } from "@/components/core/tabs/Tabs";
 // import { DownloadPrompt } from "@/components/sections/home/DownloadPrompt";
 // import { ExploreOptions } from "@/components/sections/home/ExploreOptions";
 import { Hero } from "@/components/sections/home/Hero";
-import { TestimonialSlide } from "@/components/sections/home/TestimonialSlide";
+// import { TestimonialSlide } from "@/components/sections/home/TestimonialSlide";
 // import { WhyChooseStephania } from "@/components/sections/home/WhyChooseStephania";
 import { HomeFilterOptions } from "@/contants/filters";
 import { useEffect, useRef, useState } from "react";
@@ -112,7 +112,7 @@ export default function Home() {
           />
         </div> */}
         {/* <WhyChooseStephania /> */}
-        <TestimonialSlide />
+        {/* <TestimonialSlide /> */}
         {/* <DownloadPrompt />
         <ExploreOptions /> */}
         <CallToAction />
