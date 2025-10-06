@@ -24,7 +24,7 @@ export const TeamSection = ({ title, subtitle, members }: TeamSectionProps) => {
       viewport={{ once: true }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.4 }}
-      className="mt-16 768:mt-24 1180:mt-32"
+      className="mt-12 768:mt-14 1180:mt-16"
     >
       <h3 className="text-center text-black text-[28px] 640:text-[36px] 1180:text-[48px] font-bold leading-[36px] 640:leading-[44px] 1180:leading-[56px] tracking-[-1px] 640:tracking-[-1.5px] mb-4">
         {title} <span className="text-gradient">Team</span>

@@ -1,27 +1,27 @@
-import peace from '/public/assets/sponsor/peace-trans.png';
-import lc from '/public/assets/sponsor/lc.png';
-import beth from '/public/assets/sponsor/bethmoda.png';
-import naya from '/public/assets/sponsor/naya.png';
-import boardRoom from '/public/assets/sponsor/board-room.png';
-import taj from '/public/assets/sponsor/taj.png';
+import enviro from '/public/assets/partners/enviro.png';
+import desautel from '/public/assets/partners/desautel.png';
+import electrolux from '/public/assets/partners/electrolux.svg';
+import stracu from '/public/assets/partners/stracu.png';
+import rwvvales from '/public/assets/partners/rwvvales.avif';
+import shipham from '/public/assets/partners/shipham.svg';
 
 export  const sponsors = [
     {
-      src: peace,
+      src: enviro,
     },
     {
-      src: beth,
+      src: desautel,
     },
     {
-      src: naya,
+      src: electrolux,
     },
     {
-      src: lc,
+      src: stracu,
     },
     {
-      src: boardRoom,
+      src: rwvvales,
     },
     {
-      src: taj,
+      src: shipham,
     },
   ];

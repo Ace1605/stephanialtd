@@ -20,19 +20,26 @@ export const SponsorSlider = ({ hide }: Props) => {
   };
 
   // Create sponsor item component
-  const sponsorItems = sponsors.map((sponsor, index) => (
-    <div
-      key={index}
-      className="min-w-[120px] max-h-[60px] 768:max-h-[40px] 768:min-w-[140px] flex justify-center cursor-pointer flex-shrink-0"
-    >
-      <Image
-        className="object-contain hover:scale-105 transition-transform duration-300"
-        src={sponsor.src}
-        priority
-        alt="sponsor_image"
-      />
-    </div>
-  ));
+  const sponsorItems = sponsors.map((sponsor, index) => {
+    // Check if this is the Stracu image by checking the src path
+    const isStracuImage = sponsor.src.src && sponsor.src.src.includes('stracu');
+    
+    return (
+      <div
+        key={index}
+        className="w-[140px] h-[60px] 768:w-[160px] 768:h-[50px] flex justify-center items-center cursor-pointer flex-shrink-0"
+      >
+        <Image
+          className={`max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300 ${
+            isStracuImage ? 'invert' : ''
+          }`}
+          src={sponsor.src}
+          priority
+          alt="sponsor_image"
+        />
+      </div>
+    );
+  });
 
   // Create enough copies to ensure continuous scrolling across screen width
   const repeatedSponsors = Array.from({ length: 4 }, (_, i) =>
@@ -44,9 +51,9 @@ export const SponsorSlider = ({ hide }: Props) => {
   return (
     <div className={clsx(hide && "!hidden 768:flex", "overflow-hidden w-full")}>
       <div
-        className="flex items-center gap-2 768:gap-3"
+        className="flex items-center gap-48 768:gap-60"
         style={{
-          animation: "slide 80s linear infinite",
+          animation: "slide 60s ease-in-out infinite",
           animationPlayState: isPaused ? "paused" : "running",
           width: "max-content",
         }}

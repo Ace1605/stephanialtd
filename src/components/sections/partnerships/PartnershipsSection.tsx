@@ -18,15 +18,14 @@ export function PartnershipsSection() {
       logo: "/assets/partners/enviro.png",
       subtitle: "Environmental Valve Solutions & Technology",
       src: "/assets/home/hero-img.png",
-      link: "#",
-      bg: "/assets/home/firstBannerImage.jpg",
+      link: "https://envirovalve.net/",
     },
     {
       title: "DESAUTEL",
-      logo: "/assets/partners/desautel.jpg",
+      logo: "/assets/partners/desautel.png",
       src: "/assets/home/integrations.png",
       subtitle: "Advanced Engineering & Industrial Solutions",
-      link: "#",
+      link: "https://www.desautel.fr/fr/",
       bg: "/assets/home/secondBannerImage.jpg",
     },
     {
@@ -34,29 +33,29 @@ export function PartnershipsSection() {
       logo: "/assets/partners/electrolux.svg",
       src: "/assets/home/powering-img.png",
       subtitle: "Global Leader in Home & Professional Appliances",
-      link: "#",
-    },
-    {
-      title: "RMV VALVES",
-      logo: "/assets/partners/enviro.png",
-      src: "/assets/home/stay-ahead-img.png",
-      subtitle: "Precision Valve Manufacturing & Engineering",
-      link: "#",
-      bg: "/assets/home/thirdBannerImage.jpg",
+      link: "https://www.electroluxgroup.com/en/",
     },
     {
       title: "STRACU VALVES",
-      logo: "/assets/partners/electrolux.svg",
+      logo: "/assets/partners/stracu.png",
       src: "/assets/home/monitor.png",
       subtitle: "Structural & Commercial Valve Solutions",
-      link: "#",
+      link: "https://www.stracau.com/en/stracau-industrial-valves-france",
+      bg: "/assets/home/firstBannerImage.jpg",
+    },
+    {
+      title: "RMV VALVES",
+      logo: "/assets/partners/rwvvales.avif",
+      src: "/assets/home/stay-ahead-img.png",
+      subtitle: "Precision Valve Manufacturing & Engineering",
+      link: "https://www.rmvvalves.com/",
     },
     {
       title: "SHIPHAM VALVES",
-      logo: "/assets/partners/desautel.jpg",
+      logo: "/assets/partners/shipham.svg",
       src: "/assets/home/market.png",
       subtitle: "Marine & Industrial Valve Specialists",
-      link: "#",
+      link: "https://www.shiphamvalves.com/",
       bg: "/assets/home/secondBannerImage.jpg",
     },
   ];
@@ -94,7 +93,7 @@ export function PartnershipsSection() {
                   : "linear-gradient(160.32deg, #fff5e6 40%, #f1ebf4 80%)",
               }}
             >
-              <div className="grid 1024:flex flex-col gap-6 relative py-8">
+              <div className="grid 1024:flex flex-col relative py-8">
                 <div className="flex flex-col justify-between">
                   <Image
                     className="max-h-[50px] w-auto object-contain object-left mb-4"
@@ -105,18 +104,7 @@ export function PartnershipsSection() {
                     alt={`${partner.title} logo`}
                   />
 
-                  <div>
-                    <h4
-                      className={clsx(
-                        "text-2xl 640:text-3xl font-bold tracking-normal mb-2",
-                        hasBackground && (index % 2 !== 0 || index === 0)
-                          ? "text-white"
-                          : "text-black",
-                        isLast && "!text-white"
-                      )}
-                    >
-                      {partner.title}
-                    </h4>
+                  <div className="mt-7">
                     <p
                       className={clsx(
                         "768:max-w-[250px] font-secondary font-medium",

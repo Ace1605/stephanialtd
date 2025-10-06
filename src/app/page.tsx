@@ -6,8 +6,8 @@ import { TabOption } from "@/components/core/tabs/Tabs";
 // import { DownloadPrompt } from "@/components/sections/home/DownloadPrompt";
 // import { ExploreOptions } from "@/components/sections/home/ExploreOptions";
 import { Hero } from "@/components/sections/home/Hero";
-// import { TestimonialSlide } from "@/components/sections/home/TestimonialSlide";
-// import { WhyChooseStephania } from "@/components/sections/home/WhyChooseStephania";
+import { TestimonialSlide } from "@/components/sections/home/TestimonialSlide";
+import { WhyChooseStephania } from "@/components/sections/home/WhyChooseStephania";
 import { HomeFilterOptions } from "@/contants/filters";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -111,8 +111,8 @@ export default function Home() {
             handleChange={handleChange}
           />
         </div> */}
-        {/* <WhyChooseStephania /> */}
-        {/* <TestimonialSlide /> */}
+        <TestimonialSlide />
+        <WhyChooseStephania />
         {/* <DownloadPrompt />
         <ExploreOptions /> */}
         <CallToAction />

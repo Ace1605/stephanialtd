@@ -31,7 +31,7 @@ export const StoryLine = () => {
   return (
     <section
       id={"pricing_hero"}
-      className={"pt-10 overflow-hidden 640:pt-20 768:pt-32 pb-6 768:pb-8"}
+      className={"pt-10 overflow-hidden 640:pt-12 768:pt-16 pb-12 768:pb-16"}
     >
       <div className="app-container flex flex-col gap-4 768:px-36">
         <motion.h4

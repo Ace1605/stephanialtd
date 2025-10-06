@@ -41,7 +41,11 @@ export const HeroCtaPair = ({
       >
         {withArrow ? (
           <AppCtaButton
-            href={buttonUrl ? buttonUrl : "https://www.stephania.africa/signup"}
+            href={
+              buttonUrl
+                ? buttonUrl
+                : "https://www.stephania.africa/contact-sales"
+            }
             className={"primary-button gap-2 h-12 768:h-14 group x-center"}
             withArrow
             type={"signup"}
@@ -53,7 +57,11 @@ export const HeroCtaPair = ({
           </AppCtaButton>
         ) : (
           <AppCtaButton
-            href={buttonUrl ? buttonUrl : "https://www.stephania.africa/signup"}
+            href={
+              buttonUrl
+                ? buttonUrl
+                : "https://www.stephania.africa/contact-sales"
+            }
             target={target}
             type={"signup"}
             className={
