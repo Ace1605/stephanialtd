@@ -5,12 +5,11 @@ import { IndustriesHero } from "@/components/sections/industries/IndustriesHero"
 import { StephaniaNumbers } from "@/components/modules/StephaniaNumbers";
 import { CallToAction } from "@/components/core/Footer/CallToAction";
 import { VideoSection } from "@/components/sections/industries/VideoSection";
-import lady from "/public/assets/businesses/hero2.jpg";
 import fullLady from "/public/assets/businesses/hero3.jpg";
 import miniLady from "/public/assets/businesses/thirdBannerImage.jpg";
 import { ServiceSolution } from "@/components/sections/industries/ServiceSolution";
 import { Description } from "@/components/sections/industries/hook/useDescription";
-import { onlineGoals } from "@/components/sections/industries/contants";
+import { oilGasGoals } from "@/components/sections/industries/contants";
 
 export const metadata: Metadata = {
   title: "Oil & Gas",
@@ -28,16 +27,16 @@ export default function OilAndGas() {
         secondImage={miniLady}
       />
       <VideoSection
-        image={lady}
+        videoSrc="/assets/products/oilandgas.mp4"
         title="Delivering Proven Results For "
         lastWord="Oil & Gas"
         id="oil_gas_video_section"
         hClassName="768:!w-2/3"
       />
       <ServiceSolution
-        title=" out your service all around."
-        lastWord="Smooth"
-        description={<Description goals={onlineGoals} />}
+        firstWord="Optimize Operations with "
+        lastWord=" Precision"
+        description={<Description goals={oilGasGoals} />}
       />
 
       {/* <StephaniaNumbers withoutParent /> */}

@@ -1,31 +1,23 @@
 'use client';
 
-import { PlayVideo } from '@/components/svgs/industries/IndustriesIcons';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import Image, { StaticImageData } from 'next/image';
-import { useState } from 'react';
 
 interface Props {
   title: string;
-  image: StaticImageData;
+  videoSrc: string;
   id: string;
   lastWord: string;
-  embedded?: boolean;
-  embedId?: string;
   hClassName?: string;
 }
 
 export const VideoSection = ({
   title,
-  image,
+  videoSrc,
   lastWord,
   id,
-  embedded,
-  embedId,
   hClassName,
 }: Props) => {
-  const [play, setPlay] = useState<boolean>(false);
   return (
     <section id={id} className='block pt-20 pb-12 768:pb-24 768:pt-24'>
       <div className={'relative app-container'}>
@@ -58,42 +50,14 @@ export const VideoSection = ({
           }}
           className='relative mt-10 768:mt-12'
         >
-          {!play && (
-            <Image
-              className='object-cover 768:object-contain min-h-[280px] 768:h-none rounded-2xl'
-              src={image}
-              priority
-              alt='market_image'
-            />
-          )}
-          {embedded && (
-            <>
-              <span
-                onClick={() => setPlay(true)}
-                className={clsx(
-                  play && 'hidden',
-                  'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer',
-                )}
-              >
-                <PlayVideo className='w-[4rem] 768:w-none' />
-              </span>
-              {play && (
-                <motion.iframe
-                  initial={{ opacity: 0.4 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.6,
-                  }}
-                  className='min-h-[280px] 768:h-none rounded-2xl 640:h-[504px] w-full'
-                  src={`https://www.youtube.com/embed/${embedId}?autoplay=1`}
-                  title='stephania-testimonial'
-                  allowFullScreen
-                  allow='accelerometer; autoplay; encrypted-media;'
-                />
-              )}
-            </>
-          )}
+          <video
+            className='object-cover w-full min-h-[280px] 768:min-h-[400px] rounded-2xl'
+            src={videoSrc}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
         </motion.div>
       </div>
     </section>

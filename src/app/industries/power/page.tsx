@@ -5,12 +5,11 @@ import { IndustriesHero } from "@/components/sections/industries/IndustriesHero"
 import { StephaniaNumbers } from "@/components/modules/StephaniaNumbers";
 import { CallToAction } from "@/components/core/Footer/CallToAction";
 import { VideoSection } from "@/components/sections/industries/VideoSection";
-import guy from "/public/assets/businesses/hero2.jpg";
 import waiter from "/public/assets/businesses/hero3.jpg";
 import leisure from "/public/assets/businesses/thirdBannerImage.jpg";
 import { ServiceSolution } from "@/components/sections/industries/ServiceSolution";
 import { Description } from "@/components/sections/industries/hook/useDescription";
-import { hospitalityGoals } from "@/components/sections/industries/contants";
+import { powerGoals } from "@/components/sections/industries/contants";
 
 export const metadata: Metadata = {
   title: "Power",
@@ -28,18 +27,16 @@ export default function Power() {
         secondImage={leisure}
       />
       <VideoSection
-        image={guy}
+        videoSrc="/assets/products/power.mp4"
         title="Delivering Proven Results For "
         lastWord="Power Companies"
         id="power_video_section"
-        embedId="ArPpwq8189M"
-        embedded
         hClassName="768:!w-2/3"
       />
       <ServiceSolution
-        title=" out your service all around."
-        lastWord="Smooth"
-        description={<Description goals={hospitalityGoals} />}
+        title=" the Future with Innovation"
+        lastWord="Power"
+        description={<Description goals={powerGoals} />}
       />
 
       {/* <StephaniaNumbers withoutParent /> */}
