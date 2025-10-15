@@ -7,20 +7,19 @@ import { usePathname } from "next/navigation";
 // import { Apple, GooglePlay } from "@/components/svgs/Socials";
 // import { Line } from "@/components/svgs/app/Line";
 
-export const BusinessesGroup = ({
-  close,
-}: {
-  close: () => void;
-}) => {
+export const BusinessesGroup = ({ close }: { close: () => void }) => {
   const pathname = usePathname();
 
   return (
     <div className={"flex items-center justify-between gap-20"}>
       <div className={"flex gap-20 -mt-12"}>
         <div>
-          <div className="w-full grid grid-cols-2 gap-x-5">
+          <h6 className={"text-base text-neutral-500 font-semibold mb-4"}>
+            Our Services
+          </h6>
+          <div className="w-full">
             {businessesLinks?.links?.["core services"]?.map((link) => {
-              const href = `/businesses/${hyphenateString(link)}`;
+              const href = `/services/${hyphenateString(link)}`;
 
               return (
                 <Link
@@ -44,9 +43,9 @@ export const BusinessesGroup = ({
         </div>
 
         <div>
-          <div className="w-full grid grid-cols-2 gap-x-5">
+          <div className="w-full mt-10">
             {businessesLinks?.links?.["specialized solutions"]?.map((link) => {
-              const href = `/businesses/${hyphenateString(link)}`;
+              const href = `/services/${hyphenateString(link)}`;
 
               return (
                 <Link
@@ -109,36 +108,15 @@ export const BusinessesGroup = ({
 export const businessesLinks = {
   links: {
     "core services": [
-      "Engineering",
-      "Production & Services",
+      "Engineering Services",
+      "Construction",
       "Procurement",
-      "Integrated Systems",
-      "Lube Oil",
-      "Full Packaging",
-      "Gas Seal Panels",
-      "Dampers",
-      "Water Washing Systems",
-      "Water Injection Systems",
-      "Gland Steam Condensers",
-      "Gas Dryers",
-      "Stator Winding Cooling Systems",
+      "Midstream Solutions",
     ],
     "specialized solutions": [
-      "Pressure Vessels",
-      "Balance of Plants",
-      "Spare Parts",
-      "Revamping and Retrofit",
-      "Onshore Construction",
-      "Offshore Construction",
-      "Oil & Gas Engineering",
-      "Mechanical Engineering",
-      "Civil Engineering",
-      "Electrical Engineering",
-      "Ground Engineering",
-      "Structural Repairs",
-      "Facilities Maintenance",
-      "Containerized Turn-Key Solutions",
-      "Dosing, Metering and Chemical Systems",
+      "Vessel Management",
+      "Offshore Solutions",
+      "Onshore Solutions",
     ],
   },
 };

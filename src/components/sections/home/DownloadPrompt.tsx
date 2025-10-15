@@ -1,7 +1,7 @@
 'use client';
 
 import { AppCtaButton } from '@/components/buttons/AppCtaButton';
-import illustration from '/public/assets/megamenu/phone.png';
+import illustration from '/public/assets/products/hero2.jpg';
 import { Apple, GooglePlay } from '@/components/svgs/Socials';
 import { Line } from '@/components/svgs/app/Line';
 import Image from 'next/image';

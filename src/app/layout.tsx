@@ -11,30 +11,29 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s - Stephania Limited",
+    template: "%s - Stephania Ltd",
     default:
-      "Stephania Limited - Stephania Support Services | Construction, Energy, Oil & Gas",
+      "Stephania Ltd - Engineering Excellence in Construction & Procurement",
   },
   description:
-    "Stephania Support Services provides bespoke and off-the-peg engineering services in construction, energy, and oil & gas industries. With a decade of experience, we prioritize quality, delivery, and project satisfaction. Our mission is to deliver high-quality goods and services at a reasonable cost, ensuring fairness, transparency, and efficiency in all supply chain processes. We aim to be recognized for our innovative sourcing approach, strategic alliances, and best practices.",
+    "Stephania Ltd is a premier engineering, construction, and procurement company delivering comprehensive solutions across oil & gas, power, construction, and telecommunications sectors worldwide. With 15+ years of experience, we provide engineering services, midstream solutions, vessel management, and offshore/onshore solutions with uncompromising quality standards.",
   keywords: [
-    "Stephania Support Services",
-    "engineering services", 
+    "Stephania Ltd",
+    "engineering excellence", 
     "construction",
-    "energy",
+    "procurement",
     "oil & gas",
-    "bespoke",
-    "off-the-peg",
-    "quality",
-    "delivery",
-    "project satisfaction",
-    "supply chain",
-    "fairness",
-    "transparency", 
-    "efficiency",
-    "innovative sourcing",
-    "strategic alliances",
-    "best practices"
+    "power generation",
+    "telecommunications",
+    "midstream solutions",
+    "vessel management",
+    "offshore solutions",
+    "onshore solutions",
+    "industrial projects",
+    "OEM partners",
+    "technical expertise",
+    "project delivery",
+    "safety focus"
   ],
 };
 

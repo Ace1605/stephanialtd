@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { StaticImageData } from "next/image";
-import heroImage from "/public/assets/home/firstBannerImage.jpg";
-import secondImage from "/public/assets/home/secondBannerImage.jpg";
-import thirdImage from "/public/assets/home/thirdBannerImage.jpg";
+import heroImage from "/public/assets/home/hero1.jpg";
+import secondImage from "/public/assets/home/hero2.jpg";
+import thirdImage from "/public/assets/home/hero3.jpg";
 import { useEffect, useState } from "react";
 import { AppCtaButton } from "@/components/buttons/AppCtaButton";
 
@@ -18,22 +18,18 @@ export const Hero = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const words: string[] = [
-    `${" "}Engineering Services`,
-    `${" "}Procurement`,
-    `${" "}Support Services`,
+    `${" "}Engineering Excellence`,
+    `${" "}Construction & Procurement`,
+    `${" "}Industrial Solutions`,
   ];
 
   const paragraphs: string[] = [
-    "Join us are we display innovation by providing holistic engineering solutions that are adapted to your precise requirements.",
-    "We give the needed boosts to project delivery of all kinds; with our extensive engineering procurement solutions.",
-    "From troubleshooting to project guidance, we're your trusted partner in engineering success.",
+    "Delivering comprehensive solutions across oil & gas, power, construction, and telecommunications sectors worldwide with proven expertise and innovation.",
+    "End-to-end engineering, construction, and procurement services ensuring optimal project delivery with uncompromising quality standards.",
+    "Specialized solutions for complex industrial environments including offshore, onshore, and midstream operations with focus on safety and efficiency.",
   ];
 
-  const buttonTexts: string[] = [
-    "See our recent projects",
-    "See our recent projects",
-    "Get a quotation",
-  ];
+  const buttonTexts: string[] = ["Get Started", "Our Services", "Contact Us"];
   useEffect(() => {
     let currentIndex = 0;
 
@@ -116,7 +112,7 @@ export const Hero = () => {
             }
           >
             <span id="changingWord" className={"text-gradient"}>
-              Engineering Services{" "}
+              Engineering Excellence{" "}
             </span>
           </motion.h1>
 

@@ -22,18 +22,14 @@ export interface NavLink {
 }
 
 export const navigationLinks: NavLink[] = [
-  // {
-  //   title: "Products",
-  //   hasChildren: true,
-  // },
-  { title: "Who we are", id: "about" },
+  { title: "About", id: "about" },
   {
     title: "Services",
     hasChildren: true,
   },
-  { title: "Partnerships" },
-  { title: "Contact us", id: "contact-sales" },
-  // { title: 'Newsroom', id: 'stephania-blog' },
+  { title: "Industries", hasChildren: true },
+  { title: "Partners", id: "partnerships" },
+  { title: "Contact", id: "contact-sales" },
 ];
 
 export const Header = () => {
@@ -128,7 +124,7 @@ export const Header = () => {
           </div>
 
           <AnimatePresence initial={false}>
-            {activeGroup === "Services" ? (
+            {activeGroup === "Services" || activeGroup === "Industries" ? (
               <motion.div
                 initial="collapsed"
                 animate="open"
@@ -152,21 +148,7 @@ export const Header = () => {
                 onMouseLeave={closeMenu}
                 className="sticky z-[1000] 1024:block hidden left-0 bg-white mt-0 w-full rounded-b-[20px] border-t"
               >
-                <div
-                  className={clsx(
-                    "h-[370px] app-container pb-20 pt-20"
-                    // activeGroup !== "Products" ? "pt-14"
-                  )}
-                >
-                  {/* {activeGroup === "Products" && (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                    >
-                      <ProductGroup close={closeMenu} />
-                    </motion.div>
-                  )} */}
+                <div className={clsx("h-[250px] app-container pb-20 pt-20")}>
                   {activeGroup === "Services" && (
                     <motion.div
                       initial={{ opacity: 0 }}
@@ -174,6 +156,15 @@ export const Header = () => {
                       viewport={{ once: true }}
                     >
                       <BusinessesGroup close={closeMenu} />
+                    </motion.div>
+                  )}
+                  {activeGroup === "Industries" && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                    >
+                      <IndustriesHeader close={closeMenu} />
                     </motion.div>
                   )}
                 </div>

@@ -1,0 +1,72 @@
+import { Metadata } from "next";
+import phone from "/public/assets/products/hero2.jpg";
+import { ProductsHero } from "@/components/sections/product/ProductsHero";
+import { ProductBrand } from "@/components/sections/product/ProductsBrand";
+import { FaqsAsFooter } from "@/components/modules/faqs/FaqsAsFooter";
+import { ProductFeature } from "@/components/sections/product/ProductFeature";
+import { HowToGetStarted } from "@/components/sections/product/HowToGetStarted";
+import pos from "/public/assets/products/hero3.jpg";
+import { SectionSlice } from "@/components/commons/sections/SectionSlice";
+import payment from "/public/assets/products/thirdBannerImage.jpg";
+import { CallToAction } from "@/components/core/Footer/CallToAction";
+
+export const metadata: Metadata = {
+  title: "Onshore Solutions",
+};
+
+export default function OnShoreSolutions() {
+  return (
+    <>
+      <ProductsHero
+        id="tap_and_pay_hero"
+        image={phone}
+        title={"Comprehensive "}
+        lastWord="Midstream Solutions"
+        description={
+          "End-to-end midstream solutions including pipeline management, storage facilities, and distribution networks designed to optimize your operations."
+        }
+        buttonText="Get Started"
+      />
+      <ProductBrand />
+      {/* <ProductFeature
+        featureTitle="Easy and convenient "
+        lastWord="contactless "
+        continuation="payment solution"
+        hClassName="768:!w-2/3"
+        pClassName="768:!w-2/3 768:pr-6"
+        subtitle="Stephania Tap and Pay is ideal for a wide range of merchants, including restaurants, boutiques, hair salons, delivery services, and cab drivers, who need to accept card payments."
+        image={pos}
+        firstBoxTitle="Evolve and speed up your customers' payment "
+        firstBoxText="Now, say goodbye to long queues at your checkout counter, as you have the capability to accept payments anywhere, on the move!"
+        secondBoxTitle="No additional hardware required"
+        secondBoxText="Stephania's Tap and Pay feature requires just your NFC-compatible device. To view a list of supported device models,"
+        linkText=" click here."
+        link="https://www.stephania.africa/login"
+        ThirdBoxTitle="See all your transactions in real-time"
+        thirdBoxText="Stephania Tap and Pay seamlessly consolidates payments from different devices, synchronizing them into a single, comprehensive dashboard for easy monitoring."
+      />
+      <SectionSlice
+        imagePosition={"right"}
+        title={
+          <span className={"1180:text-[49px] block"}>
+            Turn
+            <span className="text-gradient"> your phone </span>
+            into a POS terminal
+          </span>
+        }
+        hClassName="768:!w-5/6"
+        description={
+          <span className={"block"}>
+            {`With Stephania Tap and Pay, you can receive payments via cards with your mobile device. Keep a close eye on your transactions with real-time updates, we ensure you're always in the loop and never miss a detail.`}
+          </span>
+        }
+        image={payment}
+        action="Get Started"
+        actionLink="https://www.stephania.africa/signup"
+        target="_blank"
+        withArrow
+      /> */}
+      <CallToAction />
+    </>
+  );
+}

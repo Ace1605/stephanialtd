@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import illustration from '/public/assets/megamenu/phone.png';
+import illustration from '/public/assets/products/thirdBannerImage.jpg';
 import { AppleGoogleBtn } from '@/components/commons/AppleGoogleBtn';
 import { Apple, GooglePlay } from '@/components/svgs/Socials';
 import { Line } from '@/components/svgs/app/Line';

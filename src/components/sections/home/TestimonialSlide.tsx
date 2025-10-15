@@ -1,24 +1,15 @@
 "use client";
 
-import {
-  TestimonialSliderCards,
-  reviews,
-} from "@/components/modules/TestimonialSliderCards";
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import { SponsorSlider } from "@/components/modules/SponsorSlider";
-import { BackButton, ForwardButton } from "@/components/svgs/Navigation";
 import { Element } from "react-scroll";
 
 export const mobileWidth = 768;
 
 export const TestimonialSlide = () => {
-  const [sliderPosition, setSliderPosition] = useState<number>(0);
-  const [count, setCount] = useState<number>(0);
   const desktopXPadding = 64;
   const mobileXPadding = 60;
-  const distanceMovedOnDesktop = 620;
-  const distanceMovedOnMobile = 384;
 
   const testimonialCarouselRef = useRef<HTMLDivElement>(null);
   const fixedWidthRef = useRef<HTMLDivElement>(null);
@@ -60,83 +51,23 @@ export const TestimonialSlide = () => {
     };
   }, []);
 
-  const moveSliderBackward = () => {
-    const constantWidth = document.getElementById("constantWidth");
-    if (count > 0 && constantWidth) {
-      if (document.body.clientWidth > mobileWidth) {
-        setSliderPosition(
-          (prevPosition) => prevPosition + distanceMovedOnDesktop
-        );
-      } else {
-        setSliderPosition(
-          (prevPosition) => prevPosition + distanceMovedOnMobile
-        );
-      }
-      setCount(count - 1);
-    }
-    // Move slider to the left
-  };
-
-  const moveSliderForward = () => {
-    const constantWidth = document.getElementById("constantWidth");
-    if (count < reviews.length - 1 && constantWidth) {
-      if (document.body.clientWidth > mobileWidth) {
-        setSliderPosition(
-          (prevPosition) => prevPosition - distanceMovedOnDesktop
-        );
-      } else {
-        setSliderPosition(
-          (prevPosition) => prevPosition - distanceMovedOnMobile
-        );
-      }
-      // Move slider to the right
-      setCount(count + 1);
-    }
-  };
-
   return (
     <Element name="home_testimonial">
       <section id={"home_testimonial"} className={"py-12 overflow-hidden"}>
-        {/* <div
-          ref={fixedWidthRef}
-          id="constantWidth"
-          className="app-container flex flex-col gap-1"
-        >
-          <h4
-            className={
-              "text-left text-black font-bold text-[30px] 640:text-[50px] 1180:text-[70px] leading-[39px] 640:leading-[56px] 1180:leading-[80px] tracking-[-1.5px] 640:tracking-[-3.5px] w-full"
-            }
-          >
-            Hear from Stephania <span className="text-gradient">users</span>.
-          </h4>
-        </div> */}
-        {/* <div
-          id='dynamicMargin'
-          ref={testimonialCarouselRef}
-          className='hidden-scrollbar mt-7 768:mt-12 w-full overflow-x-auto px-8 768:pseudo-p'
-        >
-          <div
-            className={clsx('min-w-fit')}
-            style={{
-              transform: `translateX(${sliderPosition}px)`,
-              transition: 'ease-in-out',
-              transitionDuration: '300ms',
-            }}
-          >
-            <TestimonialSliderCards />
-          </div>
-        </div> */}
-        {/* <div className='app-container flex gap-8 items-center mt-7'>
-          <span className='cursor-pointer'>
-            <BackButton onClick={moveSliderBackward} />
-          </span>
-          <span className='cursor-pointer'>
-            <ForwardButton onClick={moveSliderForward} />
-          </span>
-        </div> */}
-        <div className="hidden-scrollbar px-8 768:px-8 overflow-x-auto 768:overflow-x-hidden">
-          <div className={clsx("min-w-fit")}>
-            <SponsorSlider />
+        <div className="app-container">
+          <div className="relative">
+            {/* Left Fade */}
+            <div className="absolute left-0 top-0 bottom-0 w-8 640:w-16 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+            
+            {/* Right Fade */}
+            <div className="absolute right-0 top-0 bottom-0 w-8 640:w-16 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+            
+            {/* Slider Content */}
+            <div className="hidden-scrollbar overflow-x-auto 768:overflow-x-hidden">
+              <div className={clsx("min-w-fit px-4")}>
+                <SponsorSlider />
+              </div>
+            </div>
           </div>
         </div>
       </section>

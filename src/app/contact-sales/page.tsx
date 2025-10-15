@@ -1,5 +1,6 @@
 import { CallToAction } from "@/components/core/Footer/CallToAction";
 import { GetInTouch } from "@/components/sections/contact-sales/GetInTouch";
+import { GoogleMap } from "@/components/sections/contact-sales/GoogleMap";
 // import { DownloadPrompt } from "@/components/sections/home/DownloadPrompt";
 import { Metadata } from "next";
 
@@ -12,6 +13,7 @@ export default function ContactUs() {
     <main>
       <GetInTouch isSales />
       {/* <DownloadPrompt /> */}
+      <GoogleMap />
       <CallToAction />
     </main>
   );

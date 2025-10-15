@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import dev from '/public/assets/products/developer.png';
+import dev from '/public/assets/products/hero3.jpg';
 import { motion } from 'framer-motion';
 import { Sponsors } from '../Sponsors';
 

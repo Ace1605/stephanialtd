@@ -41,8 +41,8 @@ export const SponsorSlider = ({ hide }: Props) => {
     );
   });
 
-  // Create enough copies to ensure continuous scrolling across screen width
-  const repeatedSponsors = Array.from({ length: 4 }, (_, i) =>
+  // Create enough copies to ensure seamless infinite scrolling
+  const repeatedSponsors = Array.from({ length: 6 }, (_, i) =>
     sponsorItems.map((item, index) =>
       React.cloneElement(item, { key: `${i}-${index}` })
     )
@@ -53,7 +53,7 @@ export const SponsorSlider = ({ hide }: Props) => {
       <div
         className="flex items-center gap-48 768:gap-60"
         style={{
-          animation: "slide 60s ease-in-out infinite",
+          animation: "slide 120s linear infinite",
           animationPlayState: isPaused ? "paused" : "running",
           width: "max-content",
         }}
