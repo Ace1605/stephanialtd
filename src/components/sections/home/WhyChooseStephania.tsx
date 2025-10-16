@@ -5,6 +5,9 @@ import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { AppCtaButton } from "@/components/buttons/AppCtaButton";
 import { useState, useEffect } from "react";
+import { Users } from "@/components/svgs/Users";
+import { CustomCheck } from "@/components/svgs/CustomCheck";
+import { Cap } from "@/components/svgs/Cap";
 
 // Custom hook for count-up animation
 const useCountUp = (
@@ -54,31 +57,19 @@ export const WhyChooseStephania = () => {
 
   const stats = [
     {
-      icon: (
-        <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
-        </svg>
-      ),
+      icon: <Cap className="w-12 h-12" />,
       number: "15",
       suffix: "+",
       label: "Years Experience",
     },
     {
-      icon: (
-        <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z" />
-        </svg>
-      ),
+      icon: <CustomCheck className="w-12 h-12" />,
       number: "200",
       suffix: "+",
       label: "Projects Delivered",
     },
     {
-      icon: (
-        <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-        </svg>
-      ),
+      icon: <Users className="w-12 h-12" />,
       number: "50",
       suffix: "+",
       label: "Expert Team",
@@ -150,14 +141,19 @@ export const WhyChooseStephania = () => {
 
         {/* Statistics Section */}
         <div className="relative">
-          {/* Background Image */}
+          {/* Background Video */}
           <div className="absolute inset-0 overflow-hidden">
-            <div
-              className="w-full h-full bg-cover bg-center bg-no-repeat"
-              style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/home/firstBannerImage.jpg')`,
-              }}
-            />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/assets/home/bgvid.mp4" type="video/mp4" />
+            </video>
+            {/* Video Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-70" />
           </div>
 
           {/* Content */}
