@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { AppCtaButton } from '@/components/buttons/AppCtaButton';
-import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import Image, { StaticImageData } from 'next/image';
-import { PropsWithChildren, ReactNode } from 'react';
-import { AppleGoogleBtn } from '../AppleGoogleBtn';
+import { AppCtaButton } from "@/components/buttons/AppCtaButton";
+import clsx from "clsx";
+import { motion } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
+import { PropsWithChildren, ReactNode } from "react";
+import { AppleGoogleBtn } from "../AppleGoogleBtn";
 
 interface Props {
   title: ReactNode;
@@ -13,10 +13,10 @@ interface Props {
   action?: ReactNode;
   id?: string;
   image?: StaticImageData;
-  floatingImage?: StaticImageData;
+  floatingImage?: ReactNode;
   floatingImageClassName?: string;
   imageComponent?: ReactNode;
-  imagePosition?: 'right' | 'left';
+  imagePosition?: "right" | "left";
   className?: string;
   label?: string;
   hClassName?: string;
@@ -26,6 +26,8 @@ interface Props {
   outline?: boolean;
   hasDownload?: boolean;
   target?: string;
+  floatingIcon?: ReactNode;
+  floatingIconClassName?: string;
 }
 
 export const SectionSlice = ({
@@ -33,11 +35,11 @@ export const SectionSlice = ({
   description,
   action,
   children,
-  className = '',
+  className = "",
   id,
-  imagePosition = 'right',
+  imagePosition = "right",
   image,
-  textBlockClassname = '',
+  textBlockClassname = "",
   imageComponent,
   actionLink,
   hClassName,
@@ -45,14 +47,18 @@ export const SectionSlice = ({
   outline,
   hasDownload,
   target,
+  floatingImage,
+  floatingImageClassName,
+  floatingIcon,
+  floatingIconClassName,
 }: PropsWithChildren<Props>) => {
   return (
-    <section id={id} className={'relative app-container z-5 mb-14 640:mb-28'}>
-      <div className={clsx('gap-6 768:gap-20 grid 960:grid-cols-2', className)}>
+    <section id={id} className={"relative app-container z-5 mb-14 640:mb-28"}>
+      <div className={clsx("gap-6 768:gap-14 grid 960:grid-cols-2", className)}>
         <div
           className={clsx(
-            'max-[545px] 960:w-[545px] h-full my-auto relative flex-shrink-0 flex-col align-middle justify-center',
-            imagePosition === 'right' ? 'hidden' : '960:flex hidden',
+            "max-[545px] 960:w-[545px] h-full my-auto relative flex-shrink-0 flex-col align-middle justify-center",
+            imagePosition === "right" ? "hidden" : "960:flex hidden"
           )}
         >
           {image ? (
@@ -63,25 +69,45 @@ export const SectionSlice = ({
               transition={{
                 duration: 0.6,
               }}
-              className=''
+              className=""
             >
               <Image
                 src={image}
                 priority
-                alt='illustration'
-                className='object-cover'
+                alt="illustration"
+                className="object-cover rounded-2xl max-h-[370px]"
               />
             </motion.div>
           ) : (
             imageComponent
           )}
+          {floatingImage && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: 0.5,
+              }}
+            >
+              <div
+                className={clsx(
+                  "absolute animate-float",
+                  floatingImageClassName
+                )}
+              >
+                {floatingImage}
+              </div>
+            </motion.div>
+          )}
         </div>
 
         <div
           className={clsx(
-            'y-center gap-4 960:gap-3',
-            imagePosition === 'right' ? '960:mr-10 1180:mr-20' : '',
             textBlockClassname,
+            "relative y-center gap-4 960:gap-3",
+            imagePosition === "right" ? "960:mr-5 1180:mr-10" : ""
           )}
         >
           <motion.h5
@@ -92,8 +118,8 @@ export const SectionSlice = ({
               duration: 0.6,
             }}
             className={clsx(
-              'text-left text-[38px] 640:text-[46px] 1300:text-[60px] leading-[42px] 640:leading-[60px] 1180:leading-[65px] tracking-[-2.4px] text-black font-bold 768:w-4/5',
-              hClassName,
+              "text-left text-[38px] 640:text-[46px] 1300:text-[60px] leading-[42px] 640:leading-[60px] 1180:leading-[65px] tracking-[-2.4px] text-black font-bold",
+              hClassName
             )}
           >
             {title}
@@ -108,7 +134,7 @@ export const SectionSlice = ({
                 duration: 0.8,
                 delay: 0.2,
               }}
-              className={'640:mt-3 text-left subtitle text-black'}
+              className={"640:mt-3 text-left subtitle text-black"}
             >
               {description}
             </motion.p>
@@ -125,45 +151,65 @@ export const SectionSlice = ({
                 duration: 1,
                 delay: 0.6,
               }}
-              className={'flex gap-4 items-center mt-2 768:mt-4'}
+              className={"flex gap-4 items-center mt-2 768:mt-4"}
             >
               {outline ? (
                 <AppCtaButton
                   href={actionLink!}
                   className={
-                    'outline-button text-primary-main gap-2 h-12 768:h-14 group x-center'
+                    "outline-button text-primary-main gap-2 h-12 768:h-14 group x-center"
                   }
                   withArrow={withArrow}
-                  target={target ?? '_parent'}
+                  target={target ?? "_parent"}
                 >
-                  <span className='h-full y-center'>{action}</span>
+                  <span className="h-full y-center">{action}</span>
                 </AppCtaButton>
               ) : (
                 <AppCtaButton
                   href={actionLink!}
                   className={
-                    'primary-button gap-2 h-12 768:h-14 group x-center'
+                    "primary-button gap-2 h-12 768:h-14 group x-center"
                   }
                   withArrow={withArrow}
-                  target={target ?? '_parent'}
+                  target={target ?? "_parent"}
                 >
-                  <span className='h-full y-center'>{action}</span>
+                  <span className="h-full y-center">{action}</span>
                 </AppCtaButton>
               )}
               {hasDownload && (
-                <AppleGoogleBtn href='https://cashierapp.stephania.africa' />
+                <AppleGoogleBtn href="https://cashierapp.stephania.africa" />
               )}
+            </motion.div>
+          )}
+          {floatingIcon && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: 0.5,
+              }}
+            >
+              <div
+                className={clsx(
+                  "absolute animate-float",
+                  floatingIconClassName
+                )}
+              >
+                {floatingIcon}
+              </div>
             </motion.div>
           )}
         </div>
 
         <div
           className={clsx(
-            '960:my-auto mt-3 768:mt-10 w-full',
-            imagePosition === 'right' ? '' : '960:hidden',
+            "960:my-auto mt-3 768:mt-10 w-full",
+            imagePosition === "right" ? "" : "960:hidden"
           )}
         >
-          <div className='relative'>
+          <div className="relative">
             {image ? (
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
@@ -172,17 +218,37 @@ export const SectionSlice = ({
                 transition={{
                   duration: 0.6,
                 }}
-                className='h-full '
+                className="h-full "
               >
                 <Image
                   src={image}
                   priority
-                  alt='illustration'
-                  className='object-cover'
+                  alt="illustration"
+                  className="object-cover rounded-2xl max-h-[370px]"
                 />
               </motion.div>
             ) : (
               imageComponent
+            )}
+            {floatingImage && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.5,
+                }}
+              >
+                <div
+                  className={clsx(
+                    "absolute animate-float",
+                    floatingImageClassName
+                  )}
+                >
+                  {floatingImage}
+                </div>
+              </motion.div>
             )}
           </div>
         </div>

@@ -1,12 +1,6 @@
 import { Metadata } from "next";
-import { FaqsAsFooter } from "@/components/modules/faqs/FaqsAsFooter";
-import { DownloadPrompt } from "@/components/sections/home/DownloadPrompt";
-import { IndustriesHero } from "@/components/sections/industries/IndustriesHero";
-import { StephaniaNumbers } from "@/components/modules/StephaniaNumbers";
 import { CallToAction } from "@/components/core/Footer/CallToAction";
 import { VideoSection } from "@/components/sections/industries/VideoSection";
-import library from "/public/assets/businesses/hero3.jpg";
-import student from "/public/assets/businesses/thirdBannerImage.jpg";
 import { ServiceSolution } from "@/components/sections/industries/ServiceSolution";
 import { Description } from "@/components/sections/industries/hook/useDescription";
 import { constructionGoals } from "@/components/sections/industries/contants";
@@ -18,19 +12,13 @@ export const metadata: Metadata = {
 export default function Construction() {
   return (
     <>
-      <IndustriesHero
-        subtitle="Specialized innovative solutions designed specifically for the construction industry."
-        description="From project management to equipment tracking, our services are crafted to meet the unique needs of construction companies and their operations."
-        title="Construction"
-        id="construction_hero"
-        firstImage={library}
-        secondImage={student}
-      />
       <VideoSection
         videoSrc="/assets/products/construction.mp4"
-        title="Delivering Proven Results For "
-        lastWord="Construction"
+        title="Construction"
         id="construction_video_section"
+        videoClass="max-h-[450px] 768:max-h-[600px]"
+        subtitle="Specialized innovative solutions designed specifically for the construction industry."
+        description="Stephania empowers construction companies with innovative engineering solutions and comprehensive project management systems that streamline operations from ground-breaking to completion. Our specialized services include advanced project lifecycle management, real-time equipment tracking and maintenance systems, supply chain optimization, workforce management platforms, safety compliance monitoring, BIM integration, cost estimation tools, and quality assurance systems. We provide procurement solutions for construction materials, vendor management platforms, progress tracking with drone technology, and digital documentation systems that ensure projects are delivered on time, within budget, and to the highest safety and quality standards."
       />
       <ServiceSolution
         firstWord="Build Better with"

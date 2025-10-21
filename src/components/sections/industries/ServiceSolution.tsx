@@ -17,7 +17,7 @@ export const ServiceSolution = ({
   lastWord,
 }: Props) => {
   return (
-    <section className="pt-5 pb-16 768:pb-32 768:pt-24">
+    <section className="pt-5 pb-16 768:pb-32 768:pt-12">
       <div className={"relative app-container"}>
         <motion.h1
           initial={{ y: 10, opacity: 0 }}
@@ -27,7 +27,7 @@ export const ServiceSolution = ({
             duration: 0.4,
           }}
           className={
-            "text-left text-black font-semibold text-[35px] 640:text-[52px] 1180:text-[70px] leading-[41px] 640:leading-[60px] 1180:leading-[80px] tracking-[-0.64px] 1024:tracking-[-3.5px] w-full 768:w-1/2"
+            "text-center text-black mx-auto font-semibold text-[35px] 640:text-[52px] 1180:text-[70px] leading-[41px] 640:leading-[60px] 1180:leading-[80px] tracking-[-0.64px] 1024:tracking-[-3.5px] w-full 768:w-2/3"
           }
         >
           {firstWord && firstWord}
@@ -45,7 +45,7 @@ export const ServiceSolution = ({
             delay: 0.2,
           }}
           className={
-            "block 768:hidden mb-8 mt-5 text-black text-base leading-[24px] 768:leading-[30px] 768:text-[18px] tracking-[-0.32px] 640:tracking-[-0.4px] font-normal text-left pr-2"
+            "block text-center mb-8 mt-5 text-black text-base leading-[24px] 768:leading-[30px] 768:text-[18px] tracking-[-0.32px] 640:tracking-[-0.4px] font-normal"
           }
         >
           Stephania is a growth engine for a new generation of innovative,

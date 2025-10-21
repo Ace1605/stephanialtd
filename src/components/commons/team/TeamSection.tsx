@@ -33,7 +33,7 @@ export const TeamSection = ({ title, subtitle, members }: TeamSectionProps) => {
         {subtitle}
       </p>
 
-      <div className="grid 640:grid-cols-2 1024:grid-cols-3 gap-8 1024:gap-12">
+      <div className="grid 640:grid-cols-2 1024:grid-cols-4 gap-8">
         {members.map((member, index) => (
           <div key={member.name} className={""}>
             <TeamMemberCard {...member} delay={0.1 * (index + 1)} />

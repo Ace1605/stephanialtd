@@ -20,48 +20,43 @@ export default function Procurement() {
       <ProductsHero
         id="pos_terminal_hero"
         image={phone}
-        title={"Streamlined "}
-        lastWord="Procurement Services"
+        title={"Strategic "}
+        lastWord="Procurement"
+        continuation=" Solutions"
         description={
           "Comprehensive procurement solutions designed to optimize your supply chain and reduce costs while maintaining quality standards."
         }
         buttonText="Request Terminal"
       />
       <ProductBrand />
-      {/* <ProductFeature
-        featureTitle="Robust and User-Friendly "
-        lastWord="Payment Devices "
-        continuation="for African Enterprises"
-        subtitle="Elevate your sales with our advanced, feature-rich POS device, designed to enable you to craft personalized, brand-centric customer experiences."
+      <ProductFeature
+        featureTitle="Strategic Supply Chain "
+        lastWord="Optimization"
+        continuation=" Solutions"
+        subtitle="Transform your procurement operations with comprehensive supply chain management, vendor optimization, and cost reduction strategies tailored for your industry."
         image={pos}
-        firstBoxTitle="Multiple Payment Channel"
-        firstBoxText="Unlike typical POS systems that only process card payments, Stephania Terminal offers a variety of payment options for customers."
-        secondBoxTitle="Simplified Daily Accounting"
-        secondBoxText="Track each Terminal transaction in real time via the Stephania Dashboard, rather than as a single bulk sum, saving numerous hours in reconciliation."
-        ThirdBoxTitle="Exceptional Connectivity"
-        thirdBoxText="Our Terminal devices come equipped with both Wi-Fi and a global SIM card, with a robust data signal for continuous network access."
       />
       <SectionSlice
         imagePosition={"right"}
         title={
           <span className={"1180:text-[49px] block"}>
-            Perform a Variety of
+            Streamline Your
             <span>
-              <span className={"text-gradient"}> Transactions</span>
+              <span className={"text-gradient"}> Procurement Process</span>
             </span>
           </span>
         }
         description={
           <span className={"block"}>
-            {`Experience the versatility of conducting various transactions with ease. With our POS terminal, you can accept transfers, facilitate bill payments, and process both card and QR payments effortlessly. Additionally, provide instant printed receipts to customers for a seamless transaction experience.`}
+            {`From requisition to delivery, our comprehensive procurement platform automates workflows, ensures compliance, and provides complete visibility into your purchasing operations.`}
           </span>
         }
         image={posGuy}
-        action="Request Terminal"
-        actionLink="https://www.stephania.africa/signup"
-        target="_blank"
+        action="Get Started"
+        actionLink="/contact-sales"
+        withArrow
       />
-      <HowToGetStarted
+      {/* <HowToGetStarted
         title="How To Get "
         lastWord="Your POS"
         subtitle="Need support?"

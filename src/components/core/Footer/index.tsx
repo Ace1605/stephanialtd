@@ -131,12 +131,12 @@ export const Footer = () => {
                       <Link
                         href={
                           link === "Terms of Service"
-                            ? "#"
+                            ? "/legal/terms-of-use"
                             : link === "Privacy Policy"
-                              ? "#"
-                              : link === "Partnership"
-                                ? "#"
-                                : link === "Support"
+                              ? "/legal/privacy-policy"
+                              : link === "Partners"
+                                ? "/partnerships"
+                                : link === "Contact Us"
                                   ? "/contact-sales"
                                   : link === "support@stephania.africa"
                                     ? "mailto: support@stephania.africa"
@@ -182,31 +182,30 @@ const footerGroups: {
   headerHiddenOnMobile?: boolean;
   modifier?: (link: string) => string;
 }[] = [
-  // {
-  //   title: 'Products',
-  //   nestedPages: true,
-  //   links: [
-  //     ...productGroupLinks.links?.products,
-  //     ...productGroupLinks.links?.['company size']?.slice(0, 1),
-  //   ],
-  // },
   {
-    title: "Core Services",
+    title: "Services",
     nestedPages: true,
-    links: [...businessesLinks.links?.["core services"]],
+    links: [
+      "Engineering Services",
+      "Procurement",
+      "Construction",
+      "Vessel Management",
+      "Onshore Solutions",
+      "Offshore Solutions",
+      "Midstream Solutions",
+    ],
   },
   {
-    title: "Specialized Solutions",
+    title: "Industries",
     nestedPages: true,
-    links: [...businessesLinks.links?.["specialized solutions"]],
+    links: ["Construction", "Oil & Gas", "Power", "Telecommunications"],
   },
   {
     title: "Company",
     links: [
       "About",
-      "Partnership",
-      "Contact us",
-      // "Stephania Blog",
+      "Partners",
+      "Contact Us",
       "Terms of Service",
       "Privacy Policy",
     ],

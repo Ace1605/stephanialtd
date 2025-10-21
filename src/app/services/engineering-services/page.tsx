@@ -1,14 +1,14 @@
 import { Metadata } from "next";
-import phone from "/public/assets/products/hero2.jpg";
+import phone from "/public/assets/businesses/1223.jpg";
 import { ProductsHero } from "@/components/sections/product/ProductsHero";
 import { ProductBrand } from "@/components/sections/product/ProductsBrand";
-import { FaqsAsFooter } from "@/components/modules/faqs/FaqsAsFooter";
 import { ProductFeature } from "@/components/sections/product/ProductFeature";
-import attendant from "/public/assets/products/hero3.jpg";
+import design from "/public/assets/businesses/50906.jpg";
 import { SectionSlice } from "@/components/commons/sections/SectionSlice";
-import cashierGuy from "/public/assets/products/thirdBannerImage.jpg";
-import blueLady from "/public/assets/products/hero2.jpg";
+import project from "/public/assets/businesses/3932.jpg";
+import process from "/public/assets/businesses/23070.jpg";
 import { CallToAction } from "@/components/core/Footer/CallToAction";
+import { Stars } from "@/components/svgs/Stars";
 
 export const metadata: Metadata = {
   title: "Engineering Services",
@@ -20,74 +20,82 @@ export default function EngineeringServices() {
       <ProductsHero
         id="cashier_hero"
         image={phone}
-        title={"Professional "}
+        title={"Bespoke "}
         lastWord="Engineering"
-        continuation=" Services For Your Projects"
+        continuation=" Services"
         description={
           "Comprehensive engineering solutions including design, consulting, and project management services tailored to meet your specific industry requirements."
         }
         buttonText="Get Started"
       />
       <ProductBrand />
-      {/* <ProductFeature
-        featureTitle="Collaborate With Your Team "
-        lastWord="Anywhere"
-        subtitle="Keep everyone focused on the big picture, and let Stephania automate the rest: collect payment, eliminate fake alerts, real time updates."
-        image={attendant}
-        firstBoxTitle="Payment Verification"
-        firstBoxText="Cashier can instantly verify payment without depending on the business owner"
-        secondBoxTitle="Fake Alert Elimination"
-        secondBoxText="Eliminate risk of bank transfer reversal and customer fraud."
-        ThirdBoxTitle="Fast Payment Verification"
-        thirdBoxText="Give customer immediate verification, eliminating customers wait time."
-        embedded
-        embedId="R1b8CjYO6gE"
+      <ProductFeature
+        featureTitle="Expert Engineering "
+        lastWord="Design"
+        continuation=" & Consulting"
+        subtitle="Transform your vision into reality with our comprehensive engineering expertise covering design, analysis, and technical consulting across multiple industries."
+        image={design}
       />
       <SectionSlice
         imagePosition={"right"}
         title={
           <span className={"1180:text-[49px] block"}>
-            Manage all your
+            Streamline your
             <span>
-              <span className={"text-gradient"}> cashier transactions </span>
+              <span className={"text-gradient"}> project lifecycle </span>
             </span>
-            in a single place
+            management
           </span>
         }
         hClassName="768:w-full 768:pr-10"
         description={
           <span className={"block"}>
-            {`Sync all of your payments into one place. Create unique cashier profiles for payment collections that settle in one platform.`}
+            {`From initial concept to final delivery, our project management expertise ensures your engineering projects are completed on time, within budget, and to specification.`}
           </span>
         }
-        image={cashierGuy}
+        image={project}
         action="Get Started"
         withArrow
-        actionLink="https://www.stephania.africa/signup"
-        target="_blank"
+        actionLink="/contact-sales"
+        floatingImage={
+          <div className="w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/2 rounded-full flex items-center justify-center">
+            <Stars />
+          </div>
+        }
+        floatingImageClassName="right-10 top-10"
       />
       <SectionSlice
         imagePosition={"left"}
         title={
           <span className={"1180:text-[49px] block"}>
-            Optimize business your
+            Optimize your
             <span>
-              <span className={"text-gradient"}> operations</span>
+              <span className={"text-gradient"}> engineering processes</span>
             </span>
           </span>
         }
         description={
           <span className={"block"}>
-            {`With Stephania Cashier, you can manage and streamline operations across multiple locations, sales channels, and employees to improve efficiency and your bottom line.`}
+            {`With Stephania's engineering services, you can enhance operational efficiency, reduce costs, and improve quality across your entire engineering workflow.`}
           </span>
         }
-        image={blueLady}
-        action="Try StephaniaCashier"
-        actionLink="https://www.stephania.africa/signup"
-        target="_blank"
+        image={process}
+        action="Contact Us"
+        actionLink="/contact-sales"
         outline
-        hasDownload
-      /> */}
+        floatingIcon={
+          <div className="w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/2 rounded-full flex items-center justify-center">
+            <Stars />
+          </div>
+        }
+        floatingIconClassName="-right-2 top-16"
+        floatingImage={
+          <div className="w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/2 rounded-full flex items-center justify-center">
+            <Stars />
+          </div>
+        }
+        floatingImageClassName="left-10 top-10"
+      />
       <CallToAction />
     </>
   );

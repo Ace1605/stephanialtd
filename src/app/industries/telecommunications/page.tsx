@@ -1,12 +1,6 @@
 import { Metadata } from "next";
-import { FaqsAsFooter } from "@/components/modules/faqs/FaqsAsFooter";
-import { DownloadPrompt } from "@/components/sections/home/DownloadPrompt";
-import { IndustriesHero } from "@/components/sections/industries/IndustriesHero";
-import { StephaniaNumbers } from "@/components/modules/StephaniaNumbers";
 import { CallToAction } from "@/components/core/Footer/CallToAction";
 import { VideoSection } from "@/components/sections/industries/VideoSection";
-import fashion from "/public/assets/businesses/hero3.jpg";
-import miniFashion from "/public/assets/businesses/thirdBannerImage.jpg";
 import { ServiceSolution } from "@/components/sections/industries/ServiceSolution";
 import { Description } from "@/components/sections/industries/hook/useDescription";
 import { telecommunicationsGoals } from "@/components/sections/industries/contants";
@@ -18,20 +12,14 @@ export const metadata: Metadata = {
 export default function Telecommunications() {
   return (
     <>
-      <IndustriesHero
-        subtitle="Advanced solutions for the telecommunications industry."
-        description="Stephania offers comprehensive solutions for telecommunications companies including billing systems, customer management tools, and service provisioning platforms designed to enhance connectivity and customer experience."
-        title="Telecommunications"
-        id="telecommunications_hero"
-        firstImage={fashion}
-        secondImage={miniFashion}
-      />
       <VideoSection
         videoSrc="/assets/products/telecom.mp4"
-        title="Delivering Proven Results For "
-        lastWord="Telecom Companies"
+        subtitle="Advanced solutions for the telecommunications industry."
+        description="Stephania delivers cutting-edge telecommunications solutions that revolutionize how telecom companies operate in today's connected world. Our comprehensive suite includes advanced billing systems with real-time processing, sophisticated customer management platforms with AI-driven insights, automated service provisioning tools, network optimization systems, and 5G infrastructure support. We specialize in OSS/BSS integration, IoT connectivity solutions, cloud-native architectures, and digital transformation services that enhance operational efficiency, improve customer satisfaction, and accelerate time-to-market for new services while ensuring regulatory compliance and security."
+        title="Telecommunications"
         id="telecommunications_video_section"
         hClassName="768:!w-2/3"
+        videoClass="max-h-[450px] 768:max-h-[600px]"
       />
       <ServiceSolution
         firstWord="Connect the World with "
