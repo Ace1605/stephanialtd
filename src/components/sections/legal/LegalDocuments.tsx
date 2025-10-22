@@ -27,44 +27,41 @@ const termsOfUse = {
     </ul>
     <p>We reserve the right to restrict or terminate access for any user who violates these Terms.</p>
     
-    <h3>4. Intellectual Property</h3>
-    <p>All content on this website—including text, graphics, logos, images, videos, icons, and software—is the property of Stephania Limited or its licensors.</p>
-    <p>You may not reproduce, modify, distribute, or use our content without prior written permission.</p>
+    <h3>4. Services and Availability</h3>
+    <p>We strive to provide accurate information and consistent access to our services. However, we do not guarantee that our website or services will be uninterrupted, error-free, or always available.</p>
+    <p>Stephania Limited reserves the right to modify, suspend, or discontinue any portion of the website or services without prior notice.</p>
     
-    <h3>5. Services and Availability</h3>
-    <p>We aim to ensure the accuracy and availability of our services and information. However, we do not guarantee uninterrupted access or error-free operation of our website or any online platform associated with our services.</p>
-    <p>Stephania Limited reserves the right to modify, suspend, or discontinue any part of the website or services at any time, without notice or liability.</p>
+    <h3>5. Third-Party Links</h3>
+    <p>Our website may contain links to external sites not operated by Stephania Limited. We are not responsible for their content, policies, or practices. Accessing third-party websites is at your own risk.</p>
     
-    <h3>6. Third-Party Links</h3>
-    <p>Our website may contain links to third-party websites. We are not responsible for the content, accuracy, or practices of any linked sites. Accessing third-party sites is at your own risk.</p>
-    
-    <h3>7. Limitation of Liability</h3>
+    <h3>6. Limitation of Liability</h3>
     <p>To the fullest extent permitted by law:</p>
     <ul>
-      <li>Stephania Limited shall not be liable for any indirect, incidental, or consequential damages arising from the use or inability to use our website or services.</li>
-      <li>We do not warrant that the website, content, or materials are error-free, accurate, or secure.</li>
-      <li>Your sole remedy for dissatisfaction with the website is to discontinue its use.</li>
+      <li>Stephania Limited shall not be liable for any indirect, incidental, consequential, or punitive damages resulting from your use of our website or services.</li>
+      <li>We make no warranties regarding the accuracy, reliability, or completeness of website content.</li>
+      <li>Your exclusive remedy for dissatisfaction with our website is to stop using it.</li>
     </ul>
     
-    <h3>8. Indemnification</h3>
-    <p>You agree to indemnify, defend, and hold harmless Stephania Limited, its directors, employees, affiliates, and partners from any claims, liabilities, damages, or expenses arising from your use of our website, services, or breach of these Terms.</p>
+    <h3>7. Indemnification</h3>
+    <p>You agree to defend, indemnify, and hold harmless Stephania Limited, its directors, employees, and affiliates from any claims, damages, or liabilities arising from your use of our website, violation of these Terms, or infringement of any rights.</p>
     
-    <h3>9. Governing Law</h3>
-    <p>These Terms are governed by and construed in accordance with the laws of the Federal Republic of Nigeria, without regard to conflict of law principles. Any disputes shall be subject to the exclusive jurisdiction of the courts in Nigeria.</p>
+    <h3>8. Governing Law</h3>
+    <p>These Terms shall be governed by and interpreted in accordance with the laws of the Federal Republic of Nigeria. Any disputes shall be subject to the exclusive jurisdiction of Nigerian courts.</p>
     
-    <h3>10. Termination</h3>
-    <p>Stephania Limited may suspend or terminate your access to the website or any services without notice if you breach these Terms or engage in conduct deemed harmful to the company or its users.</p>
+    <h3>9. Termination</h3>
+    <p>Stephania Limited may terminate or suspend access to the website at its discretion, without notice, for conduct that violates these Terms or is harmful to other users or the company.</p>
     
-    <h3>11. Disclaimer</h3>
-    <p>All information provided on this website is for general informational purposes only. While we strive for accuracy, Stephania Limited makes no representations or warranties, express or implied, regarding the completeness or reliability of any content.</p>
+    <h3>10. Disclaimer</h3>
+    <p>All materials on this website are provided for informational purposes only. Stephania Limited does not warrant or guarantee that the information is accurate, complete, or up to date.</p>
     
-    <h3>12. Changes to Terms</h3>
-    <p>We reserve the right to modify these Terms at any time. Updates will be posted on this page, and your continued use of the website constitutes acceptance of the updated Terms.</p>
+    <h3>11. Changes to These Terms</h3>
+    <p>We may update these Terms at any time. Continued use of our website following updates constitutes acceptance of the revised Terms.</p>
     
-    <h3>13. Contact Information</h3>
-    <p>For inquiries about these Terms, please contact:</p>
+    <h3>12. Contact Information</h3>
+    <p>For inquiries or assistance regarding these Terms, please contact:</p>
     <p><strong>Stephania Limited</strong><br>
-    Email: legal@stephanialtd.com</p>
+    Email: <a href="mailto:info@stephanialtd.com">info@stephanialtd.com</a><br>
+    Address: 5900 Balcones Drive, STE 100 Austin, Texas 78731. USA</p>
   `,
 };
 
@@ -74,7 +71,7 @@ const privacyPolicy = {
     <strong>Last Updated:</strong> October 21, 2025</p>
     
     <h3>1. Introduction</h3>
-    <p>Stephania Limited ("we", "our", or "us") values your privacy and is committed to protecting your personal information. This Privacy Policy describes how we collect, use, disclose, and protect information that identifies or can be used to identify you ("Personal Data") when you visit our website, engage our services, or interact with us in any capacity.</p>
+    <p>Stephania Limited ("we", "our", or "us") values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard information that identifies or can be used to identify you ("Personal Data") when you visit our website, engage our services, or interact with us.</p>
     <p>By accessing or using our website, products, or services, you agree to this Privacy Policy.</p>
     
     <h3>2. Information We Collect</h3>
@@ -82,74 +79,71 @@ const privacyPolicy = {
     
     <h6>a. Personal Information:</h6>
     <ul>
-      <li>Full name, company name, email address, phone number, and contact details.</li>
-      <li>Billing or payment details when applicable.</li>
-      <li>Job title, professional background, or related business information.</li>
+      <li>Name, company name, email address, and phone number.</li>
+      <li>Professional or business information related to our services.</li>
     </ul>
     
     <h6>b. Technical Information:</h6>
     <ul>
-      <li>IP address, browser type, operating system, and device identifiers.</li>
-      <li>Usage data such as pages visited, time spent on our site, and referring URLs.</li>
+      <li>IP address, browser type, device information, and operating system.</li>
+      <li>Usage data such as pages visited and time spent on our website.</li>
     </ul>
     
-    <h6>c. Cookies and Tracking:</h6>
-    <p>We use cookies and similar technologies to enhance user experience, improve website functionality, and analyze traffic patterns. You can manage cookie preferences through your browser settings.</p>
-    
     <h3>3. How We Use Your Information</h3>
-    <p>We use your data for the following purposes:</p>
+    <p>Your information helps us:</p>
     <ul>
-      <li>To provide and manage our engineering, procurement, and construction services.</li>
-      <li>To communicate with you about inquiries, projects, and support.</li>
-      <li>To process payments and manage business relationships.</li>
-      <li>To send newsletters, promotional materials, or updates (where consented).</li>
-      <li>To improve our website, services, and user experience.</li>
-      <li>To comply with legal obligations and resolve disputes.</li>
+      <li>Provide, manage, and improve our services.</li>
+      <li>Respond to inquiries, quotes, or service requests.</li>
+      <li>Process transactions and manage business relationships.</li>
+      <li>Comply with legal and regulatory obligations.</li>
     </ul>
     
     <h3>4. Legal Basis for Processing</h3>
-    <p>Depending on your jurisdiction, our processing of your data may rely on one or more of the following legal bases:</p>
+    <p>Depending on your location, we may process your information based on:</p>
     <ul>
       <li>Your consent;</li>
-      <li>The necessity of fulfilling a contract with you;</li>
-      <li>Compliance with legal obligations;</li>
-      <li>Our legitimate interest in conducting and improving our business operations.</li>
+      <li>Our contractual obligations to you;</li>
+      <li>Compliance with legal requirements; or</li>
+      <li>Our legitimate business interests.</li>
     </ul>
     
-    <h3>5. Sharing and Disclosure of Information</h3>
-    <p>We do not sell or rent your personal data. However, we may share it with:</p>
+    <h3>5. Sharing and Disclosure</h3>
+    <p>We do not sell or rent personal data. However, we may share your information with:</p>
     <ul>
-      <li>Service providers and business partners assisting us in operations (e.g., hosting, analytics, logistics, or communications).</li>
-      <li>Regulatory authorities or law enforcement when required by law.</li>
-      <li>Third parties involved in a merger, acquisition, or restructuring, under confidentiality obligations.</li>
+      <li>Trusted service providers assisting in business operations.</li>
+      <li>Legal or regulatory authorities when required by law.</li>
+      <li>Business partners involved in legitimate collaborations.</li>
+      <li>Successors in the event of a merger, acquisition, or restructuring.</li>
     </ul>
     
     <h3>6. Data Retention</h3>
-    <p>We retain personal data only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, comply with legal obligations, and resolve disputes.</p>
+    <p>We retain data for as long as necessary to provide our services, comply with legal obligations, and resolve disputes. When no longer needed, data is securely deleted or anonymized.</p>
     
     <h3>7. Data Security</h3>
-    <p>We implement appropriate administrative, technical, and physical safeguards to protect your data from unauthorized access, alteration, or destruction. However, no electronic transmission or storage system is completely secure, and we cannot guarantee absolute security.</p>
+    <p>We use reasonable administrative, technical, and physical safeguards to protect your information against unauthorized access, loss, or misuse. However, no online transmission or storage is completely secure.</p>
     
     <h3>8. Your Rights</h3>
-    <p>Depending on applicable data protection laws, you may have the right to:</p>
+    <p>Depending on applicable laws, you may have the right to:</p>
     <ul>
-      <li>Access, correct, or delete your personal data.</li>
-      <li>Withdraw consent at any time.</li>
-      <li>Object to or restrict certain processing activities.</li>
-      <li>Lodge a complaint with a relevant data protection authority.</li>
+      <li>Access or correct your data;</li>
+      <li>Request deletion of your data;</li>
+      <li>Withdraw consent for certain uses;</li>
+      <li>Object to processing; or</li>
+      <li>File a complaint with a data protection authority.</li>
     </ul>
-    <p>To exercise your rights, contact us at <a href="mailto:privacy@stephanialtd.com">privacy@stephanialtd.com</a>.</p>
+    <p>To exercise any rights or submit an inquiry, please contact us at <a href="mailto:info@stephanialtd.com">info@stephanialtd.com</a>.</p>
     
-    <h3>9. International Transfers</h3>
-    <p>Your information may be transferred to and processed in countries outside your jurisdiction. We take necessary steps to ensure your data remains protected in accordance with this policy.</p>
+    <h3>9. International Data Transfers</h3>
+    <p>Your data may be transferred and processed outside your home country. We ensure such transfers comply with applicable data protection standards.</p>
     
     <h3>10. Updates to This Policy</h3>
-    <p>We may update this Privacy Policy from time to time. Updates will be posted on this page with a revised "Last Updated" date.</p>
+    <p>We may revise this Privacy Policy periodically. Updates will be reflected by the "Last Updated" date above.</p>
     
     <h3>11. Contact Us</h3>
-    <p>If you have questions or concerns about this Privacy Policy, please contact:</p>
+    <p>For questions or concerns about this Privacy Policy, please contact:</p>
     <p><strong>Stephania Limited</strong><br>
-    Email: <a href="mailto:privacy@stephanialtd.com">privacy@stephanialtd.com</a></p>
+    Email: <a href="mailto:info@stephanialtd.com">info@stephanialtd.com</a><br>
+    Address: 5900 Balcones Drive, STE 100 Austin, Texas 78731. USA</p>
   `,
 };
 

@@ -1,13 +1,11 @@
 import { Metadata } from "next";
-import phone from "/public/assets/products/hero2.jpg";
+import phone from "/public/assets/businesses/9938.jpg";
 import { ProductsHero } from "@/components/sections/product/ProductsHero";
 import { ProductBrand } from "@/components/sections/product/ProductsBrand";
-import { FaqsAsFooter } from "@/components/modules/faqs/FaqsAsFooter";
 import { ProductFeature } from "@/components/sections/product/ProductFeature";
-import { HowToGetStarted } from "@/components/sections/product/HowToGetStarted";
-import pos from "/public/assets/products/hero3.jpg";
+import pos from "/public/assets/businesses/724.jpg";
 import { SectionSlice } from "@/components/commons/sections/SectionSlice";
-import payment from "/public/assets/products/thirdBannerImage.jpg";
+import payment from "/public/assets/businesses/126917.jpg";
 import { CallToAction } from "@/components/core/Footer/CallToAction";
 
 export const metadata: Metadata = {
@@ -27,6 +25,7 @@ export default function OnShoreSolutions() {
           "Comprehensive onshore solutions including drilling operations, production facilities, and land-based infrastructure designed to maximize efficiency and safety."
         }
         buttonText="Get Started"
+        imageClass="max-h-[438.4px] !object-cover object-center"
       />
       <ProductBrand />
       <ProductFeature

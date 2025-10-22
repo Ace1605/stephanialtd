@@ -1,11 +1,11 @@
 import { Metadata } from "next";
-import phone from "/public/assets/products/hero2.jpg";
-import posGuy from "/public/assets/products/hero3.jpg";
+import phone from "/public/assets/businesses/343.jpg";
+import posGuy from "/public/assets/businesses/2242.jpg";
 import { ProductsHero } from "@/components/sections/product/ProductsHero";
 import { FaqsAsFooter } from "@/components/modules/faqs/FaqsAsFooter";
 import { ProductFeature } from "@/components/sections/product/ProductFeature";
 import { HowToGetStarted } from "@/components/sections/product/HowToGetStarted";
-import pos from "/public/assets/products/thirdBannerImage.jpg";
+import pos from "/public/assets/businesses/77664.jpg";
 import { SectionSlice } from "@/components/commons/sections/SectionSlice";
 import { CallToAction } from "@/components/core/Footer/CallToAction";
 import { ProductBrand } from "@/components/sections/product/ProductsBrand";
@@ -55,6 +55,7 @@ export default function Procurement() {
         action="Get Started"
         actionLink="/contact-sales"
         withArrow
+        imageClass="object-top"
       />
       {/* <HowToGetStarted
         title="How To Get "

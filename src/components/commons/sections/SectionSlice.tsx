@@ -13,6 +13,7 @@ interface Props {
   action?: ReactNode;
   id?: string;
   image?: StaticImageData;
+  imageClass?: string;
   floatingImage?: ReactNode;
   floatingImageClassName?: string;
   imageComponent?: ReactNode;
@@ -51,6 +52,7 @@ export const SectionSlice = ({
   floatingImageClassName,
   floatingIcon,
   floatingIconClassName,
+  imageClass,
 }: PropsWithChildren<Props>) => {
   return (
     <section id={id} className={"relative app-container z-5 mb-14 640:mb-28"}>
@@ -75,7 +77,10 @@ export const SectionSlice = ({
                 src={image}
                 priority
                 alt="illustration"
-                className="object-cover rounded-2xl max-h-[370px]"
+                className={clsx(
+                  imageClass,
+                  "object-cover rounded-2xl max-h-[370px]"
+                )}
               />
             </motion.div>
           ) : (
@@ -224,7 +229,10 @@ export const SectionSlice = ({
                   src={image}
                   priority
                   alt="illustration"
-                  className="object-cover rounded-2xl max-h-[370px]"
+                  className={clsx(
+                    imageClass,
+                    "object-cover rounded-2xl max-h-[370px]"
+                  )}
                 />
               </motion.div>
             ) : (

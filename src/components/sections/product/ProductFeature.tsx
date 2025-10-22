@@ -39,7 +39,7 @@ export const ProductFeature = ({
     >
       <h3
         className={clsx(
-          "text-left text-black text-[38px] 640:text-48px] 1180:text-[60px] leading-[48px] 650:leading-[54px] 1180:leading-[64px] tracking-[-1.6px] 768:tracking-[-1.8px] 768:w-[700px] font-bold",
+          "text-center mx-auto text-black text-[38px] 640:text-48px] 1180:text-[60px] leading-[48px] 650:leading-[54px] 1180:leading-[64px] tracking-[-1.6px] 768:tracking-[-1.8px] 768:w-[700px] font-bold",
           hClassName
         )}
       >
@@ -58,7 +58,7 @@ export const ProductFeature = ({
           delay: 0.2,
         }}
         className={clsx(
-          "mt-2 mb-2 text-black text-base 768:leading-[28px] 768:text-[18px] font-normal text-left 768:w-[750px] pr-2",
+          "mt-2 mb-2 text-black text-base 768:leading-[28px] 768:text-[18px] font-normal text-center mx-auto 768:w-[780px]",
           pClassName
         )}
       >
