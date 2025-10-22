@@ -6,13 +6,6 @@ import { usePathname } from "next/navigation";
 export const IndustriesHeader = ({ close }: { close: () => void }) => {
   const pathname = usePathname();
 
-  const industries = [
-    "Oil & Gas",
-    "Power",
-    "Construction",
-    "Telecommunications",
-  ];
-
   return (
     <div className={"flex items-center justify-between gap-20"}>
       <div className={"flex gap-20 -mt-12"}>
@@ -48,3 +41,10 @@ export const IndustriesHeader = ({ close }: { close: () => void }) => {
     </div>
   );
 };
+
+export const industries = [
+  "Oil & Gas",
+  "Power",
+  "Construction",
+  "Telecommunications",
+];

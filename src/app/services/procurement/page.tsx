@@ -26,7 +26,7 @@ export default function Procurement() {
         description={
           "Comprehensive procurement solutions designed to optimize your supply chain and reduce costs while maintaining quality standards."
         }
-        buttonText="Request Terminal"
+        buttonText="Make Enquiry"
       />
       <ProductBrand />
       <ProductFeature

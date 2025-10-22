@@ -11,6 +11,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Dispatch, SetStateAction, useState } from "react";
 import { businessesLinks } from "@/components/core/Header/navigation/BusinessesGroup";
+import { industries } from "./Header/IndustriesHeader";
+import { url } from "inspector";
 
 interface Props {
   setShowMobileMenu: Dispatch<SetStateAction<boolean>>;
@@ -32,14 +34,19 @@ export const MobileMenu = ({
       ? [
           ...businessesLinks.links?.["core services"].map((title) => ({
             label: title,
-            url: `/businesses/${hyphenateString(title)}`,
+            url: `/services/${hyphenateString(title)}`,
           })),
           ...businessesLinks.links?.["specialized solutions"].map((title) => ({
             label: title,
-            url: `/businesses/${hyphenateString(title)}`,
+            url: `/services/${hyphenateString(title)}`,
           })),
         ]
-      : [];
+      : [
+          ...industries.map((x) => ({
+            label: x,
+            url: `/industries/${hyphenateString(x)}`,
+          })),
+        ];
 
   function close() {
     setShowMobileMenu(false);
@@ -185,7 +192,7 @@ export const MobileMenu = ({
           className="px-6 py-4 border-t border-gray-100 bg-gradient-to-r from-gray-50 to-white"
         >
           <AppCtaButton
-            href="#"
+            href="/contact-sales"
             type={"signin"}
             className="w-full flex items-center justify-center bg-gradient-to-r from-primary-main to-cyan-600 hover:from-primary-main hover:to-cyan-700 text-white font-semibold h-11 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >

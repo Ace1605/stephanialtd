@@ -90,13 +90,13 @@ export const WhyChooseStephania = () => {
     <section id="why_choose_stephania" className="py-0">
       <div ref={inViewRef}>
         {/* Main Content Section */}
-        <div className="grid 1024:grid-cols-2 gap-8 1024:gap-12 pt-16 pb-24 app-container">
+        <div className="grid 1024:grid-cols-2 gap-8 1024:gap-12 pt-8 1024:pt-16 pb-24 app-container">
           {/* Left - Image */}
           <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            animate={inView ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
+            initial={{ x: -20, opacity: 0 }}
+            animate={inView ? { x: 0, opacity: 1 } : { x: -20, opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative overflow-hidden"
+            className="relative overflow-hidden h-64 640:h-80 1024:h-full"
           >
             <Image
               src="/assets/home/homeabout.jpg"
@@ -109,8 +109,8 @@ export const WhyChooseStephania = () => {
 
           {/* Right - Content */}
           <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            animate={inView ? { x: 0, opacity: 1 } : { x: 50, opacity: 0 }}
+            initial={{ x: 20, opacity: 0 }}
+            animate={inView ? { x: 0, opacity: 1 } : { x: 20, opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="bg-white flex items-center"
           >
