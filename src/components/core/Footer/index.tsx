@@ -43,11 +43,7 @@ export const Footer = () => {
                     <>
                       <div className="mb-3 768:mb-4">
                         <p className={clsx("footer_links_header")}>USA</p>
-                        <p
-                          className={clsx(
-                            "footer_link_item pb-0 text-xs 768:text-sm"
-                          )}
-                        >
+                        <p className={clsx("footer_link_item pb-0 text-sm")}>
                           5900 Balcones Drive, STE 100 Austin, Texas 78731. USA
                         </p>
                         <p className={clsx("footer_link_item pb-0 pt-1")}>
@@ -59,11 +55,7 @@ export const Footer = () => {
                         <p className={clsx("footer_links_header")}>
                           United Kingdom
                         </p>
-                        <p
-                          className={clsx(
-                            "footer_link_item pb-0 text-xs 768:text-sm"
-                          )}
-                        >
+                        <p className={clsx("footer_link_item pb-0 text-sm")}>
                           C/o 151-177 Foleshill Road, Storage King Office
                           Complex. Coventry. CV1 4LF
                         </p>
@@ -74,11 +66,7 @@ export const Footer = () => {
 
                       <div className="mb-3 768:mb-4">
                         <p className={clsx("footer_links_header")}>Nigeria</p>
-                        <p
-                          className={clsx(
-                            "footer_link_item pb-0 text-xs 768:text-sm"
-                          )}
-                        >
+                        <p className={clsx("footer_link_item pb-0 text-sm")}>
                           162 Peter Odili Road, Port Harcourt Nigeria
                         </p>
                         <p className={clsx("footer_link_item pb-0 pt-1")}>
