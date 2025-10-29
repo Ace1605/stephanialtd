@@ -121,7 +121,7 @@ export const WhyChooseStephania = () => {
               </h2>
 
               <p className="text-gray-600 leading-relaxed mb-4 text-base 640:text-lg">
-                Stephania Ltd is a premier engineering, construction, and
+                Stephania Support Services is a premier engineering, construction, and
                 procurement company with a proven track record of delivering
                 exceptional results across multiple industries. Our commitment
                 to excellence, innovation, and safety has established us as a

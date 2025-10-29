@@ -11,14 +11,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s - Stephania Ltd",
+    template: "%s - Stephania Support Services",
     default:
-      "Stephania Ltd - Engineering Excellence in Construction & Procurement",
+      "Stephania Support Services - Engineering Excellence in Construction & Procurement",
   },
   description:
-    "Stephania Ltd is a premier engineering, construction, and procurement company delivering comprehensive solutions across oil & gas, power, construction, and telecommunications sectors worldwide. With 15+ years of experience, we provide engineering services, midstream solutions, vessel management, and offshore/onshore solutions with uncompromising quality standards.",
+    "Stephania Support Services is a premier engineering, construction, and procurement company delivering comprehensive solutions across oil & gas, power, construction, and telecommunications sectors worldwide. With 15+ years of experience, we provide engineering services, midstream solutions, vessel management, and offshore/onshore solutions with uncompromising quality standards.",
   keywords: [
-    "Stephania Ltd",
+    "Stephania Support Services",
     "engineering excellence", 
     "construction",
     "procurement",

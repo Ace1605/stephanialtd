@@ -7,7 +7,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Partnerships",
   description:
-    "Discover Stephania Ltd's strategic OEM partnerships with industry leaders including ENVIRO VALVE, DESAUTEL, ELECTROLUX, RMV VALVES, SHIPHAM VALVES, and STRACU VALVES. Our partnerships deliver cutting-edge technology and comprehensive support for engineering, construction, and procurement projects.",
+    "Discover Stephania Support Services's strategic OEM partnerships with industry leaders including ENVIRO VALVE, DESAUTEL, ELECTROLUX, RMV VALVES, SHIPHAM VALVES, and STRACU VALVES. Our partnerships deliver cutting-edge technology and comprehensive support for engineering, construction, and procurement projects.",
   keywords: [
     "Stephania partnerships",
     "OEM partners",

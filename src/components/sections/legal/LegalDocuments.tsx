@@ -11,11 +11,11 @@ const termsOfUse = {
     <p><strong>Effective Date:</strong> October 21, 2025</p>
     
     <h3>1. Introduction</h3>
-    <p>Welcome to Stephania Limited. These Terms and Conditions ("Terms") govern your access to and use of our website, products, and services. By using our website, you agree to comply with and be bound by these Terms.</p>
+    <p>Welcome to Stephania Support Services. These Terms and Conditions ("Terms") govern your access to and use of our website, products, and services. By using our website, you agree to comply with and be bound by these Terms.</p>
     <p>If you do not agree with these Terms, please discontinue use of our website and services.</p>
     
     <h3>2. Company Overview</h3>
-    <p>Stephania Limited is an engineering, construction, and procurement company offering a range of industrial and infrastructural solutions, including vessel management, midstream operations, and onshore/offshore services.</p>
+    <p>Stephania Support Services is an engineering, construction, and procurement company offering a range of industrial and infrastructural solutions, including vessel management, midstream operations, and onshore/offshore services.</p>
     
     <h3>3. Use of Our Website</h3>
     <p>You agree to use our website only for lawful purposes. You must not:</p>
@@ -29,37 +29,37 @@ const termsOfUse = {
     
     <h3>4. Services and Availability</h3>
     <p>We strive to provide accurate information and consistent access to our services. However, we do not guarantee that our website or services will be uninterrupted, error-free, or always available.</p>
-    <p>Stephania Limited reserves the right to modify, suspend, or discontinue any portion of the website or services without prior notice.</p>
+    <p>Stephania Support Services reserves the right to modify, suspend, or discontinue any portion of the website or services without prior notice.</p>
     
     <h3>5. Third-Party Links</h3>
-    <p>Our website may contain links to external sites not operated by Stephania Limited. We are not responsible for their content, policies, or practices. Accessing third-party websites is at your own risk.</p>
+    <p>Our website may contain links to external sites not operated by Stephania Support Services. We are not responsible for their content, policies, or practices. Accessing third-party websites is at your own risk.</p>
     
     <h3>6. Limitation of Liability</h3>
     <p>To the fullest extent permitted by law:</p>
     <ul>
-      <li>Stephania Limited shall not be liable for any indirect, incidental, consequential, or punitive damages resulting from your use of our website or services.</li>
+      <li>Stephania Support Services shall not be liable for any indirect, incidental, consequential, or punitive damages resulting from your use of our website or services.</li>
       <li>We make no warranties regarding the accuracy, reliability, or completeness of website content.</li>
       <li>Your exclusive remedy for dissatisfaction with our website is to stop using it.</li>
     </ul>
     
     <h3>7. Indemnification</h3>
-    <p>You agree to defend, indemnify, and hold harmless Stephania Limited, its directors, employees, and affiliates from any claims, damages, or liabilities arising from your use of our website, violation of these Terms, or infringement of any rights.</p>
+    <p>You agree to defend, indemnify, and hold harmless Stephania Support Services, its directors, employees, and affiliates from any claims, damages, or liabilities arising from your use of our website, violation of these Terms, or infringement of any rights.</p>
     
     <h3>8. Governing Law</h3>
     <p>These Terms shall be governed by and interpreted in accordance with the laws of the Federal Republic of Nigeria. Any disputes shall be subject to the exclusive jurisdiction of Nigerian courts.</p>
     
     <h3>9. Termination</h3>
-    <p>Stephania Limited may terminate or suspend access to the website at its discretion, without notice, for conduct that violates these Terms or is harmful to other users or the company.</p>
+    <p>Stephania Support Services may terminate or suspend access to the website at its discretion, without notice, for conduct that violates these Terms or is harmful to other users or the company.</p>
     
     <h3>10. Disclaimer</h3>
-    <p>All materials on this website are provided for informational purposes only. Stephania Limited does not warrant or guarantee that the information is accurate, complete, or up to date.</p>
+    <p>All materials on this website are provided for informational purposes only. Stephania Support Services does not warrant or guarantee that the information is accurate, complete, or up to date.</p>
     
     <h3>11. Changes to These Terms</h3>
     <p>We may update these Terms at any time. Continued use of our website following updates constitutes acceptance of the revised Terms.</p>
     
     <h3>12. Contact Information</h3>
     <p>For inquiries or assistance regarding these Terms, please contact:</p>
-    <p><strong>Stephania Limited</strong><br>
+    <p><strong>Stephania Support Services</strong><br>
     Email: <a href="mailto:info@stephanialtd.com">info@stephanialtd.com</a><br>
     Address: 5900 Balcones Drive, STE 100 Austin, Texas 78731. USA</p>
   `,
@@ -71,7 +71,7 @@ const privacyPolicy = {
     <strong>Last Updated:</strong> October 21, 2025</p>
     
     <h3>1. Introduction</h3>
-    <p>Stephania Limited ("we", "our", or "us") values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard information that identifies or can be used to identify you ("Personal Data") when you visit our website, engage our services, or interact with us.</p>
+    <p>Stephania Support Services ("we", "our", or "us") values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard information that identifies or can be used to identify you ("Personal Data") when you visit our website, engage our services, or interact with us.</p>
     <p>By accessing or using our website, products, or services, you agree to this Privacy Policy.</p>
     
     <h3>2. Information We Collect</h3>
@@ -141,7 +141,7 @@ const privacyPolicy = {
     
     <h3>11. Contact Us</h3>
     <p>For questions or concerns about this Privacy Policy, please contact:</p>
-    <p><strong>Stephania Limited</strong><br>
+    <p><strong>Stephania Support Services</strong><br>
     Email: <a href="mailto:info@stephanialtd.com">info@stephanialtd.com</a><br>
     Address: 5900 Balcones Drive, STE 100 Austin, Texas 78731. USA</p>
   `,
