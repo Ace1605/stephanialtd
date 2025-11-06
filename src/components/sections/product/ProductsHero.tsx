@@ -65,7 +65,7 @@ export const ProductsHero = ({
             >
               {description}
             </motion.p>
-            <HeroCtaPair target="_blank" buttonText={buttonText} justifyLeft />
+            <HeroCtaPair buttonText={buttonText} justifyLeft />
           </div>
 
           <motion.div

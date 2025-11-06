@@ -113,7 +113,10 @@ export const Header = () => {
             </div>
 
             <div className="hidden 1024:flex my-auto relative z-[1100] gap-2">
-              <AppCtaButton href="#" className={"primary-button y-center ml-2"}>
+              <AppCtaButton
+                href="/contact-sales"
+                className={"primary-button y-center ml-2"}
+              >
                 Get started
               </AppCtaButton>
             </div>

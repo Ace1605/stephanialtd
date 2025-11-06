@@ -8,9 +8,10 @@ interface Props {
   onClick?: () => void;
   className?: string;
   white?: boolean;
+  imageClass?: string;
 }
 
-export const Logo = ({ onClick, className, white }: Props) => {
+export const Logo = ({ onClick, className, white, imageClass }: Props) => {
   return (
     <Link
       onClick={onClick}
@@ -21,7 +22,10 @@ export const Logo = ({ onClick, className, white }: Props) => {
         src={white ? white_logo : logo}
         priority
         alt="stephania-logo"
-        className="cursor-pointer w-[62px] 640:w-[80px] object-contain"
+        className={clsx(
+          imageClass,
+          "cursor-pointer w-[62px] 640:w-[90px] object-contain"
+        )}
       />
     </Link>
   );

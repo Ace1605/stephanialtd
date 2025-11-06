@@ -131,7 +131,7 @@ export const Hero = () => {
           </motion.p>
 
           <AppCtaButton
-            href={"#"}
+            href={"/contact-sales"}
             className={
               "primary-button max-w-fit mt-4 640:mt-6 gap-2 h-12 768:h-14 group x-center mx-auto"
             }

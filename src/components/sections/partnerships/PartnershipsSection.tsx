@@ -31,7 +31,7 @@ export const PartnershipsSection = () => {
           transition={{
             duration: 0.4,
           }}
-          className="text-slate-900"
+          className="text-slate-900 text-2xl 640:text-[38px]"
         >
           ENVIRO VALVE
         </motion.h4>
@@ -50,7 +50,7 @@ export const PartnershipsSection = () => {
           transition={{
             duration: 0.4,
           }}
-          className="text-white"
+          className="text-white text-2xl 640:text-[38px]"
         >
           DESAUTEL
         </motion.h4>
@@ -70,7 +70,7 @@ export const PartnershipsSection = () => {
           transition={{
             duration: 0.4,
           }}
-          className="text-slate-900"
+          className="text-slate-900 text-2xl 640:text-[38px]"
         >
           ELECTROLUX
         </motion.h4>
@@ -89,7 +89,7 @@ export const PartnershipsSection = () => {
           transition={{
             duration: 0.4,
           }}
-          className="text-white"
+          className="text-white text-2xl 640:text-[38px]"
         >
           STRACU VALVES
         </motion.h4>
@@ -109,7 +109,7 @@ export const PartnershipsSection = () => {
           transition={{
             duration: 0.4,
           }}
-          className="text-white"
+          className="text-white text-2xl 640:text-[38px]"
         >
           RMV VALVES
         </motion.h4>
@@ -129,7 +129,7 @@ export const PartnershipsSection = () => {
           transition={{
             duration: 0.4,
           }}
-          className="text-slate-900"
+          className="text-slate-900 text-2xl 640:text-[38px]"
         >
           SHIPHAM VALVES
         </motion.h4>
@@ -211,9 +211,9 @@ export const PartnershipsSection = () => {
                 }}
                 className="grid 1024:flex justify-between gap-8 1024:gap-1 relative"
               >
-                <div className="flex flex-col justify-between py-12">
+                <div className="flex flex-col justify-between. py-4 640:py-12">
                   <Image
-                    className="max-h-[50px] w-auto object-contain object-left"
+                    className="max-h-[40px] 640:max-h-[50px] w-auto object-contain object-left"
                     src={option.logo}
                     priority
                     alt={`${option.title} logo`}
@@ -226,21 +226,21 @@ export const PartnershipsSection = () => {
                       duration: 0.6,
                       delay: 1.2,
                     }}
-                    className="mt-6"
+                    className="mt-3 640:mt-6"
                   >
                     <>{option.title}</>
                     <p
                       className={clsx(
                         option.bg && "text-white",
                         !option.bg && "text-slate-700",
-                        "768:max-w-[250px] font-secondary font-medium"
+                        "text-sm 640:text-base 768:max-w-[250px] font-secondary font-medium"
                       )}
                     >
                       {option.subtitle}
                     </p>
                   </motion.div>
                 </div>
-                <div className="relative pt-12">
+                <div className="relative 640:pt-12">
                   <Image
                     className={clsx(
                       penultimate
@@ -255,7 +255,9 @@ export const PartnershipsSection = () => {
                   />
                   <div
                     className={clsx(
-                      option.bg ? "bottom-10 right-16" : "-right-10 bottom-14",
+                      option.bg
+                        ? "bottom-10 right-16"
+                        : "-right-4 640:-right-10 bottom-24 640:bottom-14",
                       "absolute animate-float"
                     )}
                   >

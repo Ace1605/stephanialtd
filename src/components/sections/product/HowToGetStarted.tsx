@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { AppCtaButton } from '@/components/buttons/AppCtaButton';
-import { AppleGoogleBtn } from '@/components/commons/AppleGoogleBtn';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { AppCtaButton } from "@/components/buttons/AppCtaButton";
+import { AppleGoogleBtn } from "@/components/commons/AppleGoogleBtn";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface Props {
   subtitle: string;
@@ -32,13 +32,13 @@ export const HowToGetStarted = ({
 }: Props) => {
   return (
     <section
-      id={'product_feature'}
-      className={'app-container overflow-hidden pb-20 768:pb-8'}
+      id={"product_feature"}
+      className={"app-container overflow-hidden pb-20 768:pb-8"}
     >
-      <h3 className='text-left text-black text-[38px] 640:text-48px] 1180:text-[60px] leading-[48px] 640:leading-[64px] 1180:leading-[72px] tracking-[-1.8px] font-bold'>
+      <h3 className="text-left text-black text-[38px] 640:text-48px] 1180:text-[60px] leading-[48px] 640:leading-[64px] 1180:leading-[72px] tracking-[-1.8px] font-bold">
         {title}
-        <span className={'640:inline block'}>
-          <span className={'text-gradient'}>{lastWord}</span>
+        <span className={"640:inline block"}>
+          <span className={"text-gradient"}>{lastWord}</span>
         </span>
       </h3>
       <motion.p
@@ -50,17 +50,17 @@ export const HowToGetStarted = ({
           delay: 0.2,
         }}
         className={
-          'mt-2 768:mt-4 text-black text-base 768:leading-[28px] 768:text-[18px] font-normal text-left pr-2'
+          "mt-2 768:mt-4 text-black text-base 768:leading-[28px] 768:text-[18px] font-normal text-left pr-2"
         }
       >
-        {subtitle}{' '}
-        <Link href='/contact-sales' className='underline text-primary-400'>
+        {subtitle}{" "}
+        <Link href="/contact-sales" className="underline text-primary-400">
           {action}
         </Link>
       </motion.p>
-      <div className='grid 768:grid-cols-3 gap-6 768:gap-10 mt-10 768:mt-12 768:mt-16 768:mb-32'>
-        <div className='bg-neutral-150 rounded-xl p-9'>
-          <p className='text-black text-xl font-semibold 768:w-4/5'>
+      <div className="grid 768:grid-cols-3 gap-6 768:gap-10 mt-10 768:mt-12 768:mt-16 768:mb-32">
+        <div className="bg-neutral-150 rounded-xl p-9">
+          <p className="text-black text-xl font-semibold 768:w-4/5">
             {firstBoxTitle}
           </p>
           <motion.p
@@ -72,7 +72,7 @@ export const HowToGetStarted = ({
               delay: 0.2,
             }}
             className={
-              'mt-3 text-black text-base 768:leading-[28px] 768:text-[18px] font-light text-left pr-2'
+              "mt-3 text-black text-base 768:leading-[28px] 768:text-[18px] font-light text-left pr-2"
             }
           >
             {firstBoxText}
@@ -81,8 +81,8 @@ export const HowToGetStarted = ({
             <AppleGoogleBtn />
           </div> */}
         </div>
-        <div className='bg-neutral-150 rounded-xl p-9'>
-          <p className='text-black text-xl font-semibold 768:w-4/5'>
+        <div className="bg-neutral-150 rounded-xl p-9">
+          <p className="text-black text-xl font-semibold 768:w-4/5">
             {secondBoxTitle}
           </p>
           <motion.p
@@ -94,14 +94,14 @@ export const HowToGetStarted = ({
               delay: 0.2,
             }}
             className={
-              'mt-3 text-black text-base 768:leading-[28px] 768:text-[18px] font-light text-left pr-2'
+              "mt-3 text-black text-base 768:leading-[28px] 768:text-[18px] font-light text-left pr-2"
             }
           >
             {secondBoxText}
           </motion.p>
         </div>
-        <div className='bg-neutral-150 rounded-xl p-9'>
-          <p className='text-black text-xl font-semibold 768:w-4/5'>
+        <div className="bg-neutral-150 rounded-xl p-9">
+          <p className="text-black text-xl font-semibold 768:w-4/5">
             {ThirdBoxTitle}
           </p>
           <motion.p
@@ -113,19 +113,18 @@ export const HowToGetStarted = ({
               delay: 0.2,
             }}
             className={
-              'mt-3 text-black text-base 768:leading-[28px] 768:text-[18px] font-light text-left pr-2'
+              "mt-3 text-black text-base 768:leading-[28px] 768:text-[18px] font-light text-left pr-2"
             }
           >
             {thirdBoxText}
           </motion.p>
-          <div className='flex justify-start mt-7'>
+          <div className="flex justify-start mt-7">
             <AppCtaButton
-              href='https://www.stephania.africa/signup'
-              target='_blank'
-              className={'primary-button gap-2 group x-center px-5'}
+              href="/contact-sales"
+              className={"primary-button gap-2 group x-center px-5"}
               withArrow
             >
-              <span className='h-full y-center'>Get Started</span>
+              <span className="h-full y-center">Get Started</span>
             </AppCtaButton>
           </div>
         </div>
