@@ -17,8 +17,8 @@ export const Footer = () => {
     <footer className={"relative z-10  bg-black pb-4 -mt-2"}>
       <div className="app-container">
         <div className="py-14 768:py-32">
-          <div className="text-center mb-14 flex justify-center items-center">
-            <Logo white imageClass="w-[120px] 640:w-[200px]" />
+          <div className="text-center mb-7 768:mb-14 flex justify-center items-center">
+            <Logo white imageClass="!w-[120px] 640:!w-[200px]" />
           </div>
           <div className="grid grid-cols-12 gap-4">
             {footerGroups.map(

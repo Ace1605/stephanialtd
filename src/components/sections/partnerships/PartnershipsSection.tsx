@@ -31,7 +31,7 @@ export const PartnershipsSection = () => {
           transition={{
             duration: 0.4,
           }}
-          className="text-slate-900 text-2xl 640:text-[38px]"
+          className="text-slate-900 text-2xl 768:text-[38px]"
         >
           ENVIRO VALVE
         </motion.h4>
@@ -50,7 +50,7 @@ export const PartnershipsSection = () => {
           transition={{
             duration: 0.4,
           }}
-          className="text-white text-2xl 640:text-[38px]"
+          className="text-white text-2xl 768:text-[38px]"
         >
           DESAUTEL
         </motion.h4>
@@ -70,7 +70,7 @@ export const PartnershipsSection = () => {
           transition={{
             duration: 0.4,
           }}
-          className="text-slate-900 text-2xl 640:text-[38px]"
+          className="text-slate-900 text-2xl 768:text-[38px]"
         >
           ELECTROLUX
         </motion.h4>
@@ -89,7 +89,7 @@ export const PartnershipsSection = () => {
           transition={{
             duration: 0.4,
           }}
-          className="text-white text-2xl 640:text-[38px]"
+          className="text-white text-2xl 768:text-[38px]"
         >
           STRACU VALVES
         </motion.h4>
@@ -109,7 +109,7 @@ export const PartnershipsSection = () => {
           transition={{
             duration: 0.4,
           }}
-          className="text-white text-2xl 640:text-[38px]"
+          className="text-white text-2xl 768:text-[38px]"
         >
           RMV VALVES
         </motion.h4>
@@ -129,7 +129,7 @@ export const PartnershipsSection = () => {
           transition={{
             duration: 0.4,
           }}
-          className="text-slate-900 text-2xl 640:text-[38px]"
+          className="text-slate-900 text-2xl 768:text-[38px]"
         >
           SHIPHAM VALVES
         </motion.h4>
@@ -169,7 +169,7 @@ export const PartnershipsSection = () => {
           duration: 0.6,
           delay: 0.2,
         }}
-        className="mt-3 subtitle text-center mx-auto mb-12 max-w-3xl"
+        className="mt-3 subtitle text-center mx-auto mb-8 768:mb-12 max-w-3xl"
       >
         Collaborating with world-class OEM manufacturers to deliver cutting-edge
         engineering solutions. Our strategic partnerships ensure access to
@@ -188,7 +188,7 @@ export const PartnershipsSection = () => {
             <div
               key={index}
               className={clsx(
-                option.bg ? "pl-9 640:pl-14" : "px-9 640:px-14",
+                option.bg ? "pl-9 768:pl-14" : "px-9 768:px-14",
                 "mb-10 rounded-3xl relative",
                 inView && "sticky top-24 w-full",
                 isLast && "!bg-black"
@@ -211,9 +211,9 @@ export const PartnershipsSection = () => {
                 }}
                 className="grid 1024:flex justify-between gap-8 1024:gap-1 relative"
               >
-                <div className="flex flex-col justify-between. py-4 640:py-12">
+                <div className="flex flex-col justify-between py-4 768:py-12">
                   <Image
-                    className="max-h-[40px] 640:max-h-[50px] w-auto object-contain object-left"
+                    className="max-h-[40px] 768:max-h-[50px] w-auto object-contain object-left"
                     src={option.logo}
                     priority
                     alt={`${option.title} logo`}
@@ -226,21 +226,21 @@ export const PartnershipsSection = () => {
                       duration: 0.6,
                       delay: 1.2,
                     }}
-                    className="mt-3 640:mt-6"
+                    className="mt-3 768:mt-6"
                   >
                     <>{option.title}</>
                     <p
                       className={clsx(
                         option.bg && "text-white",
                         !option.bg && "text-slate-700",
-                        "text-sm 640:text-base 768:max-w-[250px] font-secondary font-medium"
+                        "text-sm 768:text-base 768:max-w-[250px] font-secondary font-medium"
                       )}
                     >
                       {option.subtitle}
                     </p>
                   </motion.div>
                 </div>
-                <div className="relative 640:pt-12">
+                <div className="relative 768:pt-12">
                   <Image
                     className={clsx(
                       penultimate
@@ -256,8 +256,8 @@ export const PartnershipsSection = () => {
                   <div
                     className={clsx(
                       option.bg
-                        ? "bottom-10 right-16"
-                        : "-right-4 640:-right-10 bottom-24 640:bottom-14",
+                        ? "bottom-24 768:bottom-10 right-16"
+                        : "-right-4 768:-right-10 bottom-28 768:bottom-14",
                       "absolute animate-float"
                     )}
                   >
