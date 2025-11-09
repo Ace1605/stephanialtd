@@ -10,6 +10,8 @@ import { productGroupLinks } from "../Header/navigation/ProductGroup";
 import { Link as PageScroll } from "react-scroll";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/commons/Logo";
+import { Pin } from "@/components/svgs/Pin";
+import { Telephone } from "@/components/svgs/Telephone";
 
 export const Footer = () => {
   const pathname = usePathname();
@@ -48,11 +50,25 @@ export const Footer = () => {
                       <>
                         <div className="mb-3 768:mb-4">
                           <p className={clsx("footer_links_header")}>USA</p>
-                          <p className={clsx("footer_link_item pb-0 text-sm")}>
+                          <p
+                            className={clsx(
+                              "footer_link_item pb-0 text-sm flex items-start gap-2 justify-center 768:justify-start"
+                            )}
+                          >
+                            <span className="w-5 h-5">
+                              <Pin className="w-5 h-5" />
+                            </span>
                             5900 Balcones Drive, STE 100 Austin, Texas 78731.
                             USA
                           </p>
-                          <p className={clsx("footer_link_item pb-0 pt-1")}>
+                          <p
+                            className={clsx(
+                              "footer_link_item pb-0 pt-1 flex items-start gap-2 justify-center 768:justify-start"
+                            )}
+                          >
+                            <span className="w-5 h-5">
+                              <Telephone className="w-4 h-4" />
+                            </span>
                             <Link href="tel:+19282656523">+1 928 265 6523</Link>
                           </p>
                         </div>
@@ -61,11 +77,25 @@ export const Footer = () => {
                           <p className={clsx("footer_links_header")}>
                             United Kingdom
                           </p>
-                          <p className={clsx("footer_link_item pb-0 text-sm")}>
+                          <p
+                            className={clsx(
+                              "footer_link_item pb-0 text-sm flex items-start gap-2 justify-center 768:justify-start"
+                            )}
+                          >
+                            <span className="w-5 h-5">
+                              <Pin className="w-5 h-5" />
+                            </span>
                             C/o 151-177 Foleshill Road, Storage King Office
                             Complex. Coventry. CV1 4LF
                           </p>
-                          <p className={clsx("footer_link_item pb-0 pt-1")}>
+                          <p
+                            className={clsx(
+                              "footer_link_item pb-0 pt-1 flex items-start gap-2 justify-center 768:justify-start"
+                            )}
+                          >
+                            <span className="w-5 h-5">
+                              <Telephone className="w-4 h-4" />
+                            </span>
                             <Link href="tel:+447452230428">
                               +44 7452 230428
                             </Link>
@@ -74,15 +104,36 @@ export const Footer = () => {
 
                         <div className="mb-3 768:mb-4">
                           <p className={clsx("footer_links_header")}>Nigeria</p>
-                          <p className={clsx("footer_link_item pb-0 text-sm")}>
+                          <p
+                            className={clsx(
+                              "footer_link_item pb-0 text-sm flex items-start gap-2 justify-center 768:justify-start"
+                            )}
+                          >
+                            <span className="w-5 h-5">
+                              <Pin className="w-5 h-5" />
+                            </span>
                             162 Peter Odili Road, Port Harcourt Nigeria
                           </p>
-                          <p className={clsx("footer_link_item pb-0 pt-1")}>
+                          <p
+                            className={clsx(
+                              "footer_link_item pb-0 pt-1 flex items-start gap-2 justify-center 768:justify-start"
+                            )}
+                          >
+                            <span className="w-5 h-5">
+                              <Telephone className="w-4 h-4" />
+                            </span>
                             <Link href="tel:+2348134646487">
                               +234 813 464 6487
                             </Link>
                           </p>
-                          <p className={clsx("footer_link_item pb-0")}>
+                          <p
+                            className={clsx(
+                              "footer_link_item pb-0 flex items-start gap-2 justify-center 768:justify-start"
+                            )}
+                          >
+                            <span className="w-5 h-5">
+                              <Telephone className="w-4 h-4" />
+                            </span>
                             <Link href="tel:+2349133033349">
                               +234 913 303 3349
                             </Link>

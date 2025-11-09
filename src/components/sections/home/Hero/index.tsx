@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { StaticImageData } from "next/image";
-import heroImage from "/public/assets/home/hero1.jpg";
-import secondImage from "/public/assets/home/769.jpg";
-import thirdImage from "/public/assets/home/77664.jpg";
+import heroImage from "/public/assets/home/first.jpg";
+import secondImage from "/public/assets/home/second.jpg";
+import thirdImage from "/public/assets/home/third.jpg";
 import { useEffect, useState } from "react";
 import { AppCtaButton } from "@/components/buttons/AppCtaButton";
 

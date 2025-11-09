@@ -58,7 +58,11 @@ export const Header = () => {
         >
           <div className="app-container py-0 x-between h-full">
             <div className="h-full gap-8 flex">
-              <Logo className={"relative z-10"} onClick={closeMenu} />
+              <Logo
+                imageClass="w-[100px] 640:w-[125px]"
+                className={"relative z-10"}
+                onClick={closeMenu}
+              />
 
               <ul className="hidden 1024:flex h-full py-0 my-0">
                 {navigationLinks.map(({ title, id, hasChildren }) => {

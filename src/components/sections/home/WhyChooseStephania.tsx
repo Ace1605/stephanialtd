@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { Users } from "@/components/svgs/Users";
 import { CustomCheck } from "@/components/svgs/CustomCheck";
 import { Cap } from "@/components/svgs/Cap";
+import why from "/public/assets/home/homeabout.jpg";
 
 // Custom hook for count-up animation
 const useCountUp = (
@@ -99,7 +100,7 @@ export const WhyChooseStephania = () => {
             className="relative overflow-hidden h-64 640:h-80 1024:h-full"
           >
             <Image
-              src="/assets/home/homeabout.jpg"
+              src={why}
               alt="Heavy duty engineering equipment"
               fill
               className="object-cover object-center rounded-3xl"
@@ -121,11 +122,12 @@ export const WhyChooseStephania = () => {
               </h2>
 
               <p className="text-gray-600 leading-relaxed mb-4 text-base 640:text-lg">
-                Stephania Support Services is a premier engineering, construction, and
-                procurement company with a proven track record of delivering
-                exceptional results across multiple industries. Our commitment
-                to excellence, innovation, and safety has established us as a
-                trusted partner for complex industrial projects worldwide.
+                Stephania Support Services is a premier engineering,
+                construction, and procurement company with a proven track record
+                of delivering exceptional results across multiple industries.
+                Our commitment to excellence, innovation, and safety has
+                established us as a trusted partner for complex industrial
+                projects worldwide.
               </p>
 
               <AppCtaButton

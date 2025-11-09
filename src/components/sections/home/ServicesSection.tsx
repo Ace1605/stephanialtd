@@ -6,13 +6,17 @@ import Image from "next/image";
 import { Stars } from "@/components/svgs/Stars";
 import { ArrowRight } from "@/components/svgs/Arrows";
 import Link from "next/link";
+import eng from "/public/assets/home/eng.jpg";
+import construction from "/public/assets/businesses/1223.jpg";
+import procurement from "/public/assets/businesses/343.jpg";
+import offshore from "/public/assets/businesses/372.jpg";
 
 const services = [
   {
     title: "Engineering Excellence Delivered",
     description:
       "Comprehensive engineering solutions from concept to commissioning, including design, analysis, and technical consultation for complex industrial projects.",
-    image: "/assets/home/eng.jpg",
+    image: eng,
     bgColor: "bg-gradient-to-br from-blue-50 to-indigo-100",
     link: "/services/engineering-services",
   },
@@ -20,7 +24,7 @@ const services = [
     title: "Construction & Project Management",
     description:
       "End-to-end construction management and execution services, delivering projects on time and within budget with uncompromising quality standards.",
-    image: "/assets/businesses/1223.jpg",
+    image: construction,
     bgColor: "bg-gradient-to-br from-teal-50 to-cyan-100",
     link: "/services/construction",
   },
@@ -28,7 +32,7 @@ const services = [
     title: "Strategic Procurement Solutions",
     description:
       "Strategic procurement services ensuring optimal sourcing, vendor management, and supply chain efficiency for your critical projects.",
-    image: "/assets/businesses/343.jpg",
+    image: procurement,
     bgColor: "bg-gradient-to-br from-green-50 to-emerald-100",
     link: "/services/procurement",
   },
@@ -36,7 +40,7 @@ const services = [
     title: "Offshore & Marine Operations",
     description:
       "Expert offshore solutions for challenging marine environments, including platform services, subsea operations, and offshore installations.",
-    image: "/assets/businesses/372.jpg",
+    image: offshore,
     bgColor: "bg-gradient-to-br from-purple-50 to-violet-100",
     link: "/services/offshore-solutions",
   },

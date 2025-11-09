@@ -16,6 +16,12 @@ body:has(.no-scroll) {
   overflow: hidden !important;
 }
 
+.vp-title,
+.Title_module_title__2159b884 {
+  display: none !important;
+  opacity: 0 !important;
+}
+
 .flip-card {
   position: relative;
   cursor: pointer;

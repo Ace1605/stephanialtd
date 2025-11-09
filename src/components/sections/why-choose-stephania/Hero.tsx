@@ -1,9 +1,7 @@
 "use client";
 
 import { HeroCtaPair } from "@/components/commons/hero/HeroCtaPair";
-import coat_lady from "/public/assets/why_stephania/about.jpg";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export const Hero = () => {
   return (
@@ -63,12 +61,20 @@ export const Hero = () => {
             }}
             className="960:w-1/2 mt-10 960:mt-0"
           >
-            <Image
-              src={coat_lady}
-              alt="about_hero"
-              priority
-              className="object-cover w-full object-center rounded-3xl min-h-[300px] max-h-[500px] 1180:max-h-[600px]"
-            />
+            <div className="min-h-[250px] 768:min-h-[400px] max-h-[500px] 1180:max-h-[600px] relative">
+              <iframe
+                src="https://player.vimeo.com/video/1135014504?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1"
+                className="w-full absolute top-0 h-full"
+                style={{
+                  border: 0,
+                  borderRadius: "24px",
+                  clipPath: "inset(0 round 24px)",
+                }}
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Stephania Video"
+              />
+            </div>
           </motion.div>
         </div>
       </div>

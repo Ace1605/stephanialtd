@@ -46,17 +46,20 @@ export const Socials = ({ className, isDark }: Props) => {
 };
 
 const socials: { icon: JSX.Element; url: string }[] = [
+  // {
+  //   icon: <Twitter />,
+  //   url: "#",
+  // },
   {
-    icon: <Twitter />,
-    url: "#",
+    icon: <Instagram />,
+    url: "https://www.instagram.com/stephaniasupportservices?igsh=NDRyOTljdmVodDNz",
   },
-  { icon: <Instagram />, url: "#" },
   {
     icon: <Facebook />,
-    url: "#",
+    url: "https://www.facebook.com/share/1BPMkdjizZ/?mibextid=wwXIfr",
   },
-  {
-    icon: <LinkedIn />,
-    url: "#",
-  },
+  // {
+  //   icon: <LinkedIn />,
+  //   url: "#",
+  // },
 ];
