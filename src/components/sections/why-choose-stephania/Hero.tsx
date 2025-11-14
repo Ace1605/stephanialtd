@@ -37,10 +37,8 @@ export const Hero = () => {
               }}
               className="text-neutral-600 text-lg 768:text-xl leading-relaxed mb-8 768:pr-10"
             >
-              Our mission is to be globally recognized for delivering
-              high-value, impactful solutions that leave a measurable mark in
-              the industries we serve through excellence in engineering and
-              procurement.
+              Stephania a woman-owned, engineering, procurement, constructions
+              located in USA, UK, NIGERIA offers bespoke engineering solutions
             </motion.p>
             <HeroCtaPair
               buttonUrl="/contact-sales"
@@ -66,7 +64,7 @@ export const Hero = () => {
                 src="https://player.vimeo.com/video/1135014504?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1"
                 className="w-full absolute top-0 h-full"
                 style={{
-                  border: 0,
+                  border: "1px solid #0194a3",
                   borderRadius: "24px",
                   clipPath: "inset(0 round 24px)",
                 }}
