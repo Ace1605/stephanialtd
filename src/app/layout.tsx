@@ -35,6 +35,18 @@ export const metadata: Metadata = {
     "project delivery",
     "safety focus"
   ],
+  openGraph: {
+    title: "Stephania Support Services - Engineering Excellence in Construction & Procurement",
+    description: "Premier engineering, construction, and procurement company delivering comprehensive solutions across oil & gas, power, construction, and telecommunications sectors worldwide.",
+    images: ["/stephania.jpeg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Stephania Support Services - Engineering Excellence in Construction & Procurement",
+    description: "Premier engineering, construction, and procurement company delivering comprehensive solutions across oil & gas, power, construction, and telecommunications sectors worldwide.",
+    images: ["/stephania.jpeg"],
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
