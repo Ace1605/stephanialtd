@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Legal",
 };
 
+export async function generateStaticParams() {
+  return [
+    { id: 'terms-of-use' },
+    { id: 'privacy-policy' },
+  ];
+}
+
 export default function Legal(props: any) {
   return (
     <main>
