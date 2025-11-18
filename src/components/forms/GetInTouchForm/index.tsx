@@ -2,6 +2,7 @@
 
 import { Formik } from "formik";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { initialValues } from "./initialValues";
 import { validationSchema } from "./validationSchema";
 import { Form } from "./Form";
@@ -24,50 +25,41 @@ export const GetInTouchForm = ({ onSuccess }: Props) => {
     try {
       setIsLoading(true);
 
-      // Split full name into first and last name for the API
+      // Split full name into first and last name
       const nameParts = full_name.trim().split(" ");
       const first_name = nameParts[0] || "";
       const last_name = nameParts.slice(1).join(" ") || "";
 
-      // const _res = await fetch(
-      //   `${process.env.NEXT_PUBLIC_API_URL}/service/demo/v1/query/messaging/web/support/send`,
-      //   {
-      //     method: 'POST',
-      //     headers: {
-      //       publickey: `${process.env.NEXT_PUBLIC_KEY}`,
-      //       'content-type': 'application/json',
-      //     },
-      //     body: JSON.stringify({
-      //       subject: full_name,
-      //       first_name,
-      //       last_name,
-      //       email,
-      //       company_name,
-      //       message,
-      //       recipients: 'info@stephanialtd.com',
-      //     }),
-      //   },
-      // );
+      // EmailJS template parameters
+      const templateParams = {
+        from_name: full_name,
+        first_name,
+        last_name,
+        from_email: email,
+        company_name,
+        message,
+        to_email: "info@stephanialtd.com",
+      };
 
-      // const res = await _res.json();
+      // Send email using EmailJS
+      await emailjs.send(
+        "service_vmcwqxt",
+        "template_jm7ht32",
+        templateParams,
+        "upOwbqAFVYaBvfAMU"
+      );
 
       setIsLoading(false);
+      toast.success("Message sent successfully!", { type: "success" });
+      reset();
 
-      // if (res.status) return toast.success(res.message, { type: 'success' });
-
-      // toast(res.message, { type: 'info' });
-
-      // reset();
-
-      if (!onSuccess) return;
-
-      onSuccess();
+      if (onSuccess) {
+        onSuccess();
+      }
     } catch (err) {
       setIsLoading(false);
-
-      console.error(err);
-
-      toast("Failed to join Newsletter", { type: "error" });
+      console.error("EmailJS error:", err);
+      toast("Failed to send message. Please try again.", { type: "error" });
     }
   }
 
