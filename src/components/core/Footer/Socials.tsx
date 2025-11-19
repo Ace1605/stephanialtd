@@ -58,8 +58,8 @@ const socials: { icon: JSX.Element; url: string }[] = [
     icon: <Facebook />,
     url: "https://www.facebook.com/share/1BPMkdjizZ/?mibextid=wwXIfr",
   },
-  // {
-  //   icon: <LinkedIn />,
-  //   url: "#",
-  // },
+  {
+    icon: <LinkedIn />,
+    url: "https://www.linkedin.com/company/stephania-support-services/",
+  },
 ];

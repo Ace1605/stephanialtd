@@ -54,14 +54,17 @@ export const TestimonialSlide = () => {
   return (
     <Element name="home_testimonial">
       <section id={"home_testimonial"} className={"py-12 overflow-hidden"}>
+        <h3 className="text-center text-xl 768:text-2xl font-bold text-slate-900 group-hover:text-slate-700 transition-colors duration-300 mb-10">
+          Our Partners
+        </h3>
         <div className="app-container">
           <div className="relative">
             {/* Left Fade */}
             <div className="absolute left-0 top-0 bottom-0 w-8 640:w-16 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
-            
+
             {/* Right Fade */}
             <div className="absolute right-0 top-0 bottom-0 w-8 640:w-16 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
-            
+
             {/* Slider Content */}
             <div className="hidden-scrollbar overflow-x-auto 768:overflow-x-hidden">
               <div className={clsx("min-w-fit px-4")}>

@@ -28,13 +28,17 @@ export const GetInTouchMeans = () => {
   };
 
   const socialReveal = (value: string) => {
-    if (value.includes('@') || value.includes('mailto')) {
+    if (value.includes("@") || value.includes("mailto")) {
       return <Email />;
-    } else if (value.includes('tel:') || value.includes('+') || /^\+?[\d\s-()]+$/.test(value)) {
+    } else if (
+      value.includes("tel:") ||
+      value.includes("+") ||
+      /^\+?[\d\s-()]+$/.test(value)
+    ) {
       return <PhoneIcon />;
-    } else if (value.includes('wa.me') || value.includes('whatsapp')) {
+    } else if (value.includes("wa.me") || value.includes("whatsapp")) {
       return <Whatsapp />;
-    } else if (value.includes('t.me') || value.includes('telegram')) {
+    } else if (value.includes("t.me") || value.includes("telegram")) {
       return <Telegram />;
     } else {
       return <PhoneIcon />; // Default fallback
@@ -108,36 +112,47 @@ export const GetInTouchMeans = () => {
                     {backTitle}
                   </p>
                   {links.map((x, i) => (
-                    <div key={i} className="mx-auto w-full 640:max-w-[280px]">
+                    <div key={i} className="mx-auto w-full 640:max-w-[300px]">
                       <Link
                         href={
-                          x.value.includes('@') && !x.value.includes('mailto')
+                          x.value.includes("@") && !x.value.includes("mailto")
                             ? `mailto:${x.value}`
-                            : x.value.match(/^\+?[\d\s-()]+$/) && !x.value.includes('tel:')
-                              ? `tel:${x.value.replace(/\s/g, '')}`
+                            : x.value.match(/^\+?[\d\s-()]+$/) &&
+                                !x.value.includes("tel:")
+                              ? `tel:${x.value.replace(/\s/g, "")}`
                               : x.value
                         }
                         className={clsx(
-                          links.length > 2
+                          links.length > 2 && i < links.length - 1
                             ? "border-b border-neutral-310"
                             : "flex justify-center",
-                          "py-2 text-neutral-600 text-base 768:leading-[24px] font-medium text-center flex gap-2 425:gap-4 hover:text-primary-main"
+                          "py-2 text-neutral-600 text-base 768:leading-[24px] font-medium text-center flex items-center justify-between gap-2 425:gap-4 hover:text-primary-main"
                         )}
                         target={
-                          x.value.includes('@') || x.value.match(/^\+?[\d\s-()]+$/)
+                          x.value.includes("@") ||
+                          x.value.match(/^\+?[\d\s-()]+$/)
                             ? "_parent"
                             : "_blank"
                         }
                       >
-                        {links.length > 2 && (
-                          <span className="">{socialReveal(x.value)}</span>
+                        <div className="flex items-center gap-2 425:gap-4">
+                          {links.length > 1 && (
+                            <span className="">{socialReveal(x.value)}</span>
+                          )}
+                          <div className="flex flex-col items-center">
+                            <span className="hidden 425:block text-center">
+                              {TruncateWord(x.value, 28)}
+                            </span>
+                            <span className="block 425:hidden text-center">
+                              {TruncateWord(x.value, 20)}
+                            </span>
+                          </div>
+                        </div>
+                        {x.label && (
+                          <span className="text-xs font-medium text-slate-600 bg-slate-100 px-2 py-1 rounded-full ml-auto">
+                            {x.label}
+                          </span>
                         )}
-                        <span className="hidden 425:block text-center">
-                          {TruncateWord(x.value, 28)}
-                        </span>
-                        <span className="block 425:hidden text-center">
-                          {TruncateWord(x.value, 20)}
-                        </span>
                       </Link>
                     </div>
                   ))}

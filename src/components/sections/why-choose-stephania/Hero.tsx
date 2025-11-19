@@ -37,8 +37,9 @@ export const Hero = () => {
               }}
               className="text-neutral-600 text-lg 768:text-xl leading-relaxed mb-8 768:pr-10"
             >
-              Stephania a woman-owned, engineering, procurement, constructions
-              located in USA, UK, NIGERIA offers bespoke engineering solutions
+              Stephania Support Services is a woman-owned "engineering,
+              construction and procurement" company located in USA, UK, and NIGERIA
+              that offers bespoke engineering solutions.
             </motion.p>
             <HeroCtaPair
               buttonUrl="/contact-sales"

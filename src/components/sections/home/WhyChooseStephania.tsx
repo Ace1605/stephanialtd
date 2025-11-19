@@ -297,6 +297,7 @@ export const WhyChooseStephania = () => {
               className="mt-12 text-center"
             >
               <div className="inline-flex items-center space-x-4 px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                <div className="w-2 h-2 bg-primary-main rounded-full animate-pulse" />
                 <span className="text-blue-200 text-sm font-medium">
                   Trusted by industry leaders worldwide
                 </span>

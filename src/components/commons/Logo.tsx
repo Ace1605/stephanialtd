@@ -24,7 +24,7 @@ export const Logo = ({ onClick, className, white, imageClass }: Props) => {
         alt="stephania-logo"
         className={clsx(
           imageClass,
-          "cursor-pointer w-[62px] 640:w-[90px] object-contain"
+          "cursor-pointer w-[102px] 640:w-[128px] object-contain"
         )}
       />
     </Link>
