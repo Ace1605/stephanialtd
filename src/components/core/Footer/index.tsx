@@ -59,7 +59,7 @@ export const Footer = () => {
                               <Pin className="w-5 h-5" />
                             </span>
                             5900 Balcones Drive, STE 100 Austin, Texas 78731.
-                            USA
+                            USA 🇺🇸
                           </p>
                           <p
                             className={clsx(
@@ -86,7 +86,7 @@ export const Footer = () => {
                               <Pin className="w-5 h-5" />
                             </span>
                             C/o 151-177 Foleshill Road, Storage King Office
-                            Complex. Coventry. CV1 4LF
+                            Complex. Coventry. CV1 4LF 🇬🇧
                           </p>
                           <p
                             className={clsx(
@@ -112,7 +112,7 @@ export const Footer = () => {
                             <span className="w-5 h-5">
                               <Pin className="w-5 h-5" />
                             </span>
-                            162 Peter Odili Road, Port Harcourt Nigeria
+                            162 Peter Odili Road, Port Harcourt Nigeria 🇳🇬
                           </p>
                           <p
                             className={clsx(
