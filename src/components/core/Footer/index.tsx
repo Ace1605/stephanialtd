@@ -69,7 +69,7 @@ export const Footer = () => {
                             <span className="w-5 h-5">
                               <Telephone className="w-4 h-4" />
                             </span>
-                            <Link href="tel:+19282656523">+1 928 265 6523</Link>
+                            <Link href="tel:+12519104296">+1 251 910 4296</Link>
                           </p>
                         </div>
 
@@ -96,8 +96,8 @@ export const Footer = () => {
                             <span className="w-5 h-5">
                               <Telephone className="w-4 h-4" />
                             </span>
-                            <Link href="tel:+447452230428">
-                              +44 7452 230428
+                            <Link href="tel:+447575885942">
+                              +44 7575 885 942
                             </Link>
                           </p>
                         </div>
