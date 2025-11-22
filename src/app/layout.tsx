@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   title: {
     template: "%s - Stephania Support Services",
     default:
-      "Stephania Support Services - Engineering Excellence in Construction & Procurement",
+      "Stephania Support Services - Engineering Excellence in Procurement & Construction",
   },
   description:
-    "Stephania Support Services is a premier engineering, construction, and procurement company delivering comprehensive solutions across oil & gas, power, construction, and telecommunications sectors worldwide. With 15+ years of experience, we provide engineering services, midstream solutions, vessel management, and offshore/onshore solutions with uncompromising quality standards.",
+    "Stephania Support Services is a premier engineering, procurement and construction company delivering comprehensive solutions across oil & gas, power, construction, and telecommunications sectors worldwide. With 15+ years of experience, we provide engineering services, midstream solutions, vessel management, and offshore/onshore solutions with uncompromising quality standards.",
   keywords: [
     "Stephania Support Services",
-    "engineering excellence", 
+    "engineering excellence",
     "construction",
     "procurement",
     "oil & gas",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "OEM partners",
     "technical expertise",
     "project delivery",
-    "safety focus"
+    "safety focus",
   ],
 };
 

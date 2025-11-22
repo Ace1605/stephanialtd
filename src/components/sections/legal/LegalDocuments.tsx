@@ -15,7 +15,7 @@ const termsOfUse = {
     <p>If you do not agree with these Terms, please discontinue use of our website and services.</p>
     
     <h3>2. Company Overview</h3>
-    <p>Stephania Support Services is an engineering, construction, and procurement company offering a range of industrial and infrastructural solutions, including vessel management, midstream operations, and onshore/offshore services.</p>
+    <p>Stephania Support Services is an engineering, procurement and construction company offering a range of industrial and infrastructural solutions, including vessel management, midstream operations, and onshore/offshore services.</p>
     
     <h3>3. Use of Our Website</h3>
     <p>You agree to use our website only for lawful purposes. You must not:</p>

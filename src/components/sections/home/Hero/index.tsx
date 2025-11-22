@@ -25,7 +25,7 @@ export const Hero = () => {
 
   const paragraphs: string[] = [
     "Delivering comprehensive solutions across oil & gas, power, construction, and telecommunications sectors worldwide with proven expertise and innovation.",
-    "End-to-end engineering, construction, and procurement services ensuring optimal project delivery with uncompromising quality standards.",
+    "End-to-end engineering, procurement and construction services ensuring optimal project delivery with uncompromising quality standards.",
     "Specialized solutions for complex industrial environments including offshore, onshore, and midstream operations with focus on safety and efficiency.",
   ];
 
